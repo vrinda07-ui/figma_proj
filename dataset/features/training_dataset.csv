@@ -1,6 +1,6 @@
 dashboard_id,candidate_id,width,height,area,aspect_ratio,child_count,text_count,numeric_text_count,text_density,numeric_density,vector_count,line_count,ellipse_count,rectangle_count,graphical_count,has_percentage,has_date_text,has_chart_word,has_table_word,has_kpi_word,has_filter_word,label
-dashboard_01,12:54,267.0,160.0,42720.0,1.66875,3,4,2,1.3333333333333333,0.5,2,7,0,0,9,1,0,0,0,1,0,KPI_CARD
 dashboard_01,12:199,646.0,319.0,206074.0,2.025078369905956,2,17,11,8.5,0.6470588235294118,0,0,0,5,0,1,0,0,0,0,0,CHART
+dashboard_01,12:54,267.0,160.0,42720.0,1.66875,3,4,2,1.3333333333333333,0.5,2,7,0,0,9,1,0,0,0,1,0,KPI_CARD
 dashboard_01,12:75,267.0,160.0,42720.0,1.66875,3,4,2,1.3333333333333333,0.5,2,7,0,0,9,1,0,0,0,1,0,KPI_CARD
 dashboard_01,12:96,267.0,160.0,42720.0,1.66875,3,4,2,1.3333333333333333,0.5,2,7,0,0,9,1,0,0,0,1,0,KPI_CARD
 dashboard_01,12:249,450.0,267.0,120150.0,1.6853932584269662,2,14,11,7.0,0.7857142857142857,0,0,5,5,5,1,0,1,0,0,0,CHART

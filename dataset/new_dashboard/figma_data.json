@@ -1,0 +1,2556 @@
+{
+  "document": {
+    "id": "local-document",
+    "name": "Document",
+    "type": "DOCUMENT",
+    "children": [
+      {
+        "id": "0:1",
+        "name": "Page 1",
+        "type": "PAGE",
+        "children": [
+          {
+            "id": "3:13",
+            "name": "Frame 5",
+            "type": "FRAME",
+            "visible": true,
+            "absoluteBoundingBox": {
+              "x": -870,
+              "y": -547,
+              "width": 1663,
+              "height": 1152
+            },
+            "relativeTransform": [
+              [
+                1,
+                0,
+                -870
+              ],
+              [
+                0,
+                1,
+                -547
+              ]
+            ],
+            "fills": [
+              {
+                "type": "SOLID",
+                "visible": true,
+                "opacity": 1,
+                "blendMode": "NORMAL",
+                "color": {
+                  "r": 0.987500011920929,
+                  "g": 0.9829738736152649,
+                  "b": 0.9422395825386047
+                },
+                "boundVariables": {}
+              }
+            ],
+            "strokes": [],
+            "layoutMode": "NONE",
+            "children": [
+              {
+                "id": "2:4",
+                "name": "Desktop - 1",
+                "type": "FRAME",
+                "visible": true,
+                "absoluteBoundingBox": {
+                  "x": -758,
+                  "y": -482,
+                  "width": 1440,
+                  "height": 1024
+                },
+                "relativeTransform": [
+                  [
+                    1,
+                    0,
+                    112
+                  ],
+                  [
+                    0,
+                    1,
+                    65
+                  ]
+                ],
+                "fills": [
+                  {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                      "r": 1,
+                      "g": 1,
+                      "b": 1
+                    },
+                    "boundVariables": {}
+                  }
+                ],
+                "strokes": [],
+                "layoutMode": "NONE",
+                "children": [
+                  {
+                    "id": "2:6",
+                    "name": "B ESQUERDA",
+                    "type": "FRAME",
+                    "visible": true,
+                    "absoluteBoundingBox": {
+                      "x": -706,
+                      "y": -366,
+                      "width": 395,
+                      "height": 282
+                    },
+                    "relativeTransform": [
+                      [
+                        1,
+                        0,
+                        52
+                      ],
+                      [
+                        0,
+                        1,
+                        116
+                      ]
+                    ],
+                    "fills": [
+                      {
+                        "type": "SOLID",
+                        "visible": true,
+                        "opacity": 1,
+                        "blendMode": "NORMAL",
+                        "color": {
+                          "r": 1,
+                          "g": 1,
+                          "b": 1
+                        },
+                        "boundVariables": {}
+                      }
+                    ],
+                    "strokes": [
+                      {
+                        "type": "SOLID",
+                        "visible": true,
+                        "opacity": 1,
+                        "blendMode": "NORMAL",
+                        "color": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0
+                        },
+                        "boundVariables": {}
+                      }
+                    ],
+                    "layoutMode": "VERTICAL",
+                    "children": []
+                  },
+                  {
+                    "id": "2:11",
+                    "name": "B DIREITO",
+                    "type": "FRAME",
+                    "visible": true,
+                    "absoluteBoundingBox": {
+                      "x": 236,
+                      "y": -366,
+                      "width": 395,
+                      "height": 282
+                    },
+                    "relativeTransform": [
+                      [
+                        1,
+                        0,
+                        994
+                      ],
+                      [
+                        0,
+                        1,
+                        116
+                      ]
+                    ],
+                    "fills": [
+                      {
+                        "type": "SOLID",
+                        "visible": true,
+                        "opacity": 1,
+                        "blendMode": "NORMAL",
+                        "color": {
+                          "r": 1,
+                          "g": 1,
+                          "b": 1
+                        },
+                        "boundVariables": {}
+                      }
+                    ],
+                    "strokes": [
+                      {
+                        "type": "SOLID",
+                        "visible": true,
+                        "opacity": 1,
+                        "blendMode": "NORMAL",
+                        "color": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0
+                        },
+                        "boundVariables": {}
+                      }
+                    ],
+                    "layoutMode": "VERTICAL",
+                    "children": []
+                  },
+                  {
+                    "id": "2:9",
+                    "name": "B MEIO",
+                    "type": "FRAME",
+                    "visible": true,
+                    "absoluteBoundingBox": {
+                      "x": -235,
+                      "y": -366,
+                      "width": 395,
+                      "height": 282
+                    },
+                    "relativeTransform": [
+                      [
+                        1,
+                        0,
+                        523
+                      ],
+                      [
+                        0,
+                        1,
+                        116
+                      ]
+                    ],
+                    "fills": [
+                      {
+                        "type": "SOLID",
+                        "visible": true,
+                        "opacity": 1,
+                        "blendMode": "NORMAL",
+                        "color": {
+                          "r": 1,
+                          "g": 1,
+                          "b": 1
+                        },
+                        "boundVariables": {}
+                      }
+                    ],
+                    "strokes": [
+                      {
+                        "type": "SOLID",
+                        "visible": true,
+                        "opacity": 1,
+                        "blendMode": "NORMAL",
+                        "color": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0
+                        },
+                        "boundVariables": {}
+                      }
+                    ],
+                    "layoutMode": "VERTICAL",
+                    "children": []
+                  },
+                  {
+                    "id": "2:12",
+                    "name": "grafico",
+                    "type": "FRAME",
+                    "visible": true,
+                    "absoluteBoundingBox": {
+                      "x": -708,
+                      "y": 6,
+                      "width": 1337,
+                      "height": 459
+                    },
+                    "relativeTransform": [
+                      [
+                        1,
+                        0,
+                        50
+                      ],
+                      [
+                        0,
+                        1,
+                        488
+                      ]
+                    ],
+                    "fills": [
+                      {
+                        "type": "SOLID",
+                        "visible": true,
+                        "opacity": 1,
+                        "blendMode": "NORMAL",
+                        "color": {
+                          "r": 1,
+                          "g": 1,
+                          "b": 1
+                        },
+                        "boundVariables": {}
+                      }
+                    ],
+                    "strokes": [],
+                    "layoutMode": "NONE",
+                    "children": [
+                      {
+                        "id": "4:14",
+                        "name": "Vector",
+                        "type": "VECTOR",
+                        "visible": true,
+                        "absoluteBoundingBox": {
+                          "x": -588,
+                          "y": 40,
+                          "width": 1166,
+                          "height": 361
+                        },
+                        "relativeTransform": [
+                          [
+                            1,
+                            0,
+                            120
+                          ],
+                          [
+                            0,
+                            1,
+                            34
+                          ]
+                        ],
+                        "fills": [],
+                        "strokes": [
+                          {
+                            "type": "SOLID",
+                            "visible": true,
+                            "opacity": 1,
+                            "blendMode": "NORMAL",
+                            "color": {
+                              "r": 0.27843138575553894,
+                              "g": 0.03921568766236305,
+                              "b": 0.03921568766236305
+                            },
+                            "boundVariables": {}
+                          }
+                        ]
+                      },
+                      {
+                        "id": "4:54",
+                        "name": "Sun Mon Tue Wed Thu Fri Sat",
+                        "type": "TEXT",
+                        "visible": true,
+                        "absoluteBoundingBox": {
+                          "x": -618,
+                          "y": 431,
+                          "width": 1438,
+                          "height": 34
+                        },
+                        "relativeTransform": [
+                          [
+                            1,
+                            0,
+                            90
+                          ],
+                          [
+                            0,
+                            1,
+                            425
+                          ]
+                        ],
+                        "fills": [
+                          {
+                            "type": "SOLID",
+                            "visible": true,
+                            "opacity": 1,
+                            "blendMode": "NORMAL",
+                            "color": {
+                              "r": 0.27450981736183167,
+                              "g": 0.27450981736183167,
+                              "b": 0.27450981736183167
+                            },
+                            "boundVariables": {}
+                          }
+                        ],
+                        "strokes": [],
+                        "characters": "Sun Mon Tue Wed Thu Fri Sat",
+                        "fontSize": 32
+                      },
+                      {
+                        "id": "4:65",
+                        "name": "0",
+                        "type": "TEXT",
+                        "visible": true,
+                        "absoluteBoundingBox": {
+                          "x": -642,
+                          "y": 385,
+                          "width": 54,
+                          "height": 43
+                        },
+                        "relativeTransform": [
+                          [
+                            1,
+                            0,
+                            66
+                          ],
+                          [
+                            0,
+                            1,
+                            379
+                          ]
+                        ],
+                        "fills": [
+                          {
+                            "type": "SOLID",
+                            "visible": true,
+                            "opacity": 1,
+                            "blendMode": "NORMAL",
+                            "color": {
+                              "r": 0.27450981736183167,
+                              "g": 0.27450981736183167,
+                              "b": 0.27450981736183167
+                            },
+                            "boundVariables": {}
+                          }
+                        ],
+                        "strokes": [],
+                        "characters": "0",
+                        "fontSize": 32
+                      },
+                      {
+                        "id": "4:66",
+                        "name": "50",
+                        "type": "TEXT",
+                        "visible": true,
+                        "absoluteBoundingBox": {
+                          "x": -650,
+                          "y": 236,
+                          "width": 54,
+                          "height": 43
+                        },
+                        "relativeTransform": [
+                          [
+                            1,
+                            0,
+                            58
+                          ],
+                          [
+                            0,
+                            1,
+                            230
+                          ]
+                        ],
+                        "fills": [
+                          {
+                            "type": "SOLID",
+                            "visible": true,
+                            "opacity": 1,
+                            "blendMode": "NORMAL",
+                            "color": {
+                              "r": 0.27450981736183167,
+                              "g": 0.27450981736183167,
+                              "b": 0.27450981736183167
+                            },
+                            "boundVariables": {}
+                          }
+                        ],
+                        "strokes": [],
+                        "characters": "50",
+                        "fontSize": 32
+                      },
+                      {
+                        "id": "4:67",
+                        "name": "100",
+                        "type": "TEXT",
+                        "visible": true,
+                        "absoluteBoundingBox": {
+                          "x": -672,
+                          "y": 53,
+                          "width": 54,
+                          "height": 43
+                        },
+                        "relativeTransform": [
+                          [
+                            1,
+                            0,
+                            36
+                          ],
+                          [
+                            0,
+                            1,
+                            47
+                          ]
+                        ],
+                        "fills": [
+                          {
+                            "type": "SOLID",
+                            "visible": true,
+                            "opacity": 1,
+                            "blendMode": "NORMAL",
+                            "color": {
+                              "r": 0.27450981736183167,
+                              "g": 0.27450981736183167,
+                              "b": 0.27450981736183167
+                            },
+                            "boundVariables": {}
+                          }
+                        ],
+                        "strokes": [],
+                        "characters": "100",
+                        "fontSize": 32
+                      },
+                      {
+                        "id": "4:68",
+                        "name": "Line 1",
+                        "type": "LINE",
+                        "visible": true,
+                        "absoluteBoundingBox": {
+                          "x": -615,
+                          "y": 248,
+                          "width": 1199.00048828125,
+                          "height": 0
+                        },
+                        "relativeTransform": [
+                          [
+                            1,
+                            0,
+                            93
+                          ],
+                          [
+                            0,
+                            1,
+                            242
+                          ]
+                        ],
+                        "fills": [],
+                        "strokes": [
+                          {
+                            "type": "SOLID",
+                            "visible": true,
+                            "opacity": 1,
+                            "blendMode": "NORMAL",
+                            "color": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0
+                            },
+                            "boundVariables": {}
+                          }
+                        ]
+                      },
+                      {
+                        "id": "4:72",
+                        "name": "Line 3",
+                        "type": "LINE",
+                        "visible": true,
+                        "absoluteBoundingBox": {
+                          "x": -615,
+                          "y": 398,
+                          "width": 1199.00048828125,
+                          "height": 0
+                        },
+                        "relativeTransform": [
+                          [
+                            1,
+                            0,
+                            93
+                          ],
+                          [
+                            0,
+                            1,
+                            392
+                          ]
+                        ],
+                        "fills": [],
+                        "strokes": [
+                          {
+                            "type": "SOLID",
+                            "visible": true,
+                            "opacity": 1,
+                            "blendMode": "NORMAL",
+                            "color": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0
+                            },
+                            "boundVariables": {}
+                          }
+                        ]
+                      },
+                      {
+                        "id": "4:71",
+                        "name": "Line 2",
+                        "type": "LINE",
+                        "visible": true,
+                        "absoluteBoundingBox": {
+                          "x": -615,
+                          "y": 64,
+                          "width": 1199.00048828125,
+                          "height": 0
+                        },
+                        "relativeTransform": [
+                          [
+                            1,
+                            0,
+                            93
+                          ],
+                          [
+                            0,
+                            1,
+                            58
+                          ]
+                        ],
+                        "fills": [],
+                        "strokes": [
+                          {
+                            "type": "SOLID",
+                            "visible": true,
+                            "opacity": 1,
+                            "blendMode": "NORMAL",
+                            "color": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0
+                            },
+                            "boundVariables": {}
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "3:15",
+                    "name": "LOGO",
+                    "type": "TEXT",
+                    "visible": true,
+                    "absoluteBoundingBox": {
+                      "x": -702,
+                      "y": -462,
+                      "width": 104,
+                      "height": 65
+                    },
+                    "relativeTransform": [
+                      [
+                        1,
+                        0,
+                        56
+                      ],
+                      [
+                        0,
+                        1,
+                        20
+                      ]
+                    ],
+                    "fills": [
+                      {
+                        "type": "SOLID",
+                        "visible": true,
+                        "opacity": 1,
+                        "blendMode": "NORMAL",
+                        "color": {
+                          "r": 0.27450981736183167,
+                          "g": 0.27450981736183167,
+                          "b": 0.27450981736183167
+                        },
+                        "boundVariables": {}
+                      }
+                    ],
+                    "strokes": [],
+                    "characters": "LOGO",
+                    "fontSize": 40
+                  },
+                  {
+                    "id": "4:5",
+                    "name": "NEW MESSAGES",
+                    "type": "TEXT",
+                    "visible": true,
+                    "absoluteBoundingBox": {
+                      "x": -669,
+                      "y": -343,
+                      "width": 285,
+                      "height": 52
+                    },
+                    "relativeTransform": [
+                      [
+                        1,
+                        0,
+                        89
+                      ],
+                      [
+                        0,
+                        1,
+                        139
+                      ]
+                    ],
+                    "fills": [
+                      {
+                        "type": "SOLID",
+                        "visible": true,
+                        "opacity": 1,
+                        "blendMode": "NORMAL",
+                        "color": {
+                          "r": 0.24166665971279144,
+                          "g": 0.24166665971279144,
+                          "b": 0.24166665971279144
+                        },
+                        "boundVariables": {}
+                      }
+                    ],
+                    "strokes": [],
+                    "characters": "NEW MESSAGES",
+                    "fontSize": 32
+                  },
+                  {
+                    "id": "4:6",
+                    "name": "NEW LEADS",
+                    "type": "TEXT",
+                    "visible": true,
+                    "absoluteBoundingBox": {
+                      "x": -203,
+                      "y": -343,
+                      "width": 285,
+                      "height": 52
+                    },
+                    "relativeTransform": [
+                      [
+                        1,
+                        0,
+                        555
+                      ],
+                      [
+                        0,
+                        1,
+                        139
+                      ]
+                    ],
+                    "fills": [
+                      {
+                        "type": "SOLID",
+                        "visible": true,
+                        "opacity": 1,
+                        "blendMode": "NORMAL",
+                        "color": {
+                          "r": 0.24166665971279144,
+                          "g": 0.24166665971279144,
+                          "b": 0.24166665971279144
+                        },
+                        "boundVariables": {}
+                      }
+                    ],
+                    "strokes": [],
+                    "characters": "NEW LEADS",
+                    "fontSize": 32
+                  },
+                  {
+                    "id": "4:7",
+                    "name": "RETURN (ROI)",
+                    "type": "TEXT",
+                    "visible": true,
+                    "absoluteBoundingBox": {
+                      "x": 268,
+                      "y": -343,
+                      "width": 181,
+                      "height": 52
+                    },
+                    "relativeTransform": [
+                      [
+                        1,
+                        0,
+                        1026
+                      ],
+                      [
+                        0,
+                        1,
+                        139
+                      ]
+                    ],
+                    "fills": [
+                      {
+                        "type": "SOLID",
+                        "visible": true,
+                        "opacity": 1,
+                        "blendMode": "NORMAL",
+                        "color": {
+                          "r": 0.24166665971279144,
+                          "g": 0.24166665971279144,
+                          "b": 0.24166665971279144
+                        },
+                        "boundVariables": {}
+                      }
+                    ],
+                    "strokes": [],
+                    "characters": "RETURN (ROI) ",
+                    "fontSize": 32
+                  },
+                  {
+                    "id": "4:8",
+                    "name": "58",
+                    "type": "TEXT",
+                    "visible": true,
+                    "absoluteBoundingBox": {
+                      "x": -669,
+                      "y": -322,
+                      "width": 102,
+                      "height": 156
+                    },
+                    "relativeTransform": [
+                      [
+                        1,
+                        0,
+                        89
+                      ],
+                      [
+                        0,
+                        1,
+                        160
+                      ]
+                    ],
+                    "fills": [
+                      {
+                        "type": "SOLID",
+                        "visible": true,
+                        "opacity": 1,
+                        "blendMode": "NORMAL",
+                        "color": {
+                          "r": 0.24166665971279144,
+                          "g": 0.24166665971279144,
+                          "b": 0.24166665971279144
+                        },
+                        "boundVariables": {}
+                      }
+                    ],
+                    "strokes": [],
+                    "characters": "58",
+                    "fontSize": 96
+                  },
+                  {
+                    "id": "4:9",
+                    "name": "36",
+                    "type": "TEXT",
+                    "visible": true,
+                    "absoluteBoundingBox": {
+                      "x": -203,
+                      "y": -319,
+                      "width": 102,
+                      "height": 156
+                    },
+                    "relativeTransform": [
+                      [
+                        1,
+                        0,
+                        555
+                      ],
+                      [
+                        0,
+                        1,
+                        163
+                      ]
+                    ],
+                    "fills": [
+                      {
+                        "type": "SOLID",
+                        "visible": true,
+                        "opacity": 1,
+                        "blendMode": "NORMAL",
+                        "color": {
+                          "r": 0.24166665971279144,
+                          "g": 0.24166665971279144,
+                          "b": 0.24166665971279144
+                        },
+                        "boundVariables": {}
+                      }
+                    ],
+                    "strokes": [],
+                    "characters": "36",
+                    "fontSize": 96
+                  },
+                  {
+                    "id": "4:10",
+                    "name": "62",
+                    "type": "TEXT",
+                    "visible": true,
+                    "absoluteBoundingBox": {
+                      "x": 271,
+                      "y": -322,
+                      "width": 102,
+                      "height": 156
+                    },
+                    "relativeTransform": [
+                      [
+                        1,
+                        0,
+                        1029
+                      ],
+                      [
+                        0,
+                        1,
+                        160
+                      ]
+                    ],
+                    "fills": [
+                      {
+                        "type": "SOLID",
+                        "visible": true,
+                        "opacity": 1,
+                        "blendMode": "NORMAL",
+                        "color": {
+                          "r": 0.24166665971279144,
+                          "g": 0.24166665971279144,
+                          "b": 0.24166665971279144
+                        },
+                        "boundVariables": {}
+                      }
+                    ],
+                    "strokes": [],
+                    "characters": "62",
+                    "fontSize": 96
+                  },
+                  {
+                    "id": "4:20",
+                    "name": "\ud83e\udd86 icon \"mail\"",
+                    "type": "GROUP",
+                    "visible": true,
+                    "absoluteBoundingBox": {
+                      "x": -392,
+                      "y": -334,
+                      "width": 34.714324951171875,
+                      "height": 27
+                    },
+                    "relativeTransform": [
+                      [
+                        1,
+                        0,
+                        366
+                      ],
+                      [
+                        0,
+                        1,
+                        148
+                      ]
+                    ],
+                    "children": [
+                      {
+                        "id": "4:19",
+                        "name": "Vector",
+                        "type": "VECTOR",
+                        "visible": true,
+                        "absoluteBoundingBox": {
+                          "x": -392,
+                          "y": -334,
+                          "width": 34.714324951171875,
+                          "height": 27
+                        },
+                        "relativeTransform": [
+                          [
+                            1,
+                            0,
+                            366
+                          ],
+                          [
+                            0,
+                            1,
+                            148
+                          ]
+                        ],
+                        "fills": [],
+                        "strokes": [
+                          {
+                            "type": "SOLID",
+                            "visible": true,
+                            "opacity": 1,
+                            "blendMode": "NORMAL",
+                            "color": {
+                              "r": 0.24166665971279144,
+                              "g": 0.24166665971279144,
+                              "b": 0.24166665971279144
+                            },
+                            "boundVariables": {}
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "4:45",
+                    "name": "\ud83e\udd86 icon \"presentation chart bar\"",
+                    "type": "GROUP",
+                    "visible": true,
+                    "absoluteBoundingBox": {
+                      "x": 83,
+                      "y": -338,
+                      "width": 37.05881881713867,
+                      "height": 35
+                    },
+                    "relativeTransform": [
+                      [
+                        1,
+                        0,
+                        841
+                      ],
+                      [
+                        0,
+                        1,
+                        144
+                      ]
+                    ],
+                    "children": [
+                      {
+                        "id": "4:44",
+                        "name": "Vector",
+                        "type": "VECTOR",
+                        "visible": true,
+                        "absoluteBoundingBox": {
+                          "x": 83,
+                          "y": -338,
+                          "width": 37.05881881713867,
+                          "height": 35
+                        },
+                        "relativeTransform": [
+                          [
+                            1,
+                            0,
+                            841
+                          ],
+                          [
+                            0,
+                            1,
+                            144
+                          ]
+                        ],
+                        "fills": [],
+                        "strokes": [
+                          {
+                            "type": "SOLID",
+                            "visible": true,
+                            "opacity": 1,
+                            "blendMode": "NORMAL",
+                            "color": {
+                              "r": 0.24166665971279144,
+                              "g": 0.24166665971279144,
+                              "b": 0.24166665971279144
+                            },
+                            "boundVariables": {}
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "4:51",
+                    "name": "\ud83e\udd86 icon \"currency dollar\"",
+                    "type": "GROUP",
+                    "visible": true,
+                    "absoluteBoundingBox": {
+                      "x": 550,
+                      "y": -345,
+                      "width": 42,
+                      "height": 42
+                    },
+                    "relativeTransform": [
+                      [
+                        1,
+                        0,
+                        1308
+                      ],
+                      [
+                        0,
+                        1,
+                        137
+                      ]
+                    ],
+                    "children": [
+                      {
+                        "id": "4:47",
+                        "name": "Group",
+                        "type": "GROUP",
+                        "visible": true,
+                        "absoluteBoundingBox": {
+                          "x": 550,
+                          "y": -345,
+                          "width": 42,
+                          "height": 42
+                        },
+                        "relativeTransform": [
+                          [
+                            1,
+                            0,
+                            1308
+                          ],
+                          [
+                            0,
+                            1,
+                            137
+                          ]
+                        ],
+                        "children": [
+                          {
+                            "id": "4:48",
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "visible": true,
+                            "absoluteBoundingBox": {
+                              "x": 565.75,
+                              "y": -331.4786071777344,
+                              "width": 2.625025987625122,
+                              "height": 4.457197189331055
+                            },
+                            "relativeTransform": [
+                              [
+                                1,
+                                0,
+                                1323.75
+                              ],
+                              [
+                                0,
+                                1,
+                                150.5213851928711
+                              ]
+                            ],
+                            "fills": [
+                              {
+                                "type": "SOLID",
+                                "visible": true,
+                                "opacity": 1,
+                                "blendMode": "NORMAL",
+                                "color": {
+                                  "r": 0.24166665971279144,
+                                  "g": 0.24166665971279144,
+                                  "b": 0.24166665971279144
+                                },
+                                "boundVariables": {}
+                              }
+                            ],
+                            "strokes": []
+                          },
+                          {
+                            "id": "4:49",
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "visible": true,
+                            "absoluteBoundingBox": {
+                              "x": 573.6250610351562,
+                              "y": -320.9786071777344,
+                              "width": 2.625,
+                              "height": 4.457250595092773
+                            },
+                            "relativeTransform": [
+                              [
+                                1,
+                                0,
+                                1331.6250591278076
+                              ],
+                              [
+                                0,
+                                1,
+                                161.0213851928711
+                              ]
+                            ],
+                            "fills": [
+                              {
+                                "type": "SOLID",
+                                "visible": true,
+                                "opacity": 1,
+                                "blendMode": "NORMAL",
+                                "color": {
+                                  "r": 0.24166665971279144,
+                                  "g": 0.24166665971279144,
+                                  "b": 0.24166665971279144
+                                },
+                                "boundVariables": {}
+                              }
+                            ],
+                            "strokes": []
+                          },
+                          {
+                            "id": "4:50",
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "visible": true,
+                            "absoluteBoundingBox": {
+                              "x": 550,
+                              "y": -345,
+                              "width": 42,
+                              "height": 42
+                            },
+                            "relativeTransform": [
+                              [
+                                1,
+                                0,
+                                1308
+                              ],
+                              [
+                                0,
+                                1,
+                                137
+                              ]
+                            ],
+                            "fills": [
+                              {
+                                "type": "SOLID",
+                                "visible": true,
+                                "opacity": 1,
+                                "blendMode": "NORMAL",
+                                "color": {
+                                  "r": 0.24166665971279144,
+                                  "g": 0.24166665971279144,
+                                  "b": 0.24166665971279144
+                                },
+                                "boundVariables": {}
+                              }
+                            ],
+                            "strokes": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "4:73",
+                    "name": "MY ACCOUNT",
+                    "type": "TEXT",
+                    "visible": true,
+                    "absoluteBoundingBox": {
+                      "x": 336,
+                      "y": -448,
+                      "width": 206,
+                      "height": 46
+                    },
+                    "relativeTransform": [
+                      [
+                        1,
+                        0,
+                        1094
+                      ],
+                      [
+                        0,
+                        1,
+                        34
+                      ]
+                    ],
+                    "fills": [
+                      {
+                        "type": "SOLID",
+                        "visible": true,
+                        "opacity": 1,
+                        "blendMode": "NORMAL",
+                        "color": {
+                          "r": 0.27450981736183167,
+                          "g": 0.27450981736183167,
+                          "b": 0.27450981736183167
+                        },
+                        "boundVariables": {}
+                      }
+                    ],
+                    "strokes": [],
+                    "characters": "MY ACCOUNT",
+                    "fontSize": 32
+                  },
+                  {
+                    "id": "4:79",
+                    "name": "\ud83e\udd86 icon \"menu\"",
+                    "type": "GROUP",
+                    "visible": true,
+                    "absoluteBoundingBox": {
+                      "x": 578,
+                      "y": -449,
+                      "width": 45.49999237060547,
+                      "height": 39
+                    },
+                    "relativeTransform": [
+                      [
+                        1,
+                        0,
+                        1336
+                      ],
+                      [
+                        0,
+                        1,
+                        33
+                      ]
+                    ],
+                    "children": [
+                      {
+                        "id": "4:75",
+                        "name": "Group",
+                        "type": "GROUP",
+                        "visible": true,
+                        "absoluteBoundingBox": {
+                          "x": 578,
+                          "y": -449,
+                          "width": 45.49999237060547,
+                          "height": 39
+                        },
+                        "relativeTransform": [
+                          [
+                            1,
+                            0,
+                            1336
+                          ],
+                          [
+                            0,
+                            1,
+                            33
+                          ]
+                        ],
+                        "children": [
+                          {
+                            "id": "4:76",
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "visible": true,
+                            "absoluteBoundingBox": {
+                              "x": 578,
+                              "y": -449,
+                              "width": 45.49999237060547,
+                              "height": 6.500000953674316
+                            },
+                            "relativeTransform": [
+                              [
+                                1,
+                                0,
+                                1336
+                              ],
+                              [
+                                0,
+                                1,
+                                33
+                              ]
+                            ],
+                            "fills": [
+                              {
+                                "type": "SOLID",
+                                "visible": true,
+                                "opacity": 1,
+                                "blendMode": "NORMAL",
+                                "color": {
+                                  "r": 0.32083332538604736,
+                                  "g": 0.32083332538604736,
+                                  "b": 0.32083332538604736
+                                },
+                                "boundVariables": {}
+                              }
+                            ],
+                            "strokes": [
+                              {
+                                "type": "SOLID",
+                                "visible": true,
+                                "opacity": 1,
+                                "blendMode": "NORMAL",
+                                "color": {
+                                  "r": 0.27450981736183167,
+                                  "g": 0.27450981736183167,
+                                  "b": 0.27450981736183167
+                                },
+                                "boundVariables": {}
+                              }
+                            ]
+                          },
+                          {
+                            "id": "4:77",
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "visible": true,
+                            "absoluteBoundingBox": {
+                              "x": 578,
+                              "y": -432.74993896484375,
+                              "width": 45.49999237060547,
+                              "height": 6.500000953674316
+                            },
+                            "relativeTransform": [
+                              [
+                                1,
+                                0,
+                                1336
+                              ],
+                              [
+                                0,
+                                1,
+                                49.25004959106445
+                              ]
+                            ],
+                            "fills": [
+                              {
+                                "type": "SOLID",
+                                "visible": true,
+                                "opacity": 1,
+                                "blendMode": "NORMAL",
+                                "color": {
+                                  "r": 0.32083332538604736,
+                                  "g": 0.32083332538604736,
+                                  "b": 0.32083332538604736
+                                },
+                                "boundVariables": {}
+                              }
+                            ],
+                            "strokes": [
+                              {
+                                "type": "SOLID",
+                                "visible": true,
+                                "opacity": 1,
+                                "blendMode": "NORMAL",
+                                "color": {
+                                  "r": 0.27450981736183167,
+                                  "g": 0.27450981736183167,
+                                  "b": 0.27450981736183167
+                                },
+                                "boundVariables": {}
+                              }
+                            ]
+                          },
+                          {
+                            "id": "4:78",
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "visible": true,
+                            "absoluteBoundingBox": {
+                              "x": 578,
+                              "y": -416.5000915527344,
+                              "width": 45.49999237060547,
+                              "height": 6.500000953674316
+                            },
+                            "relativeTransform": [
+                              [
+                                1,
+                                0,
+                                1336
+                              ],
+                              [
+                                0,
+                                1,
+                                65.49991989135742
+                              ]
+                            ],
+                            "fills": [
+                              {
+                                "type": "SOLID",
+                                "visible": true,
+                                "opacity": 1,
+                                "blendMode": "NORMAL",
+                                "color": {
+                                  "r": 0.32083332538604736,
+                                  "g": 0.32083332538604736,
+                                  "b": 0.32083332538604736
+                                },
+                                "boundVariables": {}
+                              }
+                            ],
+                            "strokes": [
+                              {
+                                "type": "SOLID",
+                                "visible": true,
+                                "opacity": 1,
+                                "blendMode": "NORMAL",
+                                "color": {
+                                  "r": 0.27450981736183167,
+                                  "g": 0.27450981736183167,
+                                  "b": 0.27450981736183167
+                                },
+                                "boundVariables": {}
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "4:80",
+                    "name": "RESPONSE RATE",
+                    "type": "TEXT",
+                    "visible": true,
+                    "absoluteBoundingBox": {
+                      "x": -661,
+                      "y": -156,
+                      "width": 170,
+                      "height": 45
+                    },
+                    "relativeTransform": [
+                      [
+                        1,
+                        0,
+                        97
+                      ],
+                      [
+                        0,
+                        1,
+                        326
+                      ]
+                    ],
+                    "fills": [
+                      {
+                        "type": "SOLID",
+                        "visible": true,
+                        "opacity": 1,
+                        "blendMode": "NORMAL",
+                        "color": {
+                          "r": 0.2750000059604645,
+                          "g": 0.27385416626930237,
+                          "b": 0.27385416626930237
+                        },
+                        "boundVariables": {}
+                      }
+                    ],
+                    "strokes": [],
+                    "characters": "RESPONSE RATE",
+                    "fontSize": 24
+                  },
+                  {
+                    "id": "4:82",
+                    "name": "RETURN ON INVESTMENT (ROI)",
+                    "type": "TEXT",
+                    "visible": true,
+                    "absoluteBoundingBox": {
+                      "x": 268,
+                      "y": -159,
+                      "width": 261,
+                      "height": 33
+                    },
+                    "relativeTransform": [
+                      [
+                        1,
+                        0,
+                        1026
+                      ],
+                      [
+                        0,
+                        1,
+                        323
+                      ]
+                    ],
+                    "fills": [
+                      {
+                        "type": "SOLID",
+                        "visible": true,
+                        "opacity": 1,
+                        "blendMode": "NORMAL",
+                        "color": {
+                          "r": 0.2750000059604645,
+                          "g": 0.27385416626930237,
+                          "b": 0.27385416626930237
+                        },
+                        "boundVariables": {}
+                      }
+                    ],
+                    "strokes": [],
+                    "characters": "RETURN ON INVESTMENT (ROI)",
+                    "fontSize": 20
+                  },
+                  {
+                    "id": "15:4",
+                    "name": "Group",
+                    "type": "GROUP",
+                    "visible": true,
+                    "absoluteBoundingBox": {
+                      "x": -15,
+                      "y": -270,
+                      "width": 144,
+                      "height": 144
+                    },
+                    "relativeTransform": [
+                      [
+                        1,
+                        0,
+                        743
+                      ],
+                      [
+                        0,
+                        1,
+                        212
+                      ]
+                    ],
+                    "children": [
+                      {
+                        "id": "15:2",
+                        "name": "62 (62%)",
+                        "type": "ELLIPSE",
+                        "visible": true,
+                        "absoluteBoundingBox": {
+                          "x": -15,
+                          "y": -270,
+                          "width": 144,
+                          "height": 144
+                        },
+                        "relativeTransform": [
+                          [
+                            1,
+                            0,
+                            743
+                          ],
+                          [
+                            0,
+                            1,
+                            212
+                          ]
+                        ],
+                        "fills": [
+                          {
+                            "type": "SOLID",
+                            "visible": true,
+                            "opacity": 1,
+                            "blendMode": "NORMAL",
+                            "color": {
+                              "r": 0.27843138575553894,
+                              "g": 0.03921568766236305,
+                              "b": 0.03921568766236305
+                            },
+                            "boundVariables": {}
+                          }
+                        ],
+                        "strokes": []
+                      },
+                      {
+                        "id": "15:3",
+                        "name": "38 (38%)",
+                        "type": "ELLIPSE",
+                        "visible": true,
+                        "absoluteBoundingBox": {
+                          "x": -15,
+                          "y": -270,
+                          "width": 144,
+                          "height": 144
+                        },
+                        "relativeTransform": [
+                          [
+                            1,
+                            0,
+                            743
+                          ],
+                          [
+                            0,
+                            1,
+                            212
+                          ]
+                        ],
+                        "fills": [
+                          {
+                            "type": "SOLID",
+                            "visible": true,
+                            "opacity": 1,
+                            "blendMode": "NORMAL",
+                            "color": {
+                              "r": 0.5803921818733215,
+                              "g": 0.2549019753932953,
+                              "b": 0.2549019753932953
+                            },
+                            "boundVariables": {}
+                          }
+                        ],
+                        "strokes": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "15:11",
+                    "name": "62% DAILY GOAL",
+                    "type": "TEXT",
+                    "visible": true,
+                    "absoluteBoundingBox": {
+                      "x": -203,
+                      "y": -179,
+                      "width": 160,
+                      "height": 33
+                    },
+                    "relativeTransform": [
+                      [
+                        1,
+                        0,
+                        555
+                      ],
+                      [
+                        0,
+                        1,
+                        303
+                      ]
+                    ],
+                    "fills": [
+                      {
+                        "type": "SOLID",
+                        "visible": true,
+                        "opacity": 1,
+                        "blendMode": "NORMAL",
+                        "color": {
+                          "r": 0.24166665971279144,
+                          "g": 0.24166665971279144,
+                          "b": 0.24166665971279144
+                        },
+                        "boundVariables": {}
+                      }
+                    ],
+                    "strokes": [],
+                    "characters": "62% DAILY GOAL ",
+                    "fontSize": 20
+                  },
+                  {
+                    "id": "15:13",
+                    "name": "38% THIS WEEK",
+                    "type": "TEXT",
+                    "visible": true,
+                    "absoluteBoundingBox": {
+                      "x": -203,
+                      "y": -156,
+                      "width": 151,
+                      "height": 33
+                    },
+                    "relativeTransform": [
+                      [
+                        1,
+                        0,
+                        555
+                      ],
+                      [
+                        0,
+                        1,
+                        326
+                      ]
+                    ],
+                    "fills": [
+                      {
+                        "type": "SOLID",
+                        "visible": true,
+                        "opacity": 1,
+                        "blendMode": "NORMAL",
+                        "color": {
+                          "r": 0.24166665971279144,
+                          "g": 0.24166665971279144,
+                          "b": 0.24166665971279144
+                        },
+                        "boundVariables": {}
+                      }
+                    ],
+                    "strokes": [],
+                    "characters": "38% THIS WEEK ",
+                    "fontSize": 20
+                  },
+                  {
+                    "id": "25:3",
+                    "name": "Line 4",
+                    "type": "VECTOR",
+                    "visible": true,
+                    "absoluteBoundingBox": {
+                      "x": -681,
+                      "y": -179,
+                      "width": 345,
+                      "height": 0
+                    },
+                    "relativeTransform": [
+                      [
+                        1,
+                        0,
+                        77
+                      ],
+                      [
+                        0,
+                        1,
+                        303
+                      ]
+                    ],
+                    "fills": [],
+                    "strokes": [
+                      {
+                        "type": "SOLID",
+                        "visible": true,
+                        "opacity": 1,
+                        "blendMode": "NORMAL",
+                        "color": {
+                          "r": 0.27843138575553894,
+                          "g": 0.03921568766236305,
+                          "b": 0.03921568766236305
+                        },
+                        "boundVariables": {}
+                      }
+                    ]
+                  },
+                  {
+                    "id": "25:9",
+                    "name": "Line 6",
+                    "type": "VECTOR",
+                    "visible": true,
+                    "absoluteBoundingBox": {
+                      "x": 261,
+                      "y": -179,
+                      "width": 345,
+                      "height": 0
+                    },
+                    "relativeTransform": [
+                      [
+                        1,
+                        0,
+                        1019
+                      ],
+                      [
+                        0,
+                        1,
+                        303
+                      ]
+                    ],
+                    "fills": [],
+                    "strokes": [
+                      {
+                        "type": "SOLID",
+                        "visible": true,
+                        "opacity": 1,
+                        "blendMode": "NORMAL",
+                        "color": {
+                          "r": 0.27843138575553894,
+                          "g": 0.03921568766236305,
+                          "b": 0.03921568766236305
+                        },
+                        "boundVariables": {}
+                      }
+                    ]
+                  },
+                  {
+                    "id": "25:6",
+                    "name": "Line 5",
+                    "type": "VECTOR",
+                    "visible": true,
+                    "absoluteBoundingBox": {
+                      "x": -551,
+                      "y": -179,
+                      "width": 215,
+                      "height": 0
+                    },
+                    "relativeTransform": [
+                      [
+                        1,
+                        0,
+                        207
+                      ],
+                      [
+                        0,
+                        1,
+                        303
+                      ]
+                    ],
+                    "fills": [],
+                    "strokes": [
+                      {
+                        "type": "SOLID",
+                        "visible": true,
+                        "opacity": 1,
+                        "blendMode": "NORMAL",
+                        "color": {
+                          "r": 0.5803921818733215,
+                          "g": 0.2549019753932953,
+                          "b": 0.2549019753932953
+                        },
+                        "boundVariables": {}
+                      }
+                    ]
+                  },
+                  {
+                    "id": "25:10",
+                    "name": "Line 7",
+                    "type": "VECTOR",
+                    "visible": true,
+                    "absoluteBoundingBox": {
+                      "x": 463,
+                      "y": -179,
+                      "width": 141,
+                      "height": 0
+                    },
+                    "relativeTransform": [
+                      [
+                        1,
+                        0,
+                        1221
+                      ],
+                      [
+                        0,
+                        1,
+                        303
+                      ]
+                    ],
+                    "fills": [],
+                    "strokes": [
+                      {
+                        "type": "SOLID",
+                        "visible": true,
+                        "opacity": 1,
+                        "blendMode": "NORMAL",
+                        "color": {
+                          "r": 0.5803921818733215,
+                          "g": 0.2549019753932953,
+                          "b": 0.2549019753932953
+                        },
+                        "boundVariables": {}
+                      }
+                    ]
+                  },
+                  {
+                    "id": "25:11",
+                    "name": "Rectangle 2",
+                    "type": "RECTANGLE",
+                    "visible": true,
+                    "absoluteBoundingBox": {
+                      "x": -569,
+                      "y": -209,
+                      "width": 37,
+                      "height": 21
+                    },
+                    "relativeTransform": [
+                      [
+                        1,
+                        0,
+                        189
+                      ],
+                      [
+                        0,
+                        1,
+                        273
+                      ]
+                    ],
+                    "fills": [
+                      {
+                        "type": "SOLID",
+                        "visible": true,
+                        "opacity": 1,
+                        "blendMode": "NORMAL",
+                        "color": {
+                          "r": 0.925000011920929,
+                          "g": 0.925000011920929,
+                          "b": 0.925000011920929
+                        },
+                        "boundVariables": {}
+                      }
+                    ],
+                    "strokes": []
+                  },
+                  {
+                    "id": "25:14",
+                    "name": "Rectangle 3",
+                    "type": "RECTANGLE",
+                    "visible": true,
+                    "absoluteBoundingBox": {
+                      "x": 444,
+                      "y": -208,
+                      "width": 37,
+                      "height": 21
+                    },
+                    "relativeTransform": [
+                      [
+                        1,
+                        0,
+                        1202
+                      ],
+                      [
+                        0,
+                        1,
+                        274
+                      ]
+                    ],
+                    "fills": [
+                      {
+                        "type": "SOLID",
+                        "visible": true,
+                        "opacity": 1,
+                        "blendMode": "NORMAL",
+                        "color": {
+                          "r": 0.925000011920929,
+                          "g": 0.925000011920929,
+                          "b": 0.925000011920929
+                        },
+                        "boundVariables": {}
+                      }
+                    ],
+                    "strokes": []
+                  },
+                  {
+                    "id": "25:13",
+                    "name": "36%",
+                    "type": "TEXT",
+                    "visible": true,
+                    "absoluteBoundingBox": {
+                      "x": -563,
+                      "y": -206,
+                      "width": 25,
+                      "height": 15
+                    },
+                    "relativeTransform": [
+                      [
+                        1,
+                        0,
+                        195
+                      ],
+                      [
+                        0,
+                        1,
+                        276
+                      ]
+                    ],
+                    "fills": [
+                      {
+                        "type": "SOLID",
+                        "visible": true,
+                        "opacity": 1,
+                        "blendMode": "NORMAL",
+                        "color": {
+                          "r": 0.27450981736183167,
+                          "g": 0.27450981736183167,
+                          "b": 0.27450981736183167
+                        },
+                        "boundVariables": {}
+                      }
+                    ],
+                    "strokes": [],
+                    "characters": "36%",
+                    "fontSize": 12
+                  },
+                  {
+                    "id": "25:15",
+                    "name": "62%",
+                    "type": "TEXT",
+                    "visible": true,
+                    "absoluteBoundingBox": {
+                      "x": 450,
+                      "y": -205,
+                      "width": 25,
+                      "height": 15
+                    },
+                    "relativeTransform": [
+                      [
+                        1,
+                        0,
+                        1208
+                      ],
+                      [
+                        0,
+                        1,
+                        277
+                      ]
+                    ],
+                    "fills": [
+                      {
+                        "type": "SOLID",
+                        "visible": true,
+                        "opacity": 1,
+                        "blendMode": "NORMAL",
+                        "color": {
+                          "r": 0.27450981736183167,
+                          "g": 0.27450981736183167,
+                          "b": 0.27450981736183167
+                        },
+                        "boundVariables": {}
+                      }
+                    ],
+                    "strokes": [],
+                    "characters": "62%",
+                    "fontSize": 12
+                  },
+                  {
+                    "id": "25:16",
+                    "name": "%",
+                    "type": "TEXT",
+                    "visible": true,
+                    "absoluteBoundingBox": {
+                      "x": 373,
+                      "y": -244,
+                      "width": 13,
+                      "height": 24
+                    },
+                    "relativeTransform": [
+                      [
+                        1,
+                        0,
+                        1131
+                      ],
+                      [
+                        0,
+                        1,
+                        238
+                      ]
+                    ],
+                    "fills": [
+                      {
+                        "type": "SOLID",
+                        "visible": true,
+                        "opacity": 1,
+                        "blendMode": "NORMAL",
+                        "color": {
+                          "r": 0.24166665971279144,
+                          "g": 0.24166665971279144,
+                          "b": 0.24166665971279144
+                        },
+                        "boundVariables": {}
+                      }
+                    ],
+                    "strokes": [],
+                    "characters": "%",
+                    "fontSize": 15
+                  }
+                ]
+              },
+              {
+                "id": "3:14",
+                "name": "Rectangle 1",
+                "type": "RECTANGLE",
+                "visible": true,
+                "absoluteBoundingBox": {
+                  "x": -358,
+                  "y": 497,
+                  "width": 640,
+                  "height": 89
+                },
+                "relativeTransform": [
+                  [
+                    1,
+                    0,
+                    512
+                  ],
+                  [
+                    0,
+                    1,
+                    1044
+                  ]
+                ],
+                "fills": [
+                  {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                      "r": 0.27843138575553894,
+                      "g": 0.03921568766236305,
+                      "b": 0.03921568766236305
+                    },
+                    "boundVariables": {}
+                  }
+                ],
+                "strokes": []
+              },
+              {
+                "id": "4:42",
+                "name": "\ud83e\udd86 icon \"chart pie\"",
+                "type": "GROUP",
+                "visible": true,
+                "absoluteBoundingBox": {
+                  "x": -59,
+                  "y": 521,
+                  "width": 43,
+                  "height": 42.999916076660156
+                },
+                "relativeTransform": [
+                  [
+                    1,
+                    0,
+                    811
+                  ],
+                  [
+                    0,
+                    1,
+                    1068
+                  ]
+                ],
+                "children": [
+                  {
+                    "id": "4:39",
+                    "name": "Group",
+                    "type": "GROUP",
+                    "visible": true,
+                    "absoluteBoundingBox": {
+                      "x": -59,
+                      "y": 521,
+                      "width": 43,
+                      "height": 42.999916076660156
+                    },
+                    "relativeTransform": [
+                      [
+                        1,
+                        0,
+                        811
+                      ],
+                      [
+                        0,
+                        1,
+                        1068
+                      ]
+                    ],
+                    "children": [
+                      {
+                        "id": "4:40",
+                        "name": "Vector",
+                        "type": "VECTOR",
+                        "visible": true,
+                        "absoluteBoundingBox": {
+                          "x": -59,
+                          "y": 521,
+                          "width": 43,
+                          "height": 42.999916076660156
+                        },
+                        "relativeTransform": [
+                          [
+                            1,
+                            0,
+                            811
+                          ],
+                          [
+                            0,
+                            1,
+                            1068
+                          ]
+                        ],
+                        "fills": [],
+                        "strokes": [
+                          {
+                            "type": "SOLID",
+                            "visible": true,
+                            "opacity": 1,
+                            "blendMode": "NORMAL",
+                            "color": {
+                              "r": 1,
+                              "g": 1,
+                              "b": 1
+                            },
+                            "boundVariables": {}
+                          }
+                        ]
+                      },
+                      {
+                        "id": "4:41",
+                        "name": "Vector",
+                        "type": "VECTOR",
+                        "visible": true,
+                        "absoluteBoundingBox": {
+                          "x": -30.2456111907959,
+                          "y": 522.095947265625,
+                          "width": 13.149855613708496,
+                          "height": 13.149611473083496
+                        },
+                        "relativeTransform": [
+                          [
+                            1,
+                            0,
+                            839.7543888092041
+                          ],
+                          [
+                            0,
+                            1,
+                            1069.0959721803665
+                          ]
+                        ],
+                        "fills": [],
+                        "strokes": [
+                          {
+                            "type": "SOLID",
+                            "visible": true,
+                            "opacity": 1,
+                            "blendMode": "NORMAL",
+                            "color": {
+                              "r": 1,
+                              "g": 1,
+                              "b": 1
+                            },
+                            "boundVariables": {}
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "4:34",
+                "name": "\ud83e\udd86 icon \"presentation chart line\"",
+                "type": "GROUP",
+                "visible": true,
+                "absoluteBoundingBox": {
+                  "x": -172,
+                  "y": 522,
+                  "width": 44.4705924987793,
+                  "height": 42
+                },
+                "relativeTransform": [
+                  [
+                    1,
+                    0,
+                    698
+                  ],
+                  [
+                    0,
+                    1,
+                    1069
+                  ]
+                ],
+                "children": [
+                  {
+                    "id": "4:33",
+                    "name": "Vector",
+                    "type": "VECTOR",
+                    "visible": true,
+                    "absoluteBoundingBox": {
+                      "x": -172,
+                      "y": 522,
+                      "width": 44.4705924987793,
+                      "height": 42
+                    },
+                    "relativeTransform": [
+                      [
+                        1,
+                        0,
+                        698
+                      ],
+                      [
+                        0,
+                        1,
+                        1069
+                      ]
+                    ],
+                    "fills": [],
+                    "strokes": [
+                      {
+                        "type": "SOLID",
+                        "visible": true,
+                        "opacity": 1,
+                        "blendMode": "NORMAL",
+                        "color": {
+                          "r": 1,
+                          "g": 1,
+                          "b": 1
+                        },
+                        "boundVariables": {}
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "4:31",
+            "name": "\ud83e\udd86 icon \"calculator\"",
+            "type": "GROUP",
+            "visible": true,
+            "absoluteBoundingBox": {
+              "x": 175,
+              "y": 521,
+              "width": 32.66667175292969,
+              "height": 42
+            },
+            "relativeTransform": [
+              [
+                1,
+                0,
+                175
+              ],
+              [
+                0,
+                1,
+                521
+              ]
+            ],
+            "children": [
+              {
+                "id": "4:30",
+                "name": "Vector",
+                "type": "VECTOR",
+                "visible": true,
+                "absoluteBoundingBox": {
+                  "x": 175,
+                  "y": 521,
+                  "width": 32.66667175292969,
+                  "height": 42
+                },
+                "relativeTransform": [
+                  [
+                    1,
+                    0,
+                    175
+                  ],
+                  [
+                    0,
+                    1,
+                    521
+                  ]
+                ],
+                "fills": [],
+                "strokes": [
+                  {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                      "r": 1,
+                      "g": 1,
+                      "b": 1
+                    },
+                    "boundVariables": {}
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "4:28",
+            "name": "\ud83e\udd86 icon \"newspaper\"",
+            "type": "GROUP",
+            "visible": true,
+            "absoluteBoundingBox": {
+              "x": -283,
+              "y": 523,
+              "width": 42.0113525390625,
+              "height": 37.343421936035156
+            },
+            "relativeTransform": [
+              [
+                1,
+                0,
+                -283
+              ],
+              [
+                0,
+                1,
+                523
+              ]
+            ],
+            "children": [
+              {
+                "id": "4:27",
+                "name": "Vector",
+                "type": "VECTOR",
+                "visible": true,
+                "absoluteBoundingBox": {
+                  "x": -283,
+                  "y": 523,
+                  "width": 42.0113525390625,
+                  "height": 37.343421936035156
+                },
+                "relativeTransform": [
+                  [
+                    1,
+                    0,
+                    -283
+                  ],
+                  [
+                    0,
+                    1,
+                    523
+                  ]
+                ],
+                "fills": [],
+                "strokes": [
+                  {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                      "r": 1,
+                      "g": 1,
+                      "b": 1
+                    },
+                    "boundVariables": {}
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "4:37",
+            "name": "\ud83e\udd86 icon \"collection\"",
+            "type": "GROUP",
+            "visible": true,
+            "absoluteBoundingBox": {
+              "x": 64,
+              "y": 523,
+              "width": 37,
+              "height": 37
+            },
+            "relativeTransform": [
+              [
+                1,
+                0,
+                64
+              ],
+              [
+                0,
+                1,
+                523
+              ]
+            ],
+            "children": [
+              {
+                "id": "4:36",
+                "name": "Vector",
+                "type": "VECTOR",
+                "visible": true,
+                "absoluteBoundingBox": {
+                  "x": 64,
+                  "y": 523,
+                  "width": 37,
+                  "height": 37
+                },
+                "relativeTransform": [
+                  [
+                    1,
+                    0,
+                    64
+                  ],
+                  [
+                    0,
+                    1,
+                    523
+                  ]
+                ],
+                "fills": [],
+                "strokes": [
+                  {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                      "r": 1,
+                      "g": 1,
+                      "b": 1
+                    },
+                    "boundVariables": {}
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "25:5",
+            "name": "Breakpoints",
+            "type": "TEXT",
+            "visible": true,
+            "absoluteBoundingBox": {
+              "x": -111.00708770751953,
+              "y": -56.65346145629883,
+              "width": 68,
+              "height": 15
+            },
+            "relativeTransform": [
+              [
+                1,
+                0,
+                -111.00708770751953
+              ],
+              [
+                0,
+                1,
+                -56.65346145629883
+              ]
+            ],
+            "fills": [
+              {
+                "type": "SOLID",
+                "visible": true,
+                "opacity": 1,
+                "blendMode": "NORMAL",
+                "color": {
+                  "r": 0,
+                  "g": 0,
+                  "b": 0
+                },
+                "boundVariables": {}
+              }
+            ],
+            "strokes": [],
+            "characters": "Breakpoints",
+            "fontSize": 12
+          }
+        ]
+      }
+    ]
+  },
+  "source": "figma-plugin",
+  "pageName": "Page 1"
+}

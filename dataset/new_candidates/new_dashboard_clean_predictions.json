@@ -1,0 +1,42 @@
+{
+  "dashboard": "new_dashboard",
+  "source": "dataset\\new_candidates\\new_dashboard_predictions.json",
+  "candidate_count": 1,
+  "predictions": [
+    {
+      "candidate_id": "2:12",
+      "name": "grafico",
+      "type": "FRAME",
+      "parent_id": "2:4",
+      "x": -708.0,
+      "y": 6.0,
+      "width": 1337.0,
+      "height": 459.0,
+      "area": 613683.0,
+      "aspect_ratio": 2.9128540305010895,
+      "child_count": 8,
+      "text_count": 4,
+      "numeric_text_count": 3,
+      "has_percentage": false,
+      "has_date_text": false,
+      "vector_count": 1,
+      "line_count": 3,
+      "ellipse_count": 0,
+      "rectangle_count": 0,
+      "graphical_count": 4,
+      "text_preview": [
+        "100",
+        "50",
+        "0",
+        "Sun Mon Tue Wed Thu Fri Sat"
+      ],
+      "dashboard": "new_dashboard",
+      "candidate_score": 7,
+      "has_chart_word": false,
+      "has_table_word": false,
+      "has_kpi_word": false,
+      "has_filter_word": false,
+      "predicted_type": "CHART"
+    }
+  ]
+}

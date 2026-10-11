@@ -1,0 +1,32 @@
+{
+  "dashboard_id": "2:4",
+  "dashboard_name": "Desktop - 1",
+  "grid": {
+    "columns": 12,
+    "rows": 12
+  },
+  "dashboard_size": {
+    "width": 1440.0,
+    "height": 1024.0
+  },
+  "component_count": 1,
+  "components": [
+    {
+      "candidate_id": "2:12",
+      "name": "grafico",
+      "predicted_type": "CHART",
+      "grid": {
+        "colOffset": 0,
+        "colSpan": 12,
+        "rowOffset": 5,
+        "rowSpan": 7
+      },
+      "position_relative_to_dashboard": {
+        "x": 50.0,
+        "y": 488.0,
+        "width": 1337.0,
+        "height": 459.0
+      }
+    }
+  ]
+}

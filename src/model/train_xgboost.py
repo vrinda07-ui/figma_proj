@@ -1,5 +1,7 @@
 import pandas as pd
 import numpy as np
+import joblib
+from pathlib import Path
 
 from xgboost import XGBClassifier
 from sklearn.model_selection import StratifiedKFold
@@ -154,7 +156,19 @@ final_model.fit(
     y_encoded,
     sample_weight=final_weights
 )
+MODEL_DIR = Path("models")
+MODEL_DIR.mkdir(parents=True, exist_ok=True)
 
+final_model.save_model(MODEL_DIR / "xgboost_model.json")
+
+joblib.dump(
+    encoder,
+    MODEL_DIR / "label_encoder.pkl"
+)
+
+print("\nModel saved successfully.")
+print("Model:", MODEL_DIR / "xgboost_model.json")
+print("Encoder:", MODEL_DIR / "label_encoder.pkl")
 
 # Feature importance
 importance = pd.DataFrame({

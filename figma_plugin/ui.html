@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      font: 13px sans-serif;
+      padding: 16px;
+    }
+    button {
+      width: 100%;
+      padding: 11px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+    #status {
+      margin-top: 14px;
+      overflow-wrap: anywhere;
+    }
+  </style>
+</head>
+<body>
+  <h3>Figma Dashboard Generator</h3>
+  <p>Send the current Figma page to your local Python pipeline.</p>
+  <button id="send">Send current page</button>
+  <div id="status">Ready.</div>
+
+  <script>
+    const status = document.getElementById("status");
+    const button = document.getElementById("send");
+
+    button.onclick = () => {
+      button.disabled = true;
+      status.textContent = "Reading design and sending to Python...";
+      parent.postMessage(
+        { pluginMessage: { type: "send-design" } },
+        "*"
+      );
+    };
+
+    window.onmessage = (event) => {
+      const message = event.data.pluginMessage;
+      if (!message) return;
+
+      status.textContent = message.text;
+      button.disabled = false;
+    };
+  </script>
+</body>
+</html>

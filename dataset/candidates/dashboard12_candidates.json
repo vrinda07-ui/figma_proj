@@ -1,0 +1,35 @@
+{
+  "dashboard": "dashboard12",
+  "candidate_count": 1,
+  "candidates": [
+    {
+      "candidate_id": "1:88",
+      "name": "Group 1",
+      "type": "GROUP",
+      "parent_id": "1:2",
+      "x": -126.082275390625,
+      "y": 175.18353271484375,
+      "width": 378.84814453125,
+      "height": 85.22865295410156,
+      "area": 32288.717032559216,
+      "aspect_ratio": 4.445079575941112,
+      "child_count": 28,
+      "text_count": 0,
+      "numeric_text_count": 0,
+      "has_percentage": false,
+      "has_date_text": false,
+      "vector_count": 28,
+      "line_count": 0,
+      "ellipse_count": 0,
+      "rectangle_count": 0,
+      "graphical_count": 28,
+      "text_preview": [],
+      "dashboard": "dashboard12",
+      "candidate_score": 3,
+      "has_chart_word": false,
+      "has_table_word": false,
+      "has_kpi_word": false,
+      "has_filter_word": false
+    }
+  ]
+}
