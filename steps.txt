@@ -1,0 +1,105 @@
+# Figma-to-Dashboard Classification Pipeline — Execution Steps
+
+**Project directory:** `C:\major_project`
+
+## Step 1: Open the project folder
+Open PowerShell and run:
+
+```powershell
+cd C:\major_project
+```
+
+## Step 2: Start the Figma plugin receiver
+Open a **separate PowerShell terminal** and run:
+
+```powershell
+cd C:\major_project
+python plugin_receiver.py
+```
+
+Keep this terminal running while sending the Figma design data.
+
+*Note: If your receiver script is located elsewhere, use its actual path.*
+
+## Step 3: Send the Figma design
+1. Open the Figma design you want to classify.
+2. Run your Figma plugin.
+3. Send/export the design data through the plugin.
+4. Verify that the received data is saved to:
+
+```text
+dataset\new_dashboard\figma_data.json
+```
+
+Make sure the file contains the **new design**, not an older dashboard's data.
+
+## Step 4: Generate component candidates
+In the main PowerShell terminal, run:
+
+```powershell
+python src\preprocessing\generate_new_candidates.py
+```
+
+Output:
+
+```text
+dataset\new_candidates\new_dashboard_candidates.json
+```
+
+## Step 5: Run the trained XGBoost model
+Run:
+
+```powershell
+python src\model\predict.py
+```
+
+Output:
+
+```text
+dataset\new_candidates\new_dashboard_predictions.json
+```
+
+## Step 6: Clean the predictions
+Run:
+
+```powershell
+python src\output\clean_predictions.py
+```
+
+Output:
+
+```text
+dataset\new_candidates\new_dashboard_clean_predictions.json
+```
+
+## Step 7: Validate the final JSON
+Run:
+
+```powershell
+python -c "import json; p='dataset/new_candidates/new_dashboard_clean_predictions.json'; d=json.load(open(p,encoding='utf-8')); items=d.get('predictions',[]); print('Valid JSON: Yes'); print('Dashboard:',d.get('dashboard')); print('Components:',len(items)); print('Classes:',{k:sum(x.get('predicted_type')==k for x in items) for k in sorted(set(x.get('predicted_type','OTHER') for x in items))}); print('Missing IDs:',sum(not x.get('candidate_id') for x in items)); print('Missing classes:',sum(not x.get('predicted_type') for x in items))"
+```
+
+Check that the JSON is valid, components are present, and IDs and classifications are not missing.
+
+## Step 8: Review the classified components
+Open the final output:
+
+```powershell
+code dataset\new_candidates\new_dashboard_clean_predictions.json
+```
+
+Review the component names, text, and `predicted_type` values. Check for incorrect classifications and duplicate or nested components.
+
+## Final output
+
+Your final classified dashboard JSON is:
+
+```text
+dataset\new_candidates\new_dashboard_clean_predictions.json
+```
+
+The classification labels currently include `CHART`, `KPI_CARD`, and `OTHER`.
+
+**Important:** This pipeline uses the already-trained XGBoost model. You do not need to retrain it every time you process a new Figma design. Retrain only when you intentionally update the training data or model.
+
+**Execution order:** Receiver → Figma plugin → Generate candidates → Predict → Clean predictions → Validate JSON → Review results.
