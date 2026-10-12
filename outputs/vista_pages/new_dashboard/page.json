@@ -1,0 +1,399 @@
+{
+  "schemaVersion": "1.0",
+  "format": "local-dashboard-page",
+  "id": "873dc9b1-a39e-4f06-b5f0-77ab80623946",
+  "contentId": "nt3x8",
+  "slideId": "hryja",
+  "dashboard": {
+    "id": "4:49",
+    "name": "main-content",
+    "columns": 12,
+    "rows": 12,
+    "sourceWidth": 1180.0,
+    "sourceHeight": 1419.0
+  },
+  "tiles": [
+    {
+      "id": "59f7da00-7987-4aff-acb9-4536c98b116c",
+      "contentId": "nt3x8",
+      "slideId": "hryja",
+      "widgetId": "0af0b6bd-64ff-4c87-95a6-61f7675b4085",
+      "grid": {
+        "colOffset": 0,
+        "colSpan": 4,
+        "rowOffset": 0,
+        "rowSpan": 1
+      }
+    },
+    {
+      "id": "5fadf708-7f05-4fe7-88e0-3aaa2171029b",
+      "contentId": "nt3x8",
+      "slideId": "hryja",
+      "widgetId": "813efc23-f9c7-425e-a332-5425c56caa78",
+      "grid": {
+        "colOffset": 0,
+        "colSpan": 4,
+        "rowOffset": 0,
+        "rowSpan": 3
+      }
+    },
+    {
+      "id": "35f26a71-224a-41cb-a77e-ae56d35c172c",
+      "contentId": "nt3x8",
+      "slideId": "hryja",
+      "widgetId": "c58f4a88-5fb7-4fce-95e9-19f51fa6d969",
+      "grid": {
+        "colOffset": 3,
+        "colSpan": 3,
+        "rowOffset": 0,
+        "rowSpan": 3
+      }
+    },
+    {
+      "id": "6e80a818-2ec9-412c-8df4-dbbfdd1e7345",
+      "contentId": "nt3x8",
+      "slideId": "hryja",
+      "widgetId": "82a6617e-e562-4ed4-9028-d5e9f56a20c5",
+      "grid": {
+        "colOffset": 6,
+        "colSpan": 3,
+        "rowOffset": 0,
+        "rowSpan": 3
+      }
+    },
+    {
+      "id": "e3f516ce-2adc-4152-aaa9-c21f356d9886",
+      "contentId": "nt3x8",
+      "slideId": "hryja",
+      "widgetId": "2b4e7b76-4eaa-4f09-84be-94eb944a5247",
+      "grid": {
+        "colOffset": 8,
+        "colSpan": 4,
+        "rowOffset": 0,
+        "rowSpan": 3
+      }
+    },
+    {
+      "id": "cf6cc435-2249-4047-a210-7e130d521a46",
+      "contentId": "nt3x8",
+      "slideId": "hryja",
+      "widgetId": "33f29506-8962-4ec7-aa55-b4fa7ef4c2cb",
+      "grid": {
+        "colOffset": 0,
+        "colSpan": 3,
+        "rowOffset": 1,
+        "rowSpan": 1
+      }
+    },
+    {
+      "id": "53cce3aa-eea5-4efa-8cbc-075930541889",
+      "contentId": "nt3x8",
+      "slideId": "hryja",
+      "widgetId": "8336da99-ea47-4737-a822-d572e0fc7343",
+      "grid": {
+        "colOffset": 3,
+        "colSpan": 3,
+        "rowOffset": 1,
+        "rowSpan": 1
+      }
+    },
+    {
+      "id": "488466f2-746f-467b-a576-17486b0d417d",
+      "contentId": "nt3x8",
+      "slideId": "hryja",
+      "widgetId": "68272076-6c18-491d-80ee-feb32f6dc82f",
+      "grid": {
+        "colOffset": 6,
+        "colSpan": 3,
+        "rowOffset": 1,
+        "rowSpan": 1
+      }
+    },
+    {
+      "id": "c4b41516-2779-48cf-a1b3-f7369011f8c1",
+      "contentId": "nt3x8",
+      "slideId": "hryja",
+      "widgetId": "2afd5148-0805-404c-a9ed-1bb8468c4c0a",
+      "grid": {
+        "colOffset": 9,
+        "colSpan": 3,
+        "rowOffset": 1,
+        "rowSpan": 1
+      }
+    },
+    {
+      "id": "7f982c92-9782-400b-bd0f-f73c7ec77e26",
+      "contentId": "nt3x8",
+      "slideId": "hryja",
+      "widgetId": "9b8431bd-e568-421e-a8cc-b39438ac4220",
+      "grid": {
+        "colOffset": 0,
+        "colSpan": 12,
+        "rowOffset": 2,
+        "rowSpan": 4
+      }
+    },
+    {
+      "id": "0de42ecb-0c14-4be4-b001-3f50a4763af8",
+      "contentId": "nt3x8",
+      "slideId": "hryja",
+      "widgetId": "8446d016-405a-47fd-bd13-c7cc09024017",
+      "grid": {
+        "colOffset": 0,
+        "colSpan": 7,
+        "rowOffset": 5,
+        "rowSpan": 4
+      }
+    },
+    {
+      "id": "9f182154-26b1-42ae-a5f6-51f72c28dd46",
+      "contentId": "nt3x8",
+      "slideId": "hryja",
+      "widgetId": "f7b2b2be-dc1c-4b91-9c0a-cde1f6f15339",
+      "grid": {
+        "colOffset": 7,
+        "colSpan": 5,
+        "rowOffset": 5,
+        "rowSpan": 3
+      }
+    },
+    {
+      "id": "e175031f-16d8-4f44-8f74-735c452774a5",
+      "contentId": "nt3x8",
+      "slideId": "hryja",
+      "widgetId": "2bb48db5-f8bd-4f68-9db5-05f04598f96a",
+      "grid": {
+        "colOffset": 7,
+        "colSpan": 2,
+        "rowOffset": 6,
+        "rowSpan": 2
+      }
+    }
+  ],
+  "widgets": [
+    {
+      "id": "0af0b6bd-64ff-4c87-95a6-61f7675b4085",
+      "type": "KPI_CARD",
+      "title": "Real-time hospital capacity and performance monitor.",
+      "sourceComponentId": "4:51",
+      "grid": {
+        "colOffset": 0,
+        "colSpan": 4,
+        "rowOffset": 0,
+        "rowSpan": 1
+      },
+      "text": [
+        "Real-time hospital capacity and performance monitor.",
+        "Clinical Operations"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "813efc23-f9c7-425e-a332-5425c56caa78",
+      "type": "KPI_CARD",
+      "title": "vs last mo",
+      "sourceComponentId": "4:63",
+      "grid": {
+        "colOffset": 0,
+        "colSpan": 4,
+        "rowOffset": 0,
+        "rowSpan": 3
+      },
+      "text": [
+        "vs last mo",
+        "+12.4%",
+        "3,480",
+        "Total Patients"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "c58f4a88-5fb7-4fce-95e9-19f51fa6d969",
+      "type": "KPI_CARD",
+      "title": "vs last mo",
+      "sourceComponentId": "4:86",
+      "grid": {
+        "colOffset": 3,
+        "colSpan": 3,
+        "rowOffset": 0,
+        "rowSpan": 3
+      },
+      "text": [
+        "vs last mo",
+        "+8.2%",
+        "142",
+        "Appointments Today"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "82a6617e-e562-4ed4-9028-d5e9f56a20c5",
+      "type": "KPI_CARD",
+      "title": "vs last mo",
+      "sourceComponentId": "4:109",
+      "grid": {
+        "colOffset": 6,
+        "colSpan": 3,
+        "rowOffset": 0,
+        "rowSpan": 3
+      },
+      "text": [
+        "vs last mo",
+        "-2.1%",
+        "84.2%",
+        "Bed Occupancy Rate"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "2b4e7b76-4eaa-4f09-84be-94eb944a5247",
+      "type": "KPI_CARD",
+      "title": "vs last mo",
+      "sourceComponentId": "4:132",
+      "grid": {
+        "colOffset": 8,
+        "colSpan": 4,
+        "rowOffset": 0,
+        "rowSpan": 3
+      },
+      "text": [
+        "vs last mo",
+        "+14.5%",
+        "$424,500",
+        "Revenue This Month"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "33f29506-8962-4ec7-aa55-b4fa7ef4c2cb",
+      "type": "KPI_CARD",
+      "title": "3,480",
+      "sourceComponentId": "4:70",
+      "grid": {
+        "colOffset": 0,
+        "colSpan": 3,
+        "rowOffset": 1,
+        "rowSpan": 1
+      },
+      "text": [
+        "3,480"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "8336da99-ea47-4737-a822-d572e0fc7343",
+      "type": "KPI_CARD",
+      "title": "142",
+      "sourceComponentId": "4:93",
+      "grid": {
+        "colOffset": 3,
+        "colSpan": 3,
+        "rowOffset": 1,
+        "rowSpan": 1
+      },
+      "text": [
+        "142"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "68272076-6c18-491d-80ee-feb32f6dc82f",
+      "type": "KPI_CARD",
+      "title": "kpi-middle",
+      "sourceComponentId": "4:116",
+      "grid": {
+        "colOffset": 6,
+        "colSpan": 3,
+        "rowOffset": 1,
+        "rowSpan": 1
+      },
+      "text": [
+        "84.2%"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "2afd5148-0805-404c-a9ed-1bb8468c4c0a",
+      "type": "KPI_CARD",
+      "title": "$424,500",
+      "sourceComponentId": "4:139",
+      "grid": {
+        "colOffset": 9,
+        "colSpan": 3,
+        "rowOffset": 1,
+        "rowSpan": 1
+      },
+      "text": [
+        "$424,500"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "9b8431bd-e568-421e-a8cc-b39438ac4220",
+      "type": "CHART",
+      "title": "Dec",
+      "sourceComponentId": "4:155",
+      "grid": {
+        "colOffset": 0,
+        "colSpan": 12,
+        "rowOffset": 2,
+        "rowSpan": 4
+      },
+      "chartData": [],
+      "chartType": "unconfigured",
+      "needsReview": true
+    },
+    {
+      "id": "8446d016-405a-47fd-bd13-c7cc09024017",
+      "type": "CHART",
+      "title": "145",
+      "sourceComponentId": "4:216",
+      "grid": {
+        "colOffset": 0,
+        "colSpan": 7,
+        "rowOffset": 5,
+        "rowSpan": 4
+      },
+      "chartData": [],
+      "chartType": "unconfigured",
+      "needsReview": true
+    },
+    {
+      "id": "f7b2b2be-dc1c-4b91-9c0a-cde1f6f15339",
+      "type": "CHART",
+      "title": "9%",
+      "sourceComponentId": "4:266",
+      "grid": {
+        "colOffset": 7,
+        "colSpan": 5,
+        "rowOffset": 5,
+        "rowSpan": 3
+      },
+      "chartData": [],
+      "chartType": "unconfigured",
+      "needsReview": true
+    },
+    {
+      "id": "2bb48db5-f8bd-4f68-9db5-05f04598f96a",
+      "type": "KPI_CARD",
+      "title": "775",
+      "sourceComponentId": "4:271",
+      "grid": {
+        "colOffset": 7,
+        "colSpan": 2,
+        "rowOffset": 6,
+        "rowSpan": 2
+      },
+      "text": [
+        "775",
+        "Total Patients"
+      ],
+      "needsReview": true
+    }
+  ],
+  "validation": {
+    "componentCount": 13,
+    "widgetCount": 13,
+    "reviewRequired": 13
+  }
+}

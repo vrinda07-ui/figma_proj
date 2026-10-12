@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Dashboard Generator</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 28px;
+  font-family: Arial, sans-serif;
+  background: #f3f6fb;
+  color: #172033;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+h1 { font-size: 24px; margin: 0 0 6px; }
+.muted { color: #718096; font-size: 13px; }
+button {
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 8px;
+  background: #234bd6;
+  color: white;
+  cursor: pointer;
+}
+#status { margin-bottom: 16px; }
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-auto-rows: minmax(72px, auto);
+  gap: 14px;
+}
+.card {
+  min-width: 0;
+  padding: 16px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px #1720330a;
+  overflow: hidden;
+}
+.card h3 {
+  font-size: 15px;
+  margin: 0 0 14px;
+  overflow-wrap: anywhere;
+}
+.kpi-value {
+  font-size: 27px;
+  font-weight: bold;
+  margin: 12px 0;
+}
+.tag {
+  display: inline-block;
+  padding: 4px 7px;
+  border-radius: 5px;
+  background: #edf2ff;
+  color: #234bd6;
+  font-size: 11px;
+  margin-bottom: 10px;
+}
+.chart-row { margin: 12px 0; }
+.chart-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.bar {
+  height: 8px;
+  background: #e8edf5;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.bar span {
+  display: block;
+  height: 100%;
+  background: #4169e1;
+  border-radius: 8px;
+}
+.review { color: #b7791f; font-size: 11px; margin-top: 12px; }
+.error { color: #b91c1c; }
+@media (max-width: 760px) {
+  body { padding: 14px; }
+  .dashboard { display: flex; flex-direction: column; }
+  .card { min-height: 120px; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1 id="title">AI Dashboard Generator</h1>
+    <div class="muted">Figma → XGBoost → Dashboard Preview</div>
+  </div>
+  <button onclick="loadDashboard()">Reload dashboard</button>
+</header>
+
+<div id="status" class="muted">Loading generated page...</div>
+<div id="dashboard" class="dashboard"></div>
+
+<script>
+const PAGE_URL = "/outputs/vista_pages/new_dashboard/page.json";
+
+function escapeHTML(value) {
+  return String(value ?? "").replace(/[&<>"']/g, ch => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;",
+    '"': "&quot;", "'": "&#39;"
+  }[ch]));
+}
+
+function renderWidget(widget) {
+  const type = escapeHTML(widget.type);
+  let content = "";
+
+  if (type === "CHART") {
+    const data = widget.chartData || [];
+    if (data.length) {
+      const max = Math.max(...data.map(d => Number(d.value)), 1);
+      content = data.map(d => `
+        <div class="chart-row">
+          <div class="chart-label">
+            <span>${escapeHTML(d.label)}</span>
+            <strong>${escapeHTML(d.value)}</strong>
+          </div>
+          <div class="bar">
+            <span style="width:${Math.max(0, Math.min(100,
+              Number(d.value) / max * 100))}%"></span>
+          </div>
+        </div>
+      `).join("");
+    } else {
+      content = `<p class="muted">
+        Chart data was not extracted. Review the source design.
+      </p>`;
+    }
+  } else {
+    const texts = Array.isArray(widget.text) ? widget.text : [];
+    if (type === "KPI_CARD") {
+      const numeric = texts.find(t => /\d/.test(t));
+      content = `
+        <div class="kpi-value">${escapeHTML(numeric || "—")}</div>
+        <div class="muted">${texts.map(escapeHTML).join(" · ")}</div>`;
+    } else if (texts.length) {
+      content = `<p>${texts.map(escapeHTML).join("<br>")}</p>`;
+    } else {
+      content = `<p class="muted">Content needs configuration.</p>`;
+    }
+  }
+
+  return `
+    <section class="card"
+      style="grid-column:${widget.grid.colOffset + 1} / span ${widget.grid.colSpan};
+             grid-row:${widget.grid.rowOffset + 1} / span ${widget.grid.rowSpan}">
+      <span class="tag">${type}</span>
+      <h3>${escapeHTML(widget.title)}</h3>
+      ${content}
+      ${widget.needsReview
+        ? '<div class="review">Review source content</div>' : ''}
+    </section>`;
+}
+
+async function loadDashboard() {
+  const status = document.getElementById("status");
+  const container = document.getElementById("dashboard");
+  status.textContent = "Loading...";
+  container.innerHTML = "";
+
+  try {
+    const response = await fetch(PAGE_URL + "?t=" + Date.now());
+    if (!response.ok) throw new Error("Could not load page.json");
+
+    const page = await response.json();
+    document.getElementById("title").textContent =
+      page.dashboard?.name || "Generated Dashboard";
+
+    if (!Array.isArray(page.widgets) || !page.widgets.length) {
+      throw new Error("No widgets found in the generated page.");
+    }
+
+    container.innerHTML = page.widgets.map(renderWidget).join("");
+    status.textContent =
+      `${page.widgets.length} widgets · ` +
+      `${page.dashboard.columns} × ${page.dashboard.rows} grid`;
+  } catch (error) {
+    status.innerHTML = '<span class="error">' +
+      escapeHTML(error.message) +
+      '</span><p class="muted">Run the local server from the project root.</p>';
+  }
+}
+
+loadDashboard();
+</script>
+</body>
+</html>

@@ -103,3 +103,27 @@ The classification labels currently include `CHART`, `KPI_CARD`, and `OTHER`.
 **Important:** This pipeline uses the already-trained XGBoost model. You do not need to retrain it every time you process a new Figma design. Retrain only when you intentionally update the training data or model.
 
 **Execution order:** Receiver → Figma plugin → Generate candidates → Predict → Clean predictions → Validate JSON → Review results.
+
+
+
+
+
+1. **Generate candidates and predictions:**
+```powershell
+python src\preprocessing\generate_new_candidates.py
+python src\model\predict.py
+python src\output\clean_predictions.py
+```
+2. **Generate the dashboard files:**
+```powershell
+python src\output\generate_grid_layout.py
+python src\output\generate_vista_page.py
+```
+3. **Start the preview server and open the dashboard:**
+```powershell
+python -m http.server 8000
+```
+Open `http://localhost:8000/dashboard_preview.html` and press **Ctrl + F5** to refresh.
+
+
+http://localhost:8000/dashboard_preview.html
