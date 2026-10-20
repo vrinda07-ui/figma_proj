@@ -1,399 +1,1344 @@
 {
+  "contentId": "EC001",
+  "slideId": "EC001",
+  "pageId": "87f97816-821b-4194-8366-b71e4465144f",
+  "id": "87f97816-821b-4194-8366-b71e4465144f",
+  "title": "E-commerce Revenue Summary",
+  "description": " ",
+  "subjectArea": "sales",
+  "topic": "ecommerce",
+  "slideName": "revenue-summary",
   "schemaVersion": "1.0",
   "format": "local-dashboard-page",
-  "id": "873dc9b1-a39e-4f06-b5f0-77ab80623946",
-  "contentId": "nt3x8",
-  "slideId": "hryja",
   "dashboard": {
-    "id": "4:49",
-    "name": "main-content",
+    "id": "1607:2230",
+    "name": "E-commerce Revenue Summary",
     "columns": 12,
     "rows": 12,
-    "sourceWidth": 1180.0,
-    "sourceHeight": 1419.0
+    "sourceWidth": 1440.0,
+    "sourceHeight": 1080.0
   },
   "tiles": [
     {
-      "id": "59f7da00-7987-4aff-acb9-4536c98b116c",
-      "contentId": "nt3x8",
-      "slideId": "hryja",
-      "widgetId": "0af0b6bd-64ff-4c87-95a6-61f7675b4085",
+      "tileId": "78e9b308-6507-4bb8-b57c-c1e48c4d66bb",
+      "id": "78e9b308-6507-4bb8-b57c-c1e48c4d66bb",
+      "contentId": "EC001",
+      "slideId": "EC001",
+      "cols": 2,
+      "rows": 5,
+      "colOffset": 0,
+      "rowOffset": 1,
+      "widgetIds": [
+        "185ef128-e871-4985-a933-13b6ff668e83"
+      ],
+      "widgetId": "185ef128-e871-4985-a933-13b6ff668e83",
       "grid": {
         "colOffset": 0,
-        "colSpan": 4,
-        "rowOffset": 0,
-        "rowSpan": 1
+        "colSpan": 2,
+        "rowOffset": 1,
+        "rowSpan": 5
       }
     },
     {
-      "id": "5fadf708-7f05-4fe7-88e0-3aaa2171029b",
-      "contentId": "nt3x8",
-      "slideId": "hryja",
-      "widgetId": "813efc23-f9c7-425e-a332-5425c56caa78",
+      "tileId": "99d1c667-d50a-40cb-bbc0-8878a85c8cba",
+      "id": "99d1c667-d50a-40cb-bbc0-8878a85c8cba",
+      "contentId": "EC001",
+      "slideId": "EC001",
+      "cols": 3,
+      "rows": 2,
+      "colOffset": 2,
+      "rowOffset": 2,
+      "widgetIds": [
+        "5b4578e1-8dcc-4405-9e88-88282e64b6b9"
+      ],
+      "widgetId": "5b4578e1-8dcc-4405-9e88-88282e64b6b9",
       "grid": {
-        "colOffset": 0,
-        "colSpan": 4,
-        "rowOffset": 0,
-        "rowSpan": 3
-      }
-    },
-    {
-      "id": "35f26a71-224a-41cb-a77e-ae56d35c172c",
-      "contentId": "nt3x8",
-      "slideId": "hryja",
-      "widgetId": "c58f4a88-5fb7-4fce-95e9-19f51fa6d969",
-      "grid": {
-        "colOffset": 3,
+        "colOffset": 2,
         "colSpan": 3,
-        "rowOffset": 0,
-        "rowSpan": 3
+        "rowOffset": 2,
+        "rowSpan": 2
       }
     },
     {
-      "id": "6e80a818-2ec9-412c-8df4-dbbfdd1e7345",
-      "contentId": "nt3x8",
-      "slideId": "hryja",
-      "widgetId": "82a6617e-e562-4ed4-9028-d5e9f56a20c5",
+      "tileId": "a62d9f2f-5586-4b17-80d7-cefb392158f4",
+      "id": "a62d9f2f-5586-4b17-80d7-cefb392158f4",
+      "contentId": "EC001",
+      "slideId": "EC001",
+      "cols": 3,
+      "rows": 2,
+      "colOffset": 4,
+      "rowOffset": 2,
+      "widgetIds": [
+        "595c616c-655e-4bb2-8205-d9f43c137236"
+      ],
+      "widgetId": "595c616c-655e-4bb2-8205-d9f43c137236",
+      "grid": {
+        "colOffset": 4,
+        "colSpan": 3,
+        "rowOffset": 2,
+        "rowSpan": 2
+      }
+    },
+    {
+      "tileId": "85d5030f-78df-45cc-81d2-00bc1ff2a05c",
+      "id": "85d5030f-78df-45cc-81d2-00bc1ff2a05c",
+      "contentId": "EC001",
+      "slideId": "EC001",
+      "cols": 4,
+      "rows": 2,
+      "colOffset": 6,
+      "rowOffset": 2,
+      "widgetIds": [
+        "cad5a432-dbfb-40f1-b031-8fc1a3e3316c"
+      ],
+      "widgetId": "cad5a432-dbfb-40f1-b031-8fc1a3e3316c",
       "grid": {
         "colOffset": 6,
-        "colSpan": 3,
-        "rowOffset": 0,
-        "rowSpan": 3
-      }
-    },
-    {
-      "id": "e3f516ce-2adc-4152-aaa9-c21f356d9886",
-      "contentId": "nt3x8",
-      "slideId": "hryja",
-      "widgetId": "2b4e7b76-4eaa-4f09-84be-94eb944a5247",
-      "grid": {
-        "colOffset": 8,
         "colSpan": 4,
-        "rowOffset": 0,
-        "rowSpan": 3
+        "rowOffset": 2,
+        "rowSpan": 2
       }
     },
     {
-      "id": "cf6cc435-2249-4047-a210-7e130d521a46",
-      "contentId": "nt3x8",
-      "slideId": "hryja",
-      "widgetId": "33f29506-8962-4ec7-aa55-b4fa7ef4c2cb",
-      "grid": {
-        "colOffset": 0,
-        "colSpan": 3,
-        "rowOffset": 1,
-        "rowSpan": 1
-      }
-    },
-    {
-      "id": "53cce3aa-eea5-4efa-8cbc-075930541889",
-      "contentId": "nt3x8",
-      "slideId": "hryja",
-      "widgetId": "8336da99-ea47-4737-a822-d572e0fc7343",
-      "grid": {
-        "colOffset": 3,
-        "colSpan": 3,
-        "rowOffset": 1,
-        "rowSpan": 1
-      }
-    },
-    {
-      "id": "488466f2-746f-467b-a576-17486b0d417d",
-      "contentId": "nt3x8",
-      "slideId": "hryja",
-      "widgetId": "68272076-6c18-491d-80ee-feb32f6dc82f",
-      "grid": {
-        "colOffset": 6,
-        "colSpan": 3,
-        "rowOffset": 1,
-        "rowSpan": 1
-      }
-    },
-    {
-      "id": "c4b41516-2779-48cf-a1b3-f7369011f8c1",
-      "contentId": "nt3x8",
-      "slideId": "hryja",
-      "widgetId": "2afd5148-0805-404c-a9ed-1bb8468c4c0a",
+      "tileId": "f7fc2f4d-d437-4afe-b668-1948a464237d",
+      "id": "f7fc2f4d-d437-4afe-b668-1948a464237d",
+      "contentId": "EC001",
+      "slideId": "EC001",
+      "cols": 3,
+      "rows": 2,
+      "colOffset": 9,
+      "rowOffset": 2,
+      "widgetIds": [
+        "ce8396eb-881d-4cd6-8cff-67ad94da3011"
+      ],
+      "widgetId": "ce8396eb-881d-4cd6-8cff-67ad94da3011",
       "grid": {
         "colOffset": 9,
         "colSpan": 3,
-        "rowOffset": 1,
-        "rowSpan": 1
-      }
-    },
-    {
-      "id": "7f982c92-9782-400b-bd0f-f73c7ec77e26",
-      "contentId": "nt3x8",
-      "slideId": "hryja",
-      "widgetId": "9b8431bd-e568-421e-a8cc-b39438ac4220",
-      "grid": {
-        "colOffset": 0,
-        "colSpan": 12,
         "rowOffset": 2,
-        "rowSpan": 4
+        "rowSpan": 2
       }
     },
     {
-      "id": "0de42ecb-0c14-4be4-b001-3f50a4763af8",
-      "contentId": "nt3x8",
-      "slideId": "hryja",
-      "widgetId": "8446d016-405a-47fd-bd13-c7cc09024017",
+      "tileId": "edcc76e3-0679-4dca-9a9a-8abf58395016",
+      "id": "edcc76e3-0679-4dca-9a9a-8abf58395016",
+      "contentId": "EC001",
+      "slideId": "EC001",
+      "cols": 10,
+      "rows": 6,
+      "colOffset": 2,
+      "rowOffset": 6,
+      "widgetIds": [
+        "dea7c803-5bb1-4c68-b088-5c7e042567b8"
+      ],
+      "widgetId": "dea7c803-5bb1-4c68-b088-5c7e042567b8",
       "grid": {
-        "colOffset": 0,
-        "colSpan": 7,
-        "rowOffset": 5,
-        "rowSpan": 4
+        "colOffset": 2,
+        "colSpan": 10,
+        "rowOffset": 6,
+        "rowSpan": 6
       }
     },
     {
-      "id": "9f182154-26b1-42ae-a5f6-51f72c28dd46",
-      "contentId": "nt3x8",
-      "slideId": "hryja",
-      "widgetId": "f7b2b2be-dc1c-4b91-9c0a-cde1f6f15339",
+      "tileId": "941bd541-f578-4e50-8866-d2a859e5c17c",
+      "id": "941bd541-f578-4e50-8866-d2a859e5c17c",
+      "contentId": "EC001",
+      "slideId": "EC001",
+      "cols": 2,
+      "rows": 5,
+      "colOffset": 2,
+      "rowOffset": 7,
+      "widgetIds": [
+        "af18c7b2-a77e-4d2f-99eb-bb6652f39629"
+      ],
+      "widgetId": "af18c7b2-a77e-4d2f-99eb-bb6652f39629",
       "grid": {
-        "colOffset": 7,
-        "colSpan": 5,
-        "rowOffset": 5,
-        "rowSpan": 3
+        "colOffset": 2,
+        "colSpan": 2,
+        "rowOffset": 7,
+        "rowSpan": 5
       }
     },
     {
-      "id": "e175031f-16d8-4f44-8f74-735c452774a5",
-      "contentId": "nt3x8",
-      "slideId": "hryja",
-      "widgetId": "2bb48db5-f8bd-4f68-9db5-05f04598f96a",
+      "tileId": "460e354a-517a-4ebc-856f-be79683946c6",
+      "id": "460e354a-517a-4ebc-856f-be79683946c6",
+      "contentId": "EC001",
+      "slideId": "EC001",
+      "cols": 2,
+      "rows": 5,
+      "colOffset": 3,
+      "rowOffset": 7,
+      "widgetIds": [
+        "d84735de-47f6-447f-8b3b-ddc5c25920cf"
+      ],
+      "widgetId": "d84735de-47f6-447f-8b3b-ddc5c25920cf",
+      "grid": {
+        "colOffset": 3,
+        "colSpan": 2,
+        "rowOffset": 7,
+        "rowSpan": 5
+      }
+    },
+    {
+      "tileId": "b965109a-aa89-4774-99d1-e31e06c8f2ae",
+      "id": "b965109a-aa89-4774-99d1-e31e06c8f2ae",
+      "contentId": "EC001",
+      "slideId": "EC001",
+      "cols": 3,
+      "rows": 5,
+      "colOffset": 4,
+      "rowOffset": 7,
+      "widgetIds": [
+        "6c8fdaf9-06be-4493-be35-208dc460a17a"
+      ],
+      "widgetId": "6c8fdaf9-06be-4493-be35-208dc460a17a",
+      "grid": {
+        "colOffset": 4,
+        "colSpan": 3,
+        "rowOffset": 7,
+        "rowSpan": 5
+      }
+    },
+    {
+      "tileId": "345e2c3b-f44f-437f-aadf-cfbee16f5ba4",
+      "id": "345e2c3b-f44f-437f-aadf-cfbee16f5ba4",
+      "contentId": "EC001",
+      "slideId": "EC001",
+      "cols": 2,
+      "rows": 5,
+      "colOffset": 6,
+      "rowOffset": 7,
+      "widgetIds": [
+        "53d67d6c-f5cd-480a-9fcb-95bfeb0f9c9c"
+      ],
+      "widgetId": "53d67d6c-f5cd-480a-9fcb-95bfeb0f9c9c",
+      "grid": {
+        "colOffset": 6,
+        "colSpan": 2,
+        "rowOffset": 7,
+        "rowSpan": 5
+      }
+    },
+    {
+      "tileId": "742d30da-dfa4-438b-8eba-6a3ea531cc74",
+      "id": "742d30da-dfa4-438b-8eba-6a3ea531cc74",
+      "contentId": "EC001",
+      "slideId": "EC001",
+      "cols": 2,
+      "rows": 5,
+      "colOffset": 7,
+      "rowOffset": 7,
+      "widgetIds": [
+        "cd8c9136-04e1-4f9f-ac07-2041866799e7"
+      ],
+      "widgetId": "cd8c9136-04e1-4f9f-ac07-2041866799e7",
       "grid": {
         "colOffset": 7,
         "colSpan": 2,
-        "rowOffset": 6,
-        "rowSpan": 2
+        "rowOffset": 7,
+        "rowSpan": 5
+      }
+    },
+    {
+      "tileId": "e1b68a6d-5f13-49c4-af19-a3b5f0a0e4dc",
+      "id": "e1b68a6d-5f13-49c4-af19-a3b5f0a0e4dc",
+      "contentId": "EC001",
+      "slideId": "EC001",
+      "cols": 2,
+      "rows": 5,
+      "colOffset": 10,
+      "rowOffset": 7,
+      "widgetIds": [
+        "525f98a0-6330-4823-901d-1b04307a557c"
+      ],
+      "widgetId": "525f98a0-6330-4823-901d-1b04307a557c",
+      "grid": {
+        "colOffset": 10,
+        "colSpan": 2,
+        "rowOffset": 7,
+        "rowSpan": 5
       }
     }
   ],
   "widgets": [
     {
-      "id": "0af0b6bd-64ff-4c87-95a6-61f7675b4085",
-      "type": "KPI_CARD",
-      "title": "Real-time hospital capacity and performance monitor.",
-      "sourceComponentId": "4:51",
+      "id": "185ef128-e871-4985-a933-13b6ff668e83",
+      "widgetId": "185ef128-e871-4985-a933-13b6ff668e83",
+      "type": "column2d",
+      "componentType": "KPI_CARD",
+      "title": "Reports",
+      "sourceComponentId": "1607:2240",
       "grid": {
         "colOffset": 0,
-        "colSpan": 4,
-        "rowOffset": 0,
-        "rowSpan": 1
-      },
-      "text": [
-        "Real-time hospital capacity and performance monitor.",
-        "Clinical Operations"
-      ],
-      "needsReview": true
-    },
-    {
-      "id": "813efc23-f9c7-425e-a332-5425c56caa78",
-      "type": "KPI_CARD",
-      "title": "vs last mo",
-      "sourceComponentId": "4:63",
-      "grid": {
-        "colOffset": 0,
-        "colSpan": 4,
-        "rowOffset": 0,
-        "rowSpan": 3
-      },
-      "text": [
-        "vs last mo",
-        "+12.4%",
-        "3,480",
-        "Total Patients"
-      ],
-      "needsReview": true
-    },
-    {
-      "id": "c58f4a88-5fb7-4fce-95e9-19f51fa6d969",
-      "type": "KPI_CARD",
-      "title": "vs last mo",
-      "sourceComponentId": "4:86",
-      "grid": {
-        "colOffset": 3,
-        "colSpan": 3,
-        "rowOffset": 0,
-        "rowSpan": 3
-      },
-      "text": [
-        "vs last mo",
-        "+8.2%",
-        "142",
-        "Appointments Today"
-      ],
-      "needsReview": true
-    },
-    {
-      "id": "82a6617e-e562-4ed4-9028-d5e9f56a20c5",
-      "type": "KPI_CARD",
-      "title": "vs last mo",
-      "sourceComponentId": "4:109",
-      "grid": {
-        "colOffset": 6,
-        "colSpan": 3,
-        "rowOffset": 0,
-        "rowSpan": 3
-      },
-      "text": [
-        "vs last mo",
-        "-2.1%",
-        "84.2%",
-        "Bed Occupancy Rate"
-      ],
-      "needsReview": true
-    },
-    {
-      "id": "2b4e7b76-4eaa-4f09-84be-94eb944a5247",
-      "type": "KPI_CARD",
-      "title": "vs last mo",
-      "sourceComponentId": "4:132",
-      "grid": {
-        "colOffset": 8,
-        "colSpan": 4,
-        "rowOffset": 0,
-        "rowSpan": 3
-      },
-      "text": [
-        "vs last mo",
-        "+14.5%",
-        "$424,500",
-        "Revenue This Month"
-      ],
-      "needsReview": true
-    },
-    {
-      "id": "33f29506-8962-4ec7-aa55-b4fa7ef4c2cb",
-      "type": "KPI_CARD",
-      "title": "3,480",
-      "sourceComponentId": "4:70",
-      "grid": {
-        "colOffset": 0,
-        "colSpan": 3,
-        "rowOffset": 1,
-        "rowSpan": 1
-      },
-      "text": [
-        "3,480"
-      ],
-      "needsReview": true
-    },
-    {
-      "id": "8336da99-ea47-4737-a822-d572e0fc7343",
-      "type": "KPI_CARD",
-      "title": "142",
-      "sourceComponentId": "4:93",
-      "grid": {
-        "colOffset": 3,
-        "colSpan": 3,
-        "rowOffset": 1,
-        "rowSpan": 1
-      },
-      "text": [
-        "142"
-      ],
-      "needsReview": true
-    },
-    {
-      "id": "68272076-6c18-491d-80ee-feb32f6dc82f",
-      "type": "KPI_CARD",
-      "title": "kpi-middle",
-      "sourceComponentId": "4:116",
-      "grid": {
-        "colOffset": 6,
-        "colSpan": 3,
-        "rowOffset": 1,
-        "rowSpan": 1
-      },
-      "text": [
-        "84.2%"
-      ],
-      "needsReview": true
-    },
-    {
-      "id": "2afd5148-0805-404c-a9ed-1bb8468c4c0a",
-      "type": "KPI_CARD",
-      "title": "$424,500",
-      "sourceComponentId": "4:139",
-      "grid": {
-        "colOffset": 9,
-        "colSpan": 3,
-        "rowOffset": 1,
-        "rowSpan": 1
-      },
-      "text": [
-        "$424,500"
-      ],
-      "needsReview": true
-    },
-    {
-      "id": "9b8431bd-e568-421e-a8cc-b39438ac4220",
-      "type": "CHART",
-      "title": "Dec",
-      "sourceComponentId": "4:155",
-      "grid": {
-        "colOffset": 0,
-        "colSpan": 12,
-        "rowOffset": 2,
-        "rowSpan": 4
-      },
-      "chartData": [],
-      "chartType": "unconfigured",
-      "needsReview": true
-    },
-    {
-      "id": "8446d016-405a-47fd-bd13-c7cc09024017",
-      "type": "CHART",
-      "title": "145",
-      "sourceComponentId": "4:216",
-      "grid": {
-        "colOffset": 0,
-        "colSpan": 7,
-        "rowOffset": 5,
-        "rowSpan": 4
-      },
-      "chartData": [],
-      "chartType": "unconfigured",
-      "needsReview": true
-    },
-    {
-      "id": "f7b2b2be-dc1c-4b91-9c0a-cde1f6f15339",
-      "type": "CHART",
-      "title": "9%",
-      "sourceComponentId": "4:266",
-      "grid": {
-        "colOffset": 7,
-        "colSpan": 5,
-        "rowOffset": 5,
-        "rowSpan": 3
-      },
-      "chartData": [],
-      "chartType": "unconfigured",
-      "needsReview": true
-    },
-    {
-      "id": "2bb48db5-f8bd-4f68-9db5-05f04598f96a",
-      "type": "KPI_CARD",
-      "title": "775",
-      "sourceComponentId": "4:271",
-      "grid": {
-        "colOffset": 7,
         "colSpan": 2,
-        "rowOffset": 6,
+        "rowOffset": 1,
+        "rowSpan": 5
+      },
+      "text": [
+        "Reports",
+        "Care gaps",
+        "Prescriptions",
+        "Claims",
+        "Members",
+        "Overview",
+        "WORKSPACE"
+      ],
+      "needsReview": false,
+      "kpiValue": "—",
+      "kpiLabel": "Reports",
+      "trend": "",
+      "chart": {
+        "showLabels": "0",
+        "showValues": "0",
+        "showLegend": "0",
+        "showXAxisLine": "0",
+        "showYAxisLine": "0",
+        "plotFillAlpha": "0",
+        "plotHoverEffect": "0",
+        "theme": "fusion,evernorth-light"
+      },
+      "annotations": {
+        "groups": [
+          {
+            "id": "kpi-group",
+            "textAlign": "center",
+            "font": "Montserrat",
+            "fontSize": "14",
+            "color": "#172033",
+            "items": [
+              {
+                "id": "lbl-1",
+                "type": "text",
+                "text": "Reports",
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+30"
+              },
+              {
+                "id": "val-1",
+                "type": "text",
+                "text": "—",
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+65",
+                "fontSize": "26",
+                "bold": "1"
+              },
+              {
+                "id": "trend-1",
+                "type": "text",
+                "text": "",
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+95",
+                "fontSize": "12",
+                "color": "#718096"
+              }
+            ]
+          }
+        ]
+      },
+      "dataRequest": {
+        "moduleCode": "CMP",
+        "type": "static",
+        "staticData": [
+          {
+            "id": "185ef128-e871-4985-a933-13b6ff668e83",
+            "label": "kpi-185ef128",
+            "data": [
+              {
+                "label": "Metric",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "5b4578e1-8dcc-4405-9e88-88282e64b6b9",
+      "widgetId": "5b4578e1-8dcc-4405-9e88-88282e64b6b9",
+      "type": "column2d",
+      "componentType": "KPI_CARD",
+      "title": "↑ 8.8%",
+      "sourceComponentId": "1607:2326",
+      "grid": {
+        "colOffset": 2,
+        "colSpan": 3,
+        "rowOffset": 2,
         "rowSpan": 2
       },
       "text": [
-        "775",
-        "Total Patients"
+        "vs. prior period",
+        "↑ 8.8%",
+        "248",
+        "Appointments today"
       ],
-      "needsReview": true
+      "needsReview": false,
+      "kpiValue": "↑ 8.8%",
+      "kpiLabel": "vs. prior period",
+      "trend": "",
+      "chart": {
+        "showLabels": "0",
+        "showValues": "0",
+        "showLegend": "0",
+        "showXAxisLine": "0",
+        "showYAxisLine": "0",
+        "plotFillAlpha": "0",
+        "plotHoverEffect": "0",
+        "theme": "fusion,evernorth-light"
+      },
+      "annotations": {
+        "groups": [
+          {
+            "id": "kpi-group",
+            "textAlign": "center",
+            "font": "Montserrat",
+            "fontSize": "14",
+            "color": "#172033",
+            "items": [
+              {
+                "id": "lbl-1",
+                "type": "text",
+                "text": "vs. prior period",
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+30"
+              },
+              {
+                "id": "val-1",
+                "type": "text",
+                "text": "↑ 8.8%",
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+65",
+                "fontSize": "26",
+                "bold": "1"
+              },
+              {
+                "id": "trend-1",
+                "type": "text",
+                "text": "",
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+95",
+                "fontSize": "12",
+                "color": "#718096"
+              }
+            ]
+          }
+        ]
+      },
+      "dataRequest": {
+        "moduleCode": "CMP",
+        "type": "static",
+        "staticData": [
+          {
+            "id": "5b4578e1-8dcc-4405-9e88-88282e64b6b9",
+            "label": "kpi-5b4578e1",
+            "data": [
+              {
+                "label": "Metric",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "595c616c-655e-4bb2-8205-d9f43c137236",
+      "widgetId": "595c616c-655e-4bb2-8205-d9f43c137236",
+      "type": "column2d",
+      "componentType": "KPI_CARD",
+      "title": "↓ 1.3 pp",
+      "sourceComponentId": "1607:2327",
+      "grid": {
+        "colOffset": 4,
+        "colSpan": 3,
+        "rowOffset": 2,
+        "rowSpan": 2
+      },
+      "text": [
+        "vs. prior period",
+        "↓ 1.3 pp",
+        "4.2%",
+        "No-show rate"
+      ],
+      "needsReview": false,
+      "kpiValue": "↓ 1.3 pp",
+      "kpiLabel": "vs. prior period",
+      "trend": "4.2%",
+      "chart": {
+        "showLabels": "0",
+        "showValues": "0",
+        "showLegend": "0",
+        "showXAxisLine": "0",
+        "showYAxisLine": "0",
+        "plotFillAlpha": "0",
+        "plotHoverEffect": "0",
+        "theme": "fusion,evernorth-light"
+      },
+      "annotations": {
+        "groups": [
+          {
+            "id": "kpi-group",
+            "textAlign": "center",
+            "font": "Montserrat",
+            "fontSize": "14",
+            "color": "#172033",
+            "items": [
+              {
+                "id": "lbl-1",
+                "type": "text",
+                "text": "vs. prior period",
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+30"
+              },
+              {
+                "id": "val-1",
+                "type": "text",
+                "text": "↓ 1.3 pp",
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+65",
+                "fontSize": "26",
+                "bold": "1"
+              },
+              {
+                "id": "trend-1",
+                "type": "text",
+                "text": "4.2%",
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+95",
+                "fontSize": "12",
+                "color": "#718096"
+              }
+            ]
+          }
+        ]
+      },
+      "dataRequest": {
+        "moduleCode": "CMP",
+        "type": "static",
+        "staticData": [
+          {
+            "id": "595c616c-655e-4bb2-8205-d9f43c137236",
+            "label": "kpi-595c616c",
+            "data": [
+              {
+                "label": "Metric",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cad5a432-dbfb-40f1-b031-8fc1a3e3316c",
+      "widgetId": "cad5a432-dbfb-40f1-b031-8fc1a3e3316c",
+      "type": "column2d",
+      "componentType": "KPI_CARD",
+      "title": "↓ 3 min",
+      "sourceComponentId": "1607:2328",
+      "grid": {
+        "colOffset": 6,
+        "colSpan": 4,
+        "rowOffset": 2,
+        "rowSpan": 2
+      },
+      "text": [
+        "vs. prior period",
+        "↓ 3 min",
+        "14 min",
+        "Avg wait time"
+      ],
+      "needsReview": false,
+      "kpiValue": "↓ 3 min",
+      "kpiLabel": "vs. prior period",
+      "trend": "",
+      "chart": {
+        "showLabels": "0",
+        "showValues": "0",
+        "showLegend": "0",
+        "showXAxisLine": "0",
+        "showYAxisLine": "0",
+        "plotFillAlpha": "0",
+        "plotHoverEffect": "0",
+        "theme": "fusion,evernorth-light"
+      },
+      "annotations": {
+        "groups": [
+          {
+            "id": "kpi-group",
+            "textAlign": "center",
+            "font": "Montserrat",
+            "fontSize": "14",
+            "color": "#172033",
+            "items": [
+              {
+                "id": "lbl-1",
+                "type": "text",
+                "text": "vs. prior period",
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+30"
+              },
+              {
+                "id": "val-1",
+                "type": "text",
+                "text": "↓ 3 min",
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+65",
+                "fontSize": "26",
+                "bold": "1"
+              },
+              {
+                "id": "trend-1",
+                "type": "text",
+                "text": "",
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+95",
+                "fontSize": "12",
+                "color": "#718096"
+              }
+            ]
+          }
+        ]
+      },
+      "dataRequest": {
+        "moduleCode": "CMP",
+        "type": "static",
+        "staticData": [
+          {
+            "id": "cad5a432-dbfb-40f1-b031-8fc1a3e3316c",
+            "label": "kpi-cad5a432",
+            "data": [
+              {
+                "label": "Metric",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ce8396eb-881d-4cd6-8cff-67ad94da3011",
+      "widgetId": "ce8396eb-881d-4cd6-8cff-67ad94da3011",
+      "type": "column2d",
+      "componentType": "KPI_CARD",
+      "title": "↑ 4.1 pp",
+      "sourceComponentId": "1607:2329",
+      "grid": {
+        "colOffset": 9,
+        "colSpan": 3,
+        "rowOffset": 2,
+        "rowSpan": 2
+      },
+      "text": [
+        "vs. prior period",
+        "↑ 4.1 pp",
+        "89.6%",
+        "Utilisation %"
+      ],
+      "needsReview": false,
+      "kpiValue": "↑ 4.1 pp",
+      "kpiLabel": "vs. prior period",
+      "trend": "89.6%",
+      "chart": {
+        "showLabels": "0",
+        "showValues": "0",
+        "showLegend": "0",
+        "showXAxisLine": "0",
+        "showYAxisLine": "0",
+        "plotFillAlpha": "0",
+        "plotHoverEffect": "0",
+        "theme": "fusion,evernorth-light"
+      },
+      "annotations": {
+        "groups": [
+          {
+            "id": "kpi-group",
+            "textAlign": "center",
+            "font": "Montserrat",
+            "fontSize": "14",
+            "color": "#172033",
+            "items": [
+              {
+                "id": "lbl-1",
+                "type": "text",
+                "text": "vs. prior period",
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+30"
+              },
+              {
+                "id": "val-1",
+                "type": "text",
+                "text": "↑ 4.1 pp",
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+65",
+                "fontSize": "26",
+                "bold": "1"
+              },
+              {
+                "id": "trend-1",
+                "type": "text",
+                "text": "89.6%",
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+95",
+                "fontSize": "12",
+                "color": "#718096"
+              }
+            ]
+          }
+        ]
+      },
+      "dataRequest": {
+        "moduleCode": "CMP",
+        "type": "static",
+        "staticData": [
+          {
+            "id": "ce8396eb-881d-4cd6-8cff-67ad94da3011",
+            "label": "kpi-ce8396eb",
+            "data": [
+              {
+                "label": "Metric",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "dea7c803-5bb1-4c68-b088-5c7e042567b8",
+      "widgetId": "dea7c803-5bb1-4c68-b088-5c7e042567b8",
+      "type": "column2d",
+      "componentType": "CHART",
+      "title": "3",
+      "sourceComponentId": "1607:2379",
+      "grid": {
+        "colOffset": 2,
+        "colSpan": 10,
+        "rowOffset": 6,
+        "rowSpan": 6
+      },
+      "text": [
+        "3",
+        "2",
+        "1",
+        "Rows per page: 10",
+        "Showing 1–10 of 248 appointments",
+        "30 min",
+        "30 min",
+        "15 min",
+        "30 min",
+        "30 min"
+      ],
+      "needsReview": false,
+      "chartData": [
+        {
+          "label": "Rows per page",
+          "value": 10.0
+        }
+      ],
+      "chart": {
+        "showValues": "1",
+        "showLegend": "0",
+        "theme": "fusion,evernorth-light",
+        "caption": "3"
+      },
+      "dataRequest": {
+        "moduleCode": "CMP",
+        "type": "static",
+        "staticData": [
+          {
+            "id": "dea7c803-5bb1-4c68-b088-5c7e042567b8",
+            "label": "widget-dea7c803",
+            "data": [
+              {
+                "label": "Rows per page",
+                "value": 10.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "af18c7b2-a77e-4d2f-99eb-bb6652f39629",
+      "widgetId": "af18c7b2-a77e-4d2f-99eb-bb6652f39629",
+      "type": "column2d",
+      "componentType": "KPI_CARD",
+      "title": "11:00",
+      "sourceComponentId": "1607:2384",
+      "grid": {
+        "colOffset": 2,
+        "colSpan": 2,
+        "rowOffset": 7,
+        "rowSpan": 5
+      },
+      "text": [
+        "11:00",
+        "10:30",
+        "10:15",
+        "10:00",
+        "09:30",
+        "09:15",
+        "09:00",
+        "08:30",
+        "08:15",
+        "08:00"
+      ],
+      "needsReview": false,
+      "kpiValue": "11:00",
+      "kpiLabel": "10:30",
+      "trend": "",
+      "chart": {
+        "showLabels": "0",
+        "showValues": "0",
+        "showLegend": "0",
+        "showXAxisLine": "0",
+        "showYAxisLine": "0",
+        "plotFillAlpha": "0",
+        "plotHoverEffect": "0",
+        "theme": "fusion,evernorth-light"
+      },
+      "annotations": {
+        "groups": [
+          {
+            "id": "kpi-group",
+            "textAlign": "center",
+            "font": "Montserrat",
+            "fontSize": "14",
+            "color": "#172033",
+            "items": [
+              {
+                "id": "lbl-1",
+                "type": "text",
+                "text": "10:30",
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+30"
+              },
+              {
+                "id": "val-1",
+                "type": "text",
+                "text": "11:00",
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+65",
+                "fontSize": "26",
+                "bold": "1"
+              },
+              {
+                "id": "trend-1",
+                "type": "text",
+                "text": "",
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+95",
+                "fontSize": "12",
+                "color": "#718096"
+              }
+            ]
+          }
+        ]
+      },
+      "dataRequest": {
+        "moduleCode": "CMP",
+        "type": "static",
+        "staticData": [
+          {
+            "id": "af18c7b2-a77e-4d2f-99eb-bb6652f39629",
+            "label": "kpi-af18c7b2",
+            "data": [
+              {
+                "label": "Metric",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "d84735de-47f6-447f-8b3b-ddc5c25920cf",
+      "widgetId": "d84735de-47f6-447f-8b3b-ddc5c25920cf",
+      "type": "column2d",
+      "componentType": "KPI_CARD",
+      "title": "Henry Wilson",
+      "sourceComponentId": "1607:2407",
+      "grid": {
+        "colOffset": 3,
+        "colSpan": 2,
+        "rowOffset": 7,
+        "rowSpan": 5
+      },
+      "text": [
+        "Henry Wilson",
+        "Charlotte Lee",
+        "Lucas Williams",
+        "Amelia Johnson",
+        "Benjamin Davis",
+        "Isabella Thompson",
+        "William Chen",
+        "Sophia Martinez",
+        "James Anderson",
+        "Olivia Bennett"
+      ],
+      "needsReview": false,
+      "kpiValue": "—",
+      "kpiLabel": "Henry Wilson",
+      "trend": "",
+      "chart": {
+        "showLabels": "0",
+        "showValues": "0",
+        "showLegend": "0",
+        "showXAxisLine": "0",
+        "showYAxisLine": "0",
+        "plotFillAlpha": "0",
+        "plotHoverEffect": "0",
+        "theme": "fusion,evernorth-light"
+      },
+      "annotations": {
+        "groups": [
+          {
+            "id": "kpi-group",
+            "textAlign": "center",
+            "font": "Montserrat",
+            "fontSize": "14",
+            "color": "#172033",
+            "items": [
+              {
+                "id": "lbl-1",
+                "type": "text",
+                "text": "Henry Wilson",
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+30"
+              },
+              {
+                "id": "val-1",
+                "type": "text",
+                "text": "—",
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+65",
+                "fontSize": "26",
+                "bold": "1"
+              },
+              {
+                "id": "trend-1",
+                "type": "text",
+                "text": "",
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+95",
+                "fontSize": "12",
+                "color": "#718096"
+              }
+            ]
+          }
+        ]
+      },
+      "dataRequest": {
+        "moduleCode": "CMP",
+        "type": "static",
+        "staticData": [
+          {
+            "id": "d84735de-47f6-447f-8b3b-ddc5c25920cf",
+            "label": "kpi-d84735de",
+            "data": [
+              {
+                "label": "Metric",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "6c8fdaf9-06be-4493-be35-208dc460a17a",
+      "widgetId": "6c8fdaf9-06be-4493-be35-208dc460a17a",
+      "type": "column2d",
+      "componentType": "KPI_CARD",
+      "title": "Dr. Maya Patel",
+      "sourceComponentId": "1607:2430",
+      "grid": {
+        "colOffset": 4,
+        "colSpan": 3,
+        "rowOffset": 7,
+        "rowSpan": 5
+      },
+      "text": [
+        "Dr. Maya Patel",
+        "Dr. Elena Ruiz",
+        "Dr. David Kim",
+        "Dr. Maya Patel",
+        "Dr. Elena Ruiz",
+        "Dr. David Kim",
+        "Dr. Maya Patel",
+        "Dr. Elena Ruiz",
+        "Dr. David Kim",
+        "Dr. Maya Patel"
+      ],
+      "needsReview": false,
+      "kpiValue": "—",
+      "kpiLabel": "Dr. Maya Patel",
+      "trend": "",
+      "chart": {
+        "showLabels": "0",
+        "showValues": "0",
+        "showLegend": "0",
+        "showXAxisLine": "0",
+        "showYAxisLine": "0",
+        "plotFillAlpha": "0",
+        "plotHoverEffect": "0",
+        "theme": "fusion,evernorth-light"
+      },
+      "annotations": {
+        "groups": [
+          {
+            "id": "kpi-group",
+            "textAlign": "center",
+            "font": "Montserrat",
+            "fontSize": "14",
+            "color": "#172033",
+            "items": [
+              {
+                "id": "lbl-1",
+                "type": "text",
+                "text": "Dr. Maya Patel",
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+30"
+              },
+              {
+                "id": "val-1",
+                "type": "text",
+                "text": "—",
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+65",
+                "fontSize": "26",
+                "bold": "1"
+              },
+              {
+                "id": "trend-1",
+                "type": "text",
+                "text": "",
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+95",
+                "fontSize": "12",
+                "color": "#718096"
+              }
+            ]
+          }
+        ]
+      },
+      "dataRequest": {
+        "moduleCode": "CMP",
+        "type": "static",
+        "staticData": [
+          {
+            "id": "6c8fdaf9-06be-4493-be35-208dc460a17a",
+            "label": "kpi-6c8fdaf9",
+            "data": [
+              {
+                "label": "Metric",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "53d67d6c-f5cd-480a-9fcb-95bfeb0f9c9c",
+      "widgetId": "53d67d6c-f5cd-480a-9fcb-95bfeb0f9c9c",
+      "type": "column2d",
+      "componentType": "KPI_CARD",
+      "title": "Follow-up",
+      "sourceComponentId": "1607:2453",
+      "grid": {
+        "colOffset": 6,
+        "colSpan": 2,
+        "rowOffset": 7,
+        "rowSpan": 5
+      },
+      "text": [
+        "Follow-up",
+        "Annual visit",
+        "Consultation",
+        "Follow-up",
+        "Annual visit",
+        "Consultation",
+        "Follow-up",
+        "Annual visit",
+        "Consultation",
+        "Follow-up"
+      ],
+      "needsReview": false,
+      "kpiValue": "—",
+      "kpiLabel": "Follow-up",
+      "trend": "",
+      "chart": {
+        "showLabels": "0",
+        "showValues": "0",
+        "showLegend": "0",
+        "showXAxisLine": "0",
+        "showYAxisLine": "0",
+        "plotFillAlpha": "0",
+        "plotHoverEffect": "0",
+        "theme": "fusion,evernorth-light"
+      },
+      "annotations": {
+        "groups": [
+          {
+            "id": "kpi-group",
+            "textAlign": "center",
+            "font": "Montserrat",
+            "fontSize": "14",
+            "color": "#172033",
+            "items": [
+              {
+                "id": "lbl-1",
+                "type": "text",
+                "text": "Follow-up",
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+30"
+              },
+              {
+                "id": "val-1",
+                "type": "text",
+                "text": "—",
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+65",
+                "fontSize": "26",
+                "bold": "1"
+              },
+              {
+                "id": "trend-1",
+                "type": "text",
+                "text": "",
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+95",
+                "fontSize": "12",
+                "color": "#718096"
+              }
+            ]
+          }
+        ]
+      },
+      "dataRequest": {
+        "moduleCode": "CMP",
+        "type": "static",
+        "staticData": [
+          {
+            "id": "53d67d6c-f5cd-480a-9fcb-95bfeb0f9c9c",
+            "label": "kpi-53d67d6c",
+            "data": [
+              {
+                "label": "Metric",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cd8c9136-04e1-4f9f-ac07-2041866799e7",
+      "widgetId": "cd8c9136-04e1-4f9f-ac07-2041866799e7",
+      "type": "column2d",
+      "componentType": "KPI_CARD",
+      "title": "North Pavilion",
+      "sourceComponentId": "1607:2476",
+      "grid": {
+        "colOffset": 7,
+        "colSpan": 2,
+        "rowOffset": 7,
+        "rowSpan": 5
+      },
+      "text": [
+        "North Pavilion",
+        "Telehealth",
+        "West Clinic",
+        "North Pavilion",
+        "Telehealth",
+        "West Clinic",
+        "North Pavilion",
+        "Telehealth",
+        "West Clinic",
+        "North Pavilion"
+      ],
+      "needsReview": false,
+      "kpiValue": "—",
+      "kpiLabel": "North Pavilion",
+      "trend": "",
+      "chart": {
+        "showLabels": "0",
+        "showValues": "0",
+        "showLegend": "0",
+        "showXAxisLine": "0",
+        "showYAxisLine": "0",
+        "plotFillAlpha": "0",
+        "plotHoverEffect": "0",
+        "theme": "fusion,evernorth-light"
+      },
+      "annotations": {
+        "groups": [
+          {
+            "id": "kpi-group",
+            "textAlign": "center",
+            "font": "Montserrat",
+            "fontSize": "14",
+            "color": "#172033",
+            "items": [
+              {
+                "id": "lbl-1",
+                "type": "text",
+                "text": "North Pavilion",
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+30"
+              },
+              {
+                "id": "val-1",
+                "type": "text",
+                "text": "—",
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+65",
+                "fontSize": "26",
+                "bold": "1"
+              },
+              {
+                "id": "trend-1",
+                "type": "text",
+                "text": "",
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+95",
+                "fontSize": "12",
+                "color": "#718096"
+              }
+            ]
+          }
+        ]
+      },
+      "dataRequest": {
+        "moduleCode": "CMP",
+        "type": "static",
+        "staticData": [
+          {
+            "id": "cd8c9136-04e1-4f9f-ac07-2041866799e7",
+            "label": "kpi-cd8c9136",
+            "data": [
+              {
+                "label": "Metric",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "525f98a0-6330-4823-901d-1b04307a557c",
+      "widgetId": "525f98a0-6330-4823-901d-1b04307a557c",
+      "type": "column2d",
+      "componentType": "KPI_CARD",
+      "title": "30 min",
+      "sourceComponentId": "1607:2522",
+      "grid": {
+        "colOffset": 10,
+        "colSpan": 2,
+        "rowOffset": 7,
+        "rowSpan": 5
+      },
+      "text": [
+        "30 min",
+        "30 min",
+        "15 min",
+        "30 min",
+        "30 min",
+        "15 min",
+        "30 min",
+        "30 min",
+        "15 min",
+        "30 min"
+      ],
+      "needsReview": false,
+      "kpiValue": "30 min",
+      "kpiLabel": "15 min",
+      "trend": "",
+      "chart": {
+        "showLabels": "0",
+        "showValues": "0",
+        "showLegend": "0",
+        "showXAxisLine": "0",
+        "showYAxisLine": "0",
+        "plotFillAlpha": "0",
+        "plotHoverEffect": "0",
+        "theme": "fusion,evernorth-light"
+      },
+      "annotations": {
+        "groups": [
+          {
+            "id": "kpi-group",
+            "textAlign": "center",
+            "font": "Montserrat",
+            "fontSize": "14",
+            "color": "#172033",
+            "items": [
+              {
+                "id": "lbl-1",
+                "type": "text",
+                "text": "15 min",
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+30"
+              },
+              {
+                "id": "val-1",
+                "type": "text",
+                "text": "30 min",
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+65",
+                "fontSize": "26",
+                "bold": "1"
+              },
+              {
+                "id": "trend-1",
+                "type": "text",
+                "text": "",
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+95",
+                "fontSize": "12",
+                "color": "#718096"
+              }
+            ]
+          }
+        ]
+      },
+      "dataRequest": {
+        "moduleCode": "CMP",
+        "type": "static",
+        "staticData": [
+          {
+            "id": "525f98a0-6330-4823-901d-1b04307a557c",
+            "label": "kpi-525f98a0",
+            "data": [
+              {
+                "label": "Metric",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "backgroundPaths": [
+    {
+      "type": "rectangle-leaf",
+      "color": "#f8fafc",
+      "colOffset": 0,
+      "colSpan": 12,
+      "rowOffset": 0,
+      "rowSpan": 12
     }
   ],
   "validation": {
-    "componentCount": 13,
-    "widgetCount": 13,
-    "reviewRequired": 13
+    "componentCount": 12,
+    "widgetCount": 12,
+    "tileCount": 12,
+    "reviewRequired": 0,
+    "validationErrors": []
   }
 }

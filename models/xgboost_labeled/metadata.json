@@ -1,0 +1,37 @@
+{
+  "feature_columns": [
+    "width",
+    "height",
+    "area",
+    "aspect_ratio",
+    "child_count",
+    "text_count",
+    "numeric_text_count",
+    "text_density",
+    "numeric_density",
+    "vector_count",
+    "line_count",
+    "ellipse_count",
+    "rectangle_count",
+    "graphical_count",
+    "has_percentage",
+    "has_date_text",
+    "has_chart_word",
+    "has_table_word",
+    "has_kpi_word",
+    "has_filter_word"
+  ],
+  "label_classes": [
+    "CHART",
+    "FILTER",
+    "HEADER",
+    "KPI_CARD",
+    "NAVBAR",
+    "OTHER",
+    "TABLE"
+  ],
+  "training_rows": 578,
+  "dashboard_count": 11,
+  "training_accuracy": 1.0,
+  "csv_path": "C:\\major_project\\dataset\\features\\labeled_data.csv"
+}

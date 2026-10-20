@@ -1,0 +1,872 @@
+dashboard_id,candidate_id,name,label
+dashbaord2,42:212,Calendar,
+dashbaord2,42:203,Tooltips,
+dashbaord2,42:106,Total Doctor,
+dashbaord2,42:119,Total Staff,
+dashbaord2,42:135,Total Patient,
+dashbaord2,42:147,New Appointment,
+dashbaord2,42:210,Schedule,
+dashbaord2,42:20,General,
+dashbaord2,42:160,Patient Overview,
+dashbaord2,42:259,Appointment,
+dashbaord2,42:289,Patient Data,
+dashbaord7,1:5,Element-1,
+dashbaord7,1:22,Element-2,
+dashbaord7,1:29,Element-3,
+dashbaord7,1:39,Element-4,
+dashbaord7,1:46,Element-5,
+dashbaord7,1:52,Element-6,
+dashbaord7,1:60,Element-7,
+dashbaord7,1:89,Element-8,
+dashbaord7,1:92,Group 61,
+dashbaord7,1:69,Bar Chart,
+dashbaord7,1:110,Element-9,
+dashbaord7,1:409,Element-10,
+dashbaord7,1:410,Group 66,
+dashbaord7,1:113,Man Anatomy Muscle,
+dashbaord9,1:101,Group 54,
+dashbaord9,1:147,Group 61,
+dashbaord9,1:110,Group 62,
+dashboard10,1:617,picture 80 px,
+dashboard10,1:627,Group 6,
+dashboard10,1:644,title,
+dashboard10,1:573,title,
+dashboard10,1:608,Rectangle 16,
+dashboard10,1:613,Rectangle 16,
+dashboard10,1:614,Rectangle 16,
+dashboard10,1:661,Component 5,
+dashboard10,1:615,Rectangle 16,
+dashboard10,1:616,Rectangle 16,
+dashboard10,1:655,Component 3,
+dashboard10,I1:242;11:703,picture 80 px,
+dashboard10,1:581,title,
+dashboard10,1:667,Group 8,
+dashboard10,1:658,Component 4,
+dashboard10,I1:242;11:908,Frame 48,
+dashboard10,I1:242;11:704,Group 6,
+dashboard10,I1:242;11:721,title,
+dashboard10,I1:242;11:671,title,
+dashboard10,I1:242;11:698,Rectangle 16,
+dashboard10,1:721,Group 12,
+dashboard10,I1:242;11:699,Rectangle 16,
+dashboard10,I1:242;11:700,Rectangle 16,
+dashboard10,I1:242;11:736,Component 5,
+dashboard10,I1:242;11:701,Rectangle 16,
+dashboard10,I1:242;11:702,Rectangle 16,
+dashboard10,I1:242;11:732,Component 3,
+dashboard10,I1:242;11:905,Frame 46,
+dashboard10,I1:242;11:672,title,
+dashboard10,I1:242;11:906,Frame 47,
+dashboard10,I1:242;11:742,Group 8,
+dashboard10,I1:242;11:733,Component 4,
+dashboard10,I1:242;11:793,Group 12,
+dashboard11,16:11305,Bar chart,
+dashboard11,16:11309,Bar chart,
+dashboard11,16:11313,Line chart,
+dashboard11,I62:679;474790:45789,SnowUI Design System,
+dashboard11,I62:679;474790:45790,Colors,
+dashboard11,I62:679;474790:45789;60755:5363,Frame 103,
+dashboard11,16:11752,Frame,
+dashboard11,16:11760,Frame,
+dashboard11,I16:11308;556:8756,Frame,
+dashboard11,I16:11312;556:8762,Frame,
+dashboard11,I16:11312;556:8765,HorizontalBars,
+dashboard11,I16:11316;557:9750,Frame,
+dashboard11,I16:11316;557:9753,LineGraph,
+dashboard11,I16:11753;556:8756,Frame,
+dashboard11,I16:11757;556:8762,Frame,
+dashboard11,I16:11757;556:8765,HorizontalBars,
+dashboard11,I16:11761;557:9750,Frame,
+dashboard11,I16:11761;557:9753,LineGraph,
+dashboard11,I62:679;474790:45790;60755:5602,Frame,
+dashboard11,I62:679;474790:45790;60755:5603,Frame,
+dashboard11,I62:679;474790:45790;60755:5606,Frame,
+dashboard11,I62:679;474790:45790;60755:5612,Frame,
+dashboard11,16:11327,Donut chart,
+dashboard11,16:11321,Donut chart,
+dashboard11,I62:679;474790:45790;79349:3033,Frame,
+dashboard11,I62:679;474790:45790;79349:3035,Frame,
+dashboard11,I62:679;474790:45790;79349:3036,Frame,
+dashboard11,I62:679;474790:45790;60755:5619,Frame,
+dashboard11,16:11774,Text,
+dashboard11,I62:679;474790:45790;60755:5621,Frame,
+dashboard11,I62:679;474790:45790;60755:5622,Frame,
+dashboard11,I62:679;474790:45790;60755:5629,Frame,
+dashboard11,I62:679;474790:45790;60755:5636,Frame,
+dashboard11,I62:679;474790:45790;60755:5643,Frame,
+dashboard11,16:11330,SemicircleChart,
+dashboard11,16:11324,SemicircleChart,
+dashboard11,16:11775,SemicircleChart,
+dashboard11,16:11769,SemicircleChart,
+dashboard11,I62:679;474790:45790;60755:5650,Frame,
+dashboard11,I62:679;474790:45790;60755:5652,Frame,
+dashboard11,I62:679;474790:45790;60755:5653,Frame,
+dashboard11,I62:679;474790:45790;60755:5660,Frame,
+dashboard11,I62:679;474790:45790;60755:5667,Frame,
+dashboard11,I62:679;474790:45790;60755:5674,Frame,
+dashboard11,16:5666,More pages,
+dashboard11,62:678,IconText,
+dashboard11,I62:679;474790:45790;60755:5713,Frame,
+dashboard11,I62:679;474790:45790;60755:5715,Frame,
+dashboard11,I62:679;474790:45790;60755:5716,Frame,
+dashboard11,I62:679;474790:45790;60755:5726,Frame,
+dashboard11,I62:679;474790:45790;60755:5736,Frame,
+dashboard11,I62:679;474790:45790;60755:5746,Frame,
+dashboard11,16:5661,Buy SnowUI,
+dashboard11,16:5668,Made with SnowUI,
+dashboard11,I62:679;474790:45790;63800:149475,Frame,
+dashboard11,I62:679;474790:45790;63800:149477,Frame,
+dashboard11,I62:679;474790:45790;63800:149478,Frame,
+dashboard11,I62:679;474790:45790;79343:2982,Frame,
+dashboard11,I62:679;474790:45790;79343:2984,Frame,
+dashboard11,I62:679;474790:45790;79343:2985,Frame,
+dashboard11,16:5672,About me,
+dashboard11,16:5675,Documentation,
+dashboard12,1:88,Group 1,
+dashboard13,1:688,BMI,
+dashboard13,1:430,Group 7,
+dashboard13,1:682,Blood Sugar,
+dashboard13,1:685,Heart Rate,
+dashboard13,1:687,Blood Pressure,
+dashboard13,1:436,Group 5,
+dashboard13,1:355,Male-Clothes,
+dashboard13,1:356,Group,
+dashboard13,1:357,Male,
+dashboard13,1:548,Acitivity Growth,
+dashboard13,1:378,Group-7,
+dashboard13,1:408,Frame 4,
+dashboard13,1:415,Frame 5,
+dashboard13,1:422,Frame 6,
+dashboard13,1:669,Upcoming,
+dashboard14,8121:111,top bar,
+dashboard14,8121:155,Todays Sales,
+dashboard14,8121:156,Today Sales,
+dashboard14,8121:217,Visitor Insights,
+dashboard14,8121:223,Card / Header,
+dashboard14,8121:65,Group 1000002724,
+dashboard14,8121:193,1,
+dashboard14,8121:183,2,
+dashboard14,8121:171,3,
+dashboard14,8121:157,4,
+dashboard14,8121:272,Total Revenue,
+dashboard14,8121:325,Customer Satisfaction,
+dashboard14,8121:924,Target Vs Reality,
+dashboard14,8121:274,Group 1000002743,
+dashboard14,8121:930,Group 1000002769,
+dashboard14,8121:931,Group 1000002784,
+dashboard14,8121:276,Group 1000002742,
+dashboard14,8121:284,Group 1000002741,
+dashboard14,8121:328,Group 1000002751,
+dashboard14,8121:1002,Get pro,
+dashboard14,8121:396,Top Products,
+dashboard14,8121:445,Sales Mapping,
+dashboard14,8121:363,Volume,
+dashboard14,8121:1008,Get pro,
+dashboard14,8121:449,world 1,
+dashboard14,8121:365,Group 1000002754,
+dashboard16,2:2487,Top header,
+dashboard16,2:61310,Top header,
+dashboard16,2:61747,Top header,
+dashboard16,2:62129,Top header,
+dashboard16,2:61326,Page introduction,
+dashboard16,2:61327,Heading and export,
+dashboard16,2:61763,Page introduction,
+dashboard16,2:61764,Heading and export,
+dashboard16,2:61765,Page heading,
+dashboard16,2:62145,Page introduction,
+dashboard16,2:62146,Heading and export,
+dashboard16,2:2514,Overview heading,
+dashboard16,2:2512,Overview and filters,
+dashboard16,2:2513,Page introduction,
+dashboard16,2:2446,Primary navigation,
+dashboard16,2:61277,Primary navigation,
+dashboard16,2:61714,Primary navigation,
+dashboard16,2:62096,Primary navigation,
+dashboard16,2:61347,Key performance indicators,
+dashboard16,2:61348,KPI Card / High-risk members,
+dashboard16,2:61361,KPI Card / Avg risk score,
+dashboard16,2:61374,KPI Card / Open care plans,
+dashboard16,2:61387,KPI Card / 30-day outreach rate,
+dashboard16,2:61784,Key performance indicators,
+dashboard16,2:61785,KPI Card / Appointments today,
+dashboard16,2:61798,KPI Card / No-show rate,
+dashboard16,2:61811,KPI Card / Avg wait time,
+dashboard16,2:61824,KPI Card / Utilisation %,
+dashboard16,2:62166,Authorization overview,
+dashboard16,2:62167,Hospital c05,
+dashboard16,2:62168,Metric pair,
+dashboard16,2:62169,KPI Card / Requests received,
+dashboard16,2:62182,KPI Card / Approval rate,
+dashboard16,2:62222,Chart / Requests by status per week,
+dashboard16,2:2538,Key performance indicators,
+dashboard16,2:2934,KPI Card / Active members,
+dashboard16,2:2959,KPI Card / Processed claims,
+dashboard16,2:2982,KPI Card / Total care cost,
+dashboard16,2:3005,KPI Card / Medication adherence,
+dashboard16,2:62236,Axes and plot,
+dashboard16,2:62243,Native plot,
+dashboard16,2:61400,Risk and care analytics,
+dashboard16,2:61401,Frame 214,
+dashboard16,2:61402,Chart / Risk tiers,
+dashboard16,2:61435,Chart / Care plans opened per month,
+dashboard16,2:61837,Chart / Wait time by weekday,
+dashboard16,2:2585,Population and cost analytics,
+dashboard16,2:2586,Claims and prescriptions chart,
+dashboard16,2:2641,Care cost by service chart,
+dashboard16,2:62195,Metric pair,
+dashboard16,2:62196,KPI Card / Pending review,
+dashboard16,2:62209,KPI Card / Avg decision time,
+dashboard16,2:2598,Chart axes and plot,
+dashboard16,2:2605,Volume plot,
+dashboard16,2:61406,Distribution and legend,
+dashboard16,2:61407,Donut plot,
+dashboard16,2:2645,Cost distribution and legend,
+dashboard16,2:2646,Cost distribution,
+dashboard16,2:61443,Axes and plot,
+dashboard16,2:61450,Native plot,
+dashboard16,2:61848,Axes and plot,
+dashboard16,2:61855,Native plot,
+dashboard16,2:2653,Service legend,
+dashboard16,2:61414,Distribution legend,
+dashboard16,2:62279,Table / Authorization requests,
+dashboard16,2:62280,Table heading,
+dashboard16,2:2919,Status Badge,
+dashboard16,2:66507,Risk and laboratory badges,
+dashboard16,2:3016,KPI Card,
+dashboard16,2:66591,Specialized KPI cards,
+dashboard16,2:67364,Specialized table rows,
+dashboard16,2:3383,Table Row,
+dashboard16,2:66514,Metric=Deductible used 1,
+dashboard16,2:66509,KPI Card / Deductible used,
+dashboard16,2:62297,Table Row / AUTH-260841,
+dashboard16,2:2674,Member activity table,
+dashboard16,2:2675,Table title and search,
+dashboard16,2:61474,Table / Top 10 high-risk members,
+dashboard16,2:61475,Table heading,
+dashboard16,2:61882,Table / Today's appointments,
+dashboard16,2:61883,Table heading,
+dashboard16,2:62317,Table Row / AUTH-260842,
+dashboard16,2:62337,Table Row / AUTH-260843,
+dashboard16,2:61886,Column-built appointment table,
+dashboard16,2:61887,Table column / Time,
+dashboard16,2:61911,Table column / Patient,
+dashboard16,2:61935,Table column / Provider,
+dashboard16,2:61959,Table column / Type,
+dashboard16,2:61983,Table column / Location,
+dashboard16,2:62007,Table column / Status,
+dashboard16,2:62051,Table column / Duration,
+dashboard16,2:66541,Metric=Out-of-pocket spent 2,
+dashboard16,2:66536,KPI Card / Out-of-pocket spent,
+dashboard16,2:62357,Table Row / AUTH-260844,
+dashboard16,2:62377,Table Row / AUTH-260845,
+dashboard16,2:62397,Table Row / AUTH-260846,
+dashboard16,2:62417,Table Row / AUTH-260847,
+dashboard16,2:66567,Metric=Service level 3,
+dashboard16,2:66563,KPI Card / Service level,
+dashboard16,2:62437,Table Row / AUTH-260848,
+dashboard16,2:66948,Record=Northwell Medical 11,
+dashboard16,2:66965,Record=Quest Diagnostics 12,
+dashboard16,2:66982,Record=Dr. Maya Patel 13,
+dashboard16,2:66999,Record=CVS Pharmacy 14,
+dashboard16,2:62514,Top header,
+dashboard16,2:62899,Top header,
+dashboard16,2:63250,Design 07 – My Health Summary,
+dashboard16,2:67016,Record=Westside Imaging 15,
+dashboard16,2:63258,Health summary content,
+dashboard16,2:62530,Page introduction,
+dashboard16,2:62531,Heading and export,
+dashboard16,2:62532,Page heading,
+dashboard16,2:62915,Page introduction,
+dashboard16,2:62916,Heading and export,
+dashboard16,2:62917,Page heading,
+dashboard16,2:67033,Record=Northwell Medical 16,
+dashboard16,2:66515,KPI Card / Deductible used,
+dashboard16,I2:66515;2:66509,KPI Card / Deductible used,
+dashboard16,2:62481,Primary navigation,
+dashboard16,2:62866,Primary navigation,
+dashboard16,2:62551,Authorization overview,
+dashboard16,2:62552,Hospital c05,
+dashboard16,2:62553,Metric pair,
+dashboard16,2:62554,KPI Card / Requests received,
+dashboard16,2:62567,KPI Card / Approval rate,
+dashboard16,2:62607,Chart / Requests by status per week,
+dashboard16,2:62936,Key performance indicators,
+dashboard16,2:62937,KPI Card / 30-day readmission rate,
+dashboard16,2:62950,KPI Card / Avg length of stay,
+dashboard16,2:62963,KPI Card / Cost per admission,
+dashboard16,2:62621,Axes and plot,
+dashboard16,2:62628,Native plot,
+dashboard16,2:66542,KPI Card / Out-of-pocket spent,
+dashboard16,I2:66542;2:66536,KPI Card / Out-of-pocket spent,
+dashboard16,2:62976,Readmission analytics,
+dashboard16,2:62977,Chart / Readmission rate by month,
+dashboard16,2:63009,Chart / Readmission rate by facility,
+dashboard16,2:62580,Metric pair,
+dashboard16,2:62581,KPI Card / Pending review,
+dashboard16,2:62594,KPI Card / Avg decision time,
+dashboard16,2:63013,Facility plot,
+dashboard16,2:62988,Axes and plot,
+dashboard16,2:62995,Native plot,
+dashboard16,2:63298,Chart / Monthly spend,
+dashboard16,2:62664,Table / Authorization requests,
+dashboard16,2:62665,Table heading,
+dashboard16,2:63306,Axes and plot,
+dashboard16,2:63313,Native plot,
+dashboard16,2:62682,Table Row / RXA-261120,
+dashboard16,2:62702,Table Row / RXA-261121,
+dashboard16,2:62722,Table Row / RXA-261122,
+dashboard16,2:63058,Table / Top diagnoses by readmissions,
+dashboard16,2:63059,Table heading,
+dashboard16,2:63337,Table / Recent claims,
+dashboard16,2:62742,Table Row / RXA-261123,
+dashboard16,2:66949,Table Row / Northwell Medical,
+dashboard16,2:62762,Table Row / RXA-261124,
+dashboard16,2:62782,Table Row / RXA-261125,
+dashboard16,2:66966,Table Row / Quest Diagnostics,
+dashboard16,2:62802,Table Row / RXA-261126,
+dashboard16,2:66983,Table Row / Dr. Maya Patel,
+dashboard16,2:62822,Table Row / RXA-261127,
+dashboard16,2:67000,Table Row / CVS Pharmacy,
+dashboard16,2:67017,Table Row / Westside Imaging,
+dashboard16,2:67034,Table Row / Northwell Medical,
+dashboard16,2:63244,Clinical opportunity,
+dashboard16,2:63456,Top header,
+dashboard16,2:63873,Top header,
+dashboard16,2:64295,Top header,
+dashboard16,2:63472,Page introduction,
+dashboard16,2:63473,Heading and export,
+dashboard16,2:63474,Page heading,
+dashboard16,2:63889,Page introduction,
+dashboard16,2:63890,Heading and export,
+dashboard16,2:63891,Page heading,
+dashboard16,2:64311,Page introduction,
+dashboard16,2:64312,Heading and export,
+dashboard16,2:64313,Page heading,
+dashboard16,2:63423,Primary navigation,
+dashboard16,2:63840,Primary navigation,
+dashboard16,2:64262,Primary navigation,
+dashboard16,2:63493,Key performance indicators,
+dashboard16,2:63494,KPI Card / Tests ordered,
+dashboard16,2:63507,KPI Card / Abnormal results,
+dashboard16,2:63520,KPI Card / Avg turnaround,
+dashboard16,2:63533,KPI Card / Pending reviews,
+dashboard16,2:63910,Key performance indicators,
+dashboard16,2:63911,KPI Card / Total drug spend,
+dashboard16,2:63924,KPI Card / Generic fill rate,
+dashboard16,2:63937,KPI Card / Specialty spend,
+dashboard16,2:63950,KPI Card / Rebate captured,
+dashboard16,2:64332,Key performance indicators,
+dashboard16,2:64333,KPI Card / Covered lives,
+dashboard16,2:64346,KPI Card / Chronic condition prevalence,
+dashboard16,2:64359,KPI Card / Preventive care rate,
+dashboard16,2:63546,Biomarker trend charts,
+dashboard16,2:63547,Chart / HbA1c,
+dashboard16,2:63575,Chart / LDL cholesterol,
+dashboard16,2:63603,Chart / Blood pressure,
+dashboard16,2:63963,Drug spend analytics,
+dashboard16,2:63964,Chart / Spend by month,
+dashboard16,2:63996,Chart / Top 8 drugs by spend,
+dashboard16,2:64372,Population patterns,
+dashboard16,2:64373,Chart / Condition prevalence heatmap,
+dashboard16,2:64488,Chart / Prevalence by age band,
+dashboard16,2:64000,Facility plot,
+dashboard16,2:63555,Axes and plot,
+dashboard16,2:63562,Native plot,
+dashboard16,2:63583,Axes and plot,
+dashboard16,2:63590,Native plot,
+dashboard16,2:63614,Axes and plot,
+dashboard16,2:63621,Native plot,
+dashboard16,2:63975,Axes and plot,
+dashboard16,2:63982,Native plot,
+dashboard16,2:64496,Axes and plot,
+dashboard16,2:64503,Native plot,
+dashboard16,2:64045,Formulary and filtering,
+dashboard16,2:64046,Table / Formulary tiers,
+dashboard16,2:64047,Table heading,
+dashboard16,2:64234,Filter panel,
+dashboard16,2:63635,Table / Recent lab results,
+dashboard16,2:63636,Table heading,
+dashboard16,2:64527,Table / Region summary,
+dashboard16,2:64528,Table heading,
+dashboard16,2:64545,Table Row / New York City,
+dashboard16,2:64565,Table Row / Long Island,
+dashboard16,2:64585,Table Row / Hudson Valley,
+dashboard16,2:64605,Table Row / New Jersey,
+dashboard16,2:64625,Table Row / Connecticut,
+dashboard16,2:64645,Table Row / Pennsylvania,
+dashboard16,2:64665,Table Row / Massachusetts,
+dashboard16,2:64685,Table Row / Rhode Island,
+dashboard16,2:64717,Design 11 – Executive Health Plan Summary,
+dashboard16,2:64759,Analytics workspace,
+dashboard16,2:65014,Top header,
+dashboard16,2:64774,Heading and export,
+dashboard16,2:65030,Page introduction,
+dashboard16,2:65031,Heading and export,
+dashboard16,2:65032,Page heading,
+dashboard16,2:64981,Primary navigation,
+dashboard16,2:64791,Executive metrics,
+dashboard16,2:64792,Metric row,
+dashboard16,2:64793,Row,
+dashboard16,2:64794,KPI Card / Covered lives,
+dashboard16,2:64807,KPI Card / Premium revenue,
+dashboard16,2:64820,KPI Card / Medical loss ratio,
+dashboard16,2:65051,Key performance indicators,
+dashboard16,2:65052,KPI Card / Tickets received,
+dashboard16,2:65065,KPI Card / Avg resolution time,
+dashboard16,2:65078,KPI Card / Open escalations,
+dashboard16,2:66568,KPI Card / Service level,
+dashboard16,I2:66568;2:66563,KPI Card / Service level,
+dashboard16,2:65108,Service volume and response analytics,
+dashboard16,2:65109,Chart / Contact volume – PNG,
+dashboard16,2:65145,Chart / Resolution time trend,
+dashboard16,2:64833,Metric row,
+dashboard16,2:64834,KPI Card / Claims paid,
+dashboard16,2:64847,KPI Card / Quality score,
+dashboard16,2:64860,KPI Card / Member retention,
+dashboard16,2:65153,Axes and plot,
+dashboard16,2:65160,Native plot,
+dashboard16,2:64873,Executive analytics,
+dashboard16,2:64874,Chart / Premium vs. claims,
+dashboard16,2:64917,Chart / Cost by category,
+dashboard16,2:64921,Distribution and legend,
+dashboard16,2:64885,Axes and plot,
+dashboard16,2:64892,Native plot,
+dashboard16,2:64922,Donut plot,
+dashboard16,2:65173,Section,
+dashboard16,2:65174,Table / Agent performance,
+dashboard16,2:65175,Table heading,
+dashboard16,2:65360,Table / Open escalations,
+dashboard16,2:65361,Table heading,
+dashboard16,2:64929,Distribution legend,
+dashboard16,2:64950,Filters and notes,
+dashboard16,2:64951,Filter panel,
+dashboard16,2:64963,Leadership notes,
+dashboard1,12:43,header-title-block,
+dashboard1,12:54,kpi-card-total-patients,
+dashboard1,12:148,chart-and-y-axis,
+dashboard1,12:199,department-card,
+dashboard1,12:254,donut-chart-container,
+dashboard1,12:75,kpi-card-appointments-today,
+dashboard1,12:96,kpi-card-bed-occupancy-rate,
+dashboard1,12:249,demographics-card,
+dashboard1,12:117,kpi-card-revenue-this-month,
+dashboard1,12:60,kpi-middle,
+dashboard1,12:81,kpi-middle,
+dashboard1,12:102,kpi-middle,
+dashboard1,12:123,kpi-middle,
+dashboard1,12:147,chart-with-axes,
+dashboard1,12:293,table,
+dashboard1,12:138,admissions-card,
+dashboard1,12:289,activity-card,
+dashboard3,1:3,Frame 1,
+dashboard3,29:9,Frame 11,
+dashboard3,40:47,Frame 16,
+dashboard3,40:48,Frame 17,
+dashboard3,32:10,Frame 12,
+dashboard3,40:62,Frame 18,
+dashboard3,40:69,Frame 19,
+dashboard3,32:40,Frame 13,
+dashboard3,42:76,Frame 20,
+dashboard3,35:80,Frame 14,
+dashboard3,44:89,Circle,
+dashboard3,35:98,Frame 15,
+dashboard3,45:116,"Doctors,Patient,Report & Balance Section",
+dashboard3,45:115,Hospital Overview Section,
+dashboard3,45:114,Gender,
+dashboard3,45:113,Appointment,
+dashboard4,1:656,Card,
+dashboard4,1:16,Card,
+dashboard4,1:53,Pagination container,
+dashboard4,1:141,Text input container,
+dashboard4,1:226,Pagination container,
+dashboard4,1:399,Horizontal container,
+dashboard4,1:477,Table container,
+dashboard4,1:494,Horizontal container,
+dashboard4,1:652,Card,
+dashboard4,1:754,Card,
+dashboard4,1:755,Tree,
+dashboard4,1:867,Horizontal container,
+dashboard4,1:868,Horizontal container,
+dashboard4,1:909,Table,
+dashboard4,1:948,Text input,
+dashboard4,1:17,Text input,
+dashboard4,1:24,Text input container,
+dashboard4,1:45,Card,
+dashboard4,1:884,Horizontal container,
+dashboard4,1:46,Text input,
+dashboard4,1:991,Text input,
+dashboard4,1:124,Card,
+dashboard4,1:209,Table,
+dashboard4,1:382,Card,
+dashboard4,1:18,Slider container,
+dashboard4,1:25,Text input container,
+dashboard4,1:32,Text input container,
+dashboard4,1:39,Text input container,
+dashboard4,1:657,Tree,
+dashboard4,1:227,Pagination container,
+dashboard4,1:229,Text input,
+dashboard4,1:230,Horizontal container,
+dashboard4,1:400,Horizontal container,
+dashboard4,1:432,Horizontal container,
+dashboard4,1:142,Text input,
+dashboard4,1:171,Slider container,
+dashboard4,1:54,Pagination container,
+dashboard4,1:71,Text input container,
+dashboard4,1:154,Input form container,
+dashboard4,1:413,Input form,
+dashboard4,1:255,Pagination container,
+dashboard4,1:239,Input form,
+dashboard4,1:493,Table,
+dashboard4,1:908,Table container,
+dashboard4,1:513,Horizontal container,
+dashboard4,1:753,Card,
+dashboard4,1:913,Vertical container,
+dashboard4,1:52,Pagination container,
+dashboard4,1:476,Table container,
+dashboard4,1:655,Card,
+dashboard4,1:649,Card,
+dashboard4,1:907,Table container,
+dashboard4,1:6,Text input,
+dashboard4,1:954,Text input,
+dashboard4,1:532,Horizontal container,
+dashboard4,1:551,Horizontal container,
+dashboard4,1:960,Text input,
+dashboard4,1:140,Text input container,
+dashboard4,1:225,Pagination container,
+dashboard4,1:398,Horizontal container,
+dashboard4,1:31,Text input container,
+dashboard4,1:38,Text input container,
+dashboard4,1:570,Horizontal container,
+dashboard4,1:589,Horizontal container,
+dashboard4,1:608,Horizontal container,
+dashboard4,1:627,Horizontal container,
+dashboard4,1:947,Vertical container,
+dashboard4,1:123,Container,
+dashboard4,1:469,Table container,
+dashboard5,55:413,Group 519,
+dashboard5,55:412,Group 518,
+dashboard5,55:411,Group 517,
+dashboard5,55:404,Group 512,
+dashboard5,55:403,Group 511,
+dashboard5,72:1474,Group 48125,
+dashboard5,55:410,Group 516,
+dashboard5,45:911,Group 418,
+dashboard5,55:401,Group 510,
+dashboard5,42:1661,Group 406,
+dashboard5,55:409,Group 515,
+dashboard5,55:416,Frame 1269,
+dashboard5,55:408,Group 514,
+dashboard5,55:414,Group 520,
+dashboard5,45:577,Group 414,
+dashboard5,55:415,Group 521,
+dashboard5,55:417,Group 522,
+dashboard5,55:438,Group 523,
+dashboard5,55:459,Group 524,
+dashboard5,55:480,Group 525,
+dashboard5,55:501,Group 526,
+dashboard5,55:407,Group 513,
+dashboard6,1:754,Diagnostics,
+dashboard6,1:818,Patients,
+dashboard6,1:794,Health Index,
+dashboard6,1:899,Appointments,
+dashboard6,1:857,Causes Range,
+dashboard6,1:20,Covid19 Pandemic,
+dashboard6,1:1058,Doctors,
+dashboard8,1:106,Group 27,
+dashboard8,1:171,Group 28,
+dashboard8,1:190,Group 29,
+dashboard8,1:207,Group 30,
+dashboard8,1:119,Group 31,
+dashboard8,1:145,Group 32,
+dashboard8,1:132,Group 33,
+dashboard8,1:157,Group 34,
+dashboard_01,12:199,department-card,CHART
+dashboard_01,12:54,kpi-card-total-patients,KPI_CARD
+dashboard_01,12:75,kpi-card-appointments-today,KPI_CARD
+dashboard_01,12:96,kpi-card-bed-occupancy-rate,KPI_CARD
+dashboard_01,12:249,demographics-card,CHART
+dashboard_01,12:117,kpi-card-revenue-this-month,KPI_CARD
+dashboard_01,12:293,table,TABLE
+dashboard_01,12:138,admissions-card,CHART
+dashboard_02,42:106,Total Doctor,KPI_CARD
+dashboard_02,42:119,Total Staff,KPI_CARD
+dashboard_02,42:135,Total Patient,KPI_CARD
+dashboard_02,42:147,New Appointment,KPI_CARD
+dashboard_02,42:160,Patient Overview,CHART
+dashboard_02,42:259,Appointment,OTHER
+dashboard_02,42:289,Patient Data,TABLE
+dashboard_03,29:9,Frame 11,KPI_CARD
+dashboard_03,32:10,Frame 12,KPI_CARD
+dashboard_03,40:62,Frame 18,KPI_CARD
+dashboard_03,40:69,Frame 19,KPI_CARD
+dashboard_03,32:40,Frame 13,KPI_CARD
+dashboard_03,35:80,Frame 14,KPI_CARD
+dashboard_03,45:114,Gender,CHART
+dashboard_03,45:113,Appointment,OTHER
+dashboard_04,1:17,Text input,KPI_CARD
+dashboard_04,1:24,Text input container,KPI_CARD
+dashboard_04,1:45,Card,CHART
+dashboard_04,1:124,Card,CHART
+dashboard_04,1:209,Table,CHART
+dashboard_04,1:382,Card,CHART
+dashboard_04,1:31,Text input container,KPI_CARD
+dashboard_04,1:38,Text input container,KPI_CARD
+dashboard_04,1:469,Table container,TABLE
+dashboard_05,52:2618,Frame 1267,TABLE
+dashboard_05,72:1474,Group 48125,CHART
+dashboard_05,42:1661,Group 406,CHART
+dashboard_06,1:754,Diagnostics,CHART
+dashboard_06,1:818,Patients,KPI_CARD
+dashboard_06,1:794,Health Index,KPI_CARD
+dashboard_06,1:899,Appointments,CHART
+dashboard_06,1:857,Causes Range,CHART
+dashboard_06,1:20,Covid19 Pandemic,CHART
+dashboard_06,1:1058,Doctors,CHART
+dashboard_07,1:5,Element-1,KPI_CARD
+dashboard_07,1:22,Element-2,KPI_CARD
+dashboard_07,1:29,Element-3,KPI_CARD
+dashboard_07,1:39,Element-4,KPI_CARD
+dashboard_07,1:46,Element-5,KPI_CARD
+dashboard_07,1:52,Element-6,CHART
+dashboard_07,1:60,Element-7,CHART
+dashboard_07,1:89,Element-8,CHART
+dashboard_07,1:110,Element-9,OTHER
+dashboard_07,1:409,Element-10,CHART
+dashboard_08,1:106,Group 27,KPI_CARD
+dashboard_08,1:171,Group 28,KPI_CARD
+dashboard_08,1:190,Group 29,KPI_CARD
+dashboard_08,1:207,Group 30,KPI_CARD
+dashboard_08,1:119,Group 31,KPI_CARD
+dashboard_08,1:145,Group 32,KPI_CARD
+dashboard_08,1:132,Group 33,KPI_CARD
+dashboard_08,1:157,Group 34,KPI_CARD
+dashboard15,3:3,Local components,OTHER
+dashboard15,3:32,Status pill,OTHER
+dashboard15,3:138,KPI card,OTHER
+dashboard15,3:2110,recent claims / Table row,OTHER
+dashboard15,3:174,Local components,OTHER
+dashboard15,3:203,Status pill,OTHER
+dashboard15,3:309,KPI card,OTHER
+dashboard15,3:2326,prescriptions / Table row,OTHER
+dashboard15,3:333,Local components,OTHER
+dashboard15,3:362,Status pill,OTHER
+dashboard15,3:463,KPI card,OTHER
+dashboard15,3:2508,members / Table row,OTHER
+dashboard15,3:503,Local components,OTHER
+dashboard15,3:532,Status pill,OTHER
+dashboard15,3:628,KPI card,OTHER
+dashboard15,3:2793,utilisation by service / Table row,OTHER
+dashboard15,3:643,Local components,OTHER
+dashboard15,3:672,Status pill,OTHER
+dashboard15,3:778,KPI card,OTHER
+dashboard15,3:2910,members needing follow-up / Table row,OTHER
+dashboard15,3:118,Metric=Total claims,OTHER
+dashboard15,3:2078,Style=Default,OTHER
+dashboard15,3:289,Metric=Scripts filled,OTHER
+dashboard15,3:2298,Style=Default,OTHER
+dashboard15,3:448,Metric=Total members,OTHER
+dashboard15,3:2468,Style=Default,OTHER
+dashboard15,3:618,"”=Metric=Admits per 1,000""",OTHER
+dashboard15,3:2771,Style=Default,OTHER
+dashboard15,3:758,Metric=Active care plans,OTHER
+dashboard15,3:2882,Style=Default,OTHER
+dashboard15,3:111,Page title,OTHER
+dashboard15,3:112,Title and description,OTHER
+dashboard15,3:282,Page title,OTHER
+dashboard15,3:283,Title and description,OTHER
+dashboard15,3:441,Page title,OTHER
+dashboard15,3:611,Page title,OTHER
+dashboard15,3:751,Page title,OTHER
+dashboard15,3:2094,Style=Alternate,OTHER
+dashboard15,3:2312,Style=Alternate,OTHER
+dashboard15,3:2488,Style=Alternate,OTHER
+dashboard15,3:2782,Style=Alternate,OTHER
+dashboard15,3:2896,Style=Alternate,OTHER
+dashboard15,3:123,Metric=Paid amount,OTHER
+dashboard15,3:294,Metric=Generic rate,OTHER
+dashboard15,3:453,Metric=New this month,OTHER
+dashboard15,3:623,"”=Metric=ER visits per 1,000""",OTHER
+dashboard15,3:763,Metric=High-risk members,OTHER
+dashboard15,3:117,Key metrics,OTHER
+dashboard15,3:139,Total claims,KPI_CARD
+dashboard15,3:144,Paid amount,KPI_CARD
+dashboard15,3:149,Denial rate,KPI_CARD
+dashboard15,3:154,Avg days to pay,KPI_CARD
+dashboard15,3:288,Key metrics,OTHER
+dashboard15,3:310,Scripts filled,KPI_CARD
+dashboard15,3:315,Generic rate,KPI_CARD
+dashboard15,3:320,Avg copay,KPI_CARD
+dashboard15,3:325,Prior auths pending,KPI_CARD
+dashboard15,3:447,Key metrics,OTHER
+dashboard15,3:464,Total members,KPI_CARD
+dashboard15,3:469,New this month,KPI_CARD
+dashboard15,3:474,Termed this month,KPI_CARD
+dashboard15,3:617,Key metrics,OTHER
+dashboard15,3:629,"”Admits per 1,000""",KPI_CARD
+dashboard15,3:634,"”ER visits per 1,000""",KPI_CARD
+dashboard15,3:757,Key metrics,OTHER
+dashboard15,3:779,Active care plans,KPI_CARD
+dashboard15,3:784,High-risk members,KPI_CARD
+dashboard15,3:789,Outreach rate,KPI_CARD
+dashboard15,3:794,Avg risk score,KPI_CARD
+dashboard15,3:128,Metric=Denial rate,OTHER
+dashboard15,3:299,Metric=Avg copay,OTHER
+dashboard15,3:458,Metric=Termed this month,OTHER
+dashboard15,3:768,Metric=Outreach rate,OTHER
+dashboard15,3:159,Charts,OTHER
+dashboard15,3:1537,claims by month,CHART
+dashboard15,3:1567,denial rate trend,CHART
+dashboard15,3:330,Charts,OTHER
+dashboard15,3:1598,scripts by drug class,CHART
+dashboard15,3:479,Filter Bar,FILTER
+dashboard15,3:639,Chart row 1,OTHER
+dashboard15,3:1624,admissions by month,CHART
+dashboard15,3:1654,ER visit trend,CHART
+dashboard15,3:799,Charts,OTHER
+dashboard15,3:1755,risk score trend,CHART
+dashboard15,3:1786,outreach by team,CHART
+dashboard15,3:2442,members,TABLE
+dashboard15,3:2443,Table heading,OTHER
+dashboard15,3:133,Metric=Avg days to pay,OTHER
+dashboard15,3:304,Metric=Prior auths pending,OTHER
+dashboard15,3:773,Metric=Avg risk score,OTHER
+dashboard15,3:2451,Header row,OTHER
+dashboard15,3:2054,recent claims,TABLE
+dashboard15,3:2055,Table heading,OTHER
+dashboard15,3:2276,prescriptions,TABLE
+dashboard15,3:2277,Table heading,OTHER
+dashboard15,3:640,Chart row 2,OTHER
+dashboard15,3:1685,visits by setting,CHART
+dashboard15,3:1707,utilisation by age group,CHART
+dashboard15,3:2860,members needing follow-up,TABLE
+dashboard15,3:2861,Table heading,OTHER
+dashboard15,3:2063,Header row,OTHER
+dashboard15,3:2285,Header row,OTHER
+dashboard15,3:2869,Header row,OTHER
+dashboard15,3:2751,utilisation by service,TABLE
+dashboard15,3:2752,Table heading,OTHER
+dashboard15,3:2760,Header row,OTHER
+dashboard15,3:1125,Test 08 - Member Home Mobile,OTHER
+dashboard15,3:802,Local components,OTHER
+dashboard15,3:831,Status pill,OTHER
+dashboard15,3:945,KPI card,OTHER
+dashboard15,3:3087,spend by category / Table row,OTHER
+dashboard15,3:977,Local components,OTHER
+dashboard15,3:1006,Status pill,OTHER
+dashboard15,3:1107,KPI card,OTHER
+dashboard15,3:3234,Top Performers / Table row,OTHER
+dashboard15,3:3343,Needs Improvement / Table row,OTHER
+dashboard15,3:1126,Local components,OTHER
+dashboard15,3:1155,Status pill,OTHER
+dashboard15,3:1176,KPI card,OTHER
+dashboard15,3:3440,recent claims / Table row,OTHER
+dashboard15,3:1207,Local components,OTHER
+dashboard15,3:1236,Status pill,OTHER
+dashboard15,3:1337,KPI card,OTHER
+dashboard15,3:3533,service categories / Table row,OTHER
+dashboard15,3:1356,Local components,OTHER
+dashboard15,3:1385,Status pill,OTHER
+dashboard15,3:1496,KPI card,OTHER
+dashboard15,3:3683,Top Denial Reasons / Table row,OTHER
+dashboard15,3:3788,High-Cost Claimants / Table row,OTHER
+dashboard15,3:3974,Contract Summary / Table row,OTHER
+dashboard15,3:917,Metric=Total spend,OTHER
+dashboard15,3:3048,Style=Default,OTHER
+dashboard15,3:1092,Metric=Providers scored,OTHER
+dashboard15,3:3212,Style=Default,OTHER
+dashboard15,3:3321,Style=Default,OTHER
+dashboard15,3:1166,Metric=Deductible used,OTHER
+dashboard15,3:3426,Style=Default,OTHER
+dashboard15,3:1322,Metric=Active members,OTHER
+dashboard15,3:3505,Style=Default,OTHER
+dashboard15,3:1471,Metric=Total members,OTHER
+dashboard15,3:3665,Style=Default,OTHER
+dashboard15,3:3760,Style=Default,OTHER
+dashboard15,3:3934,Style=Default,OTHER
+dashboard15,3:910,Page title,OTHER
+dashboard15,3:911,Title and description,OTHER
+dashboard15,3:1085,Page title,OTHER
+dashboard15,3:1086,Title and description,OTHER
+dashboard15,3:1315,Page title,OTHER
+dashboard15,3:1316,Title and description,OTHER
+dashboard15,3:1464,Page title,OTHER
+dashboard15,3:1465,Title and description,OTHER
+dashboard15,3:3061,Style=Alternate,OTHER
+dashboard15,3:3223,Style=Alternate,OTHER
+dashboard15,3:3332,Style=Alternate,OTHER
+dashboard15,3:3519,Style=Alternate,OTHER
+dashboard15,3:3674,Style=Alternate,OTHER
+dashboard15,3:3774,Style=Alternate,OTHER
+dashboard15,3:3954,Style=Alternate,OTHER
+dashboard15,3:3433,Style=Alternate,OTHER
+dashboard15,3:3074,Style=Total,OTHER
+dashboard15,3:924,Metric=PMPM,OTHER
+dashboard15,3:1097,Metric=Avg quality score,OTHER
+dashboard15,3:1171,Metric=Out-of-pocket spent,OTHER
+dashboard15,3:1327,Metric=ER visits,OTHER
+dashboard15,3:1476,Metric=Total spend,OTHER
+dashboard15,3:916,Key metrics,OTHER
+dashboard15,3:946,Total spend,KPI_CARD
+dashboard15,3:953,PMPM,KPI_CARD
+dashboard15,3:960,Specialty spend,KPI_CARD
+dashboard15,3:967,Rebates,KPI_CARD
+dashboard15,3:1091,Key metrics,OTHER
+dashboard15,3:1108,Providers scored,KPI_CARD
+dashboard15,3:1113,Avg quality score,KPI_CARD
+dashboard15,3:1118,Cost index,KPI_CARD
+dashboard15,3:1321,Key metrics,OTHER
+dashboard15,3:1338,Active members,KPI_CARD
+dashboard15,3:1343,ER visits,KPI_CARD
+dashboard15,3:1348,Cost trend,KPI_CARD
+dashboard15,3:1470,Key metrics,OTHER
+dashboard15,3:1497,Total members,KPI_CARD
+dashboard15,3:1502,Total spend,KPI_CARD
+dashboard15,3:1507,Denial rate,KPI_CARD
+dashboard15,3:1512,Quality score,KPI_CARD
+dashboard15,3:1517,PMPM,KPI_CARD
+dashboard15,3:1177,Deductible used,KPI_CARD
+dashboard15,3:1182,Out-of-pocket spent,KPI_CARD
+dashboard15,3:931,Metric=Specialty spend,OTHER
+dashboard15,3:1102,Metric=Cost index,OTHER
+dashboard15,3:1332,Metric=Cost trend,OTHER
+dashboard15,3:1481,Metric=Denial rate,OTHER
+dashboard15,3:974,Charts,OTHER
+dashboard15,3:1816,spend by month,CHART
+dashboard15,3:1123,Charts,OTHER
+dashboard15,3:1852,quality score by specialty,CHART
+dashboard15,3:1353,Charts,OTHER
+dashboard15,3:1926,scripts by drug class,CHART
+dashboard15,3:1522,Charts,OTHER
+dashboard15,3:1952,claims and denial rate,CHART
+dashboard15,3:1995,spend mix,CHART
+dashboard15,3:2021,quality by service,CHART
+dashboard15,3:1187,Charts,OTHER
+dashboard15,3:1894,monthly spend,CHART
+dashboard15,3:938,Metric=Rebates,OTHER
+dashboard15,3:1486,Metric=Quality score,OTHER
+dashboard15,3:1491,Metric=PMPM,OTHER
+dashboard15,3:3410,recent claims,TABLE
+dashboard15,3:3411,Table heading,OTHER
+dashboard15,3:3026,spend by category,TABLE
+dashboard15,3:3027,Table heading,OTHER
+dashboard15,3:3483,service categories,TABLE
+dashboard15,3:3484,Table heading,OTHER
+dashboard15,3:1523,Claims insights,OTHER
+dashboard15,3:3647,Top Denial Reasons,TABLE
+dashboard15,3:3648,Table heading,OTHER
+dashboard15,3:3738,High-Cost Claimants,TABLE
+dashboard15,3:3739,Table heading,OTHER
+dashboard15,3:1124,Provider rankings,OTHER
+dashboard15,3:3192,Top Performers,TABLE
+dashboard15,3:3193,Table heading,OTHER
+dashboard15,3:3301,Needs Improvement,TABLE
+dashboard15,3:3302,Table heading,OTHER
+dashboard15,3:3035,Header row,OTHER
+dashboard15,3:3492,Header row,OTHER
+dashboard15,3:3656,Header row,OTHER
+dashboard15,3:3747,Header row,OTHER
+dashboard15,3:3201,Header row,OTHER
+dashboard15,3:3310,Header row,OTHER
+dashboard15,3:3906,Contract Summary,TABLE
+dashboard15,3:3907,Table heading,OTHER
+dashboard15,3:3915,Header row,OTHER

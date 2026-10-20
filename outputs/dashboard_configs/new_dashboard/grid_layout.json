@@ -1,235 +1,218 @@
 {
-  "dashboard_id": "4:49",
-  "dashboard_name": "main-content",
+  "dashboard_id": "1607:2230",
+  "dashboard_name": "Design 03 – Appointment Operations",
   "grid": {
     "columns": 12,
     "rows": 12
   },
   "dashboard_size": {
-    "width": 1180.0,
-    "height": 1419.0
+    "width": 1440.0,
+    "height": 1080.0
   },
-  "component_count": 13,
+  "component_count": 12,
   "components": [
     {
-      "candidate_id": "4:51",
-      "name": "header-title-block",
+      "candidate_id": "1607:2240",
+      "name": "Primary navigation",
       "predicted_type": "KPI_CARD",
       "grid": {
         "colOffset": 0,
-        "colSpan": 4,
-        "rowOffset": 0,
-        "rowSpan": 1
+        "colSpan": 2,
+        "rowOffset": 1,
+        "rowSpan": 5
       },
       "position_relative_to_dashboard": {
-        "x": 32.0,
-        "y": 32.0,
-        "width": 343.0,
-        "height": 54.0
+        "x": 16.0,
+        "y": 166.0,
+        "width": 184.0,
+        "height": 288.0
       }
     },
     {
-      "candidate_id": "4:63",
-      "name": "kpi-card-total-patients",
+      "candidate_id": "1607:2326",
+      "name": "KPI Card / Appointments today",
       "predicted_type": "KPI_CARD",
       "grid": {
-        "colOffset": 0,
-        "colSpan": 4,
-        "rowOffset": 0,
-        "rowSpan": 3
-      },
-      "position_relative_to_dashboard": {
-        "x": 32.0,
-        "y": 110.0,
-        "width": 267.0,
-        "height": 160.0
-      }
-    },
-    {
-      "candidate_id": "4:86",
-      "name": "kpi-card-appointments-today",
-      "predicted_type": "KPI_CARD",
-      "grid": {
-        "colOffset": 3,
+        "colOffset": 2,
         "colSpan": 3,
-        "rowOffset": 0,
-        "rowSpan": 3
+        "rowOffset": 2,
+        "rowSpan": 2
       },
       "position_relative_to_dashboard": {
-        "x": 315.0,
-        "y": 110.0,
-        "width": 267.0,
-        "height": 160.0
+        "x": 244.0,
+        "y": 202.0,
+        "width": 280.0,
+        "height": 128.0
       }
     },
     {
-      "candidate_id": "4:109",
-      "name": "kpi-card-bed-occupancy-rate",
+      "candidate_id": "1607:2327",
+      "name": "KPI Card / No-show rate",
+      "predicted_type": "KPI_CARD",
+      "grid": {
+        "colOffset": 4,
+        "colSpan": 3,
+        "rowOffset": 2,
+        "rowSpan": 2
+      },
+      "position_relative_to_dashboard": {
+        "x": 540.0,
+        "y": 202.0,
+        "width": 280.0,
+        "height": 128.0
+      }
+    },
+    {
+      "candidate_id": "1607:2328",
+      "name": "KPI Card / Avg wait time",
       "predicted_type": "KPI_CARD",
       "grid": {
         "colOffset": 6,
-        "colSpan": 3,
-        "rowOffset": 0,
-        "rowSpan": 3
-      },
-      "position_relative_to_dashboard": {
-        "x": 598.0,
-        "y": 110.0,
-        "width": 267.0,
-        "height": 160.0
-      }
-    },
-    {
-      "candidate_id": "4:132",
-      "name": "kpi-card-revenue-this-month",
-      "predicted_type": "KPI_CARD",
-      "grid": {
-        "colOffset": 8,
         "colSpan": 4,
-        "rowOffset": 0,
-        "rowSpan": 3
+        "rowOffset": 2,
+        "rowSpan": 2
       },
       "position_relative_to_dashboard": {
-        "x": 881.0,
-        "y": 110.0,
-        "width": 267.0,
-        "height": 160.0
+        "x": 836.0,
+        "y": 202.0,
+        "width": 280.0,
+        "height": 128.0
       }
     },
     {
-      "candidate_id": "4:70",
-      "name": "kpi-middle",
-      "predicted_type": "KPI_CARD",
-      "grid": {
-        "colOffset": 0,
-        "colSpan": 3,
-        "rowOffset": 1,
-        "rowSpan": 1
-      },
-      "position_relative_to_dashboard": {
-        "x": 52.0,
-        "y": 166.5,
-        "width": 227.0,
-        "height": 55.0
-      }
-    },
-    {
-      "candidate_id": "4:93",
-      "name": "kpi-middle",
-      "predicted_type": "KPI_CARD",
-      "grid": {
-        "colOffset": 3,
-        "colSpan": 3,
-        "rowOffset": 1,
-        "rowSpan": 1
-      },
-      "position_relative_to_dashboard": {
-        "x": 335.0,
-        "y": 166.5,
-        "width": 227.0,
-        "height": 55.0
-      }
-    },
-    {
-      "candidate_id": "4:116",
-      "name": "kpi-middle",
-      "predicted_type": "KPI_CARD",
-      "grid": {
-        "colOffset": 6,
-        "colSpan": 3,
-        "rowOffset": 1,
-        "rowSpan": 1
-      },
-      "position_relative_to_dashboard": {
-        "x": 618.0,
-        "y": 166.5,
-        "width": 227.0,
-        "height": 55.0
-      }
-    },
-    {
-      "candidate_id": "4:139",
-      "name": "kpi-middle",
+      "candidate_id": "1607:2329",
+      "name": "KPI Card / Utilisation %",
       "predicted_type": "KPI_CARD",
       "grid": {
         "colOffset": 9,
         "colSpan": 3,
-        "rowOffset": 1,
-        "rowSpan": 1
-      },
-      "position_relative_to_dashboard": {
-        "x": 901.0,
-        "y": 166.5,
-        "width": 227.0,
-        "height": 55.0
-      }
-    },
-    {
-      "candidate_id": "4:155",
-      "name": "admissions-card",
-      "predicted_type": "CHART",
-      "grid": {
-        "colOffset": 0,
-        "colSpan": 12,
         "rowOffset": 2,
-        "rowSpan": 4
+        "rowSpan": 2
       },
       "position_relative_to_dashboard": {
-        "x": 32.0,
-        "y": 294.0,
-        "width": 1116.0,
-        "height": 359.0
+        "x": 1132.0,
+        "y": 202.0,
+        "width": 280.0,
+        "height": 128.0
       }
     },
     {
-      "candidate_id": "4:216",
-      "name": "department-card",
+      "candidate_id": "1607:2379",
+      "name": "Table / Today's appointments",
       "predicted_type": "CHART",
       "grid": {
-        "colOffset": 0,
-        "colSpan": 7,
-        "rowOffset": 5,
-        "rowSpan": 4
+        "colOffset": 2,
+        "colSpan": 10,
+        "rowOffset": 6,
+        "rowSpan": 6
       },
       "position_relative_to_dashboard": {
-        "x": 32.0,
-        "y": 677.0,
-        "width": 646.0,
-        "height": 319.0
+        "x": 244.0,
+        "y": 604.0,
+        "width": 1168.0,
+        "height": 460.0
       }
     },
     {
-      "candidate_id": "4:266",
-      "name": "demographics-card",
-      "predicted_type": "CHART",
+      "candidate_id": "1607:2384",
+      "name": "Table column / Time",
+      "predicted_type": "KPI_CARD",
       "grid": {
-        "colOffset": 7,
-        "colSpan": 5,
-        "rowOffset": 5,
-        "rowSpan": 3
+        "colOffset": 2,
+        "colSpan": 2,
+        "rowOffset": 7,
+        "rowSpan": 5
       },
       "position_relative_to_dashboard": {
-        "x": 698.0,
-        "y": 677.0,
-        "width": 450.0,
-        "height": 267.0
+        "x": 264.0,
+        "y": 652.0,
+        "width": 161.14,
+        "height": 372.0
       }
     },
     {
-      "candidate_id": "4:271",
-      "name": "donut-chart-container",
+      "candidate_id": "1607:2407",
+      "name": "Table column / Patient",
+      "predicted_type": "KPI_CARD",
+      "grid": {
+        "colOffset": 3,
+        "colSpan": 2,
+        "rowOffset": 7,
+        "rowSpan": 5
+      },
+      "position_relative_to_dashboard": {
+        "x": 425.14,
+        "y": 652.0,
+        "width": 161.14,
+        "height": 372.0
+      }
+    },
+    {
+      "candidate_id": "1607:2430",
+      "name": "Table column / Provider",
+      "predicted_type": "KPI_CARD",
+      "grid": {
+        "colOffset": 4,
+        "colSpan": 3,
+        "rowOffset": 7,
+        "rowSpan": 5
+      },
+      "position_relative_to_dashboard": {
+        "x": 586.29,
+        "y": 652.0,
+        "width": 161.14,
+        "height": 372.0
+      }
+    },
+    {
+      "candidate_id": "1607:2453",
+      "name": "Table column / Type",
+      "predicted_type": "KPI_CARD",
+      "grid": {
+        "colOffset": 6,
+        "colSpan": 2,
+        "rowOffset": 7,
+        "rowSpan": 5
+      },
+      "position_relative_to_dashboard": {
+        "x": 747.43,
+        "y": 652.0,
+        "width": 161.14,
+        "height": 372.0
+      }
+    },
+    {
+      "candidate_id": "1607:2476",
+      "name": "Table column / Location",
       "predicted_type": "KPI_CARD",
       "grid": {
         "colOffset": 7,
         "colSpan": 2,
-        "rowOffset": 6,
-        "rowSpan": 2
+        "rowOffset": 7,
+        "rowSpan": 5
       },
       "position_relative_to_dashboard": {
-        "x": 722.0,
-        "y": 760.0,
-        "width": 160.0,
-        "height": 160.0
+        "x": 908.57,
+        "y": 652.0,
+        "width": 161.14,
+        "height": 372.0
+      }
+    },
+    {
+      "candidate_id": "1607:2522",
+      "name": "Table column / Duration",
+      "predicted_type": "KPI_CARD",
+      "grid": {
+        "colOffset": 10,
+        "colSpan": 2,
+        "rowOffset": 7,
+        "rowSpan": 5
+      },
+      "position_relative_to_dashboard": {
+        "x": 1230.86,
+        "y": 652.0,
+        "width": 161.14,
+        "height": 372.0
       }
     }
   ]

@@ -1,0 +1,231 @@
+candidate_id,name,label
+3:3,Local components,OTHER
+3:32,Status pill,OTHER
+3:138,KPI card,OTHER
+3:2110,recent claims / Table row,OTHER
+3:174,Local components,OTHER
+3:203,Status pill,OTHER
+3:309,KPI card,OTHER
+3:2326,prescriptions / Table row,OTHER
+3:333,Local components,OTHER
+3:362,Status pill,OTHER
+3:463,KPI card,OTHER
+3:2508,members / Table row,OTHER
+3:503,Local components,OTHER
+3:532,Status pill,OTHER
+3:628,KPI card,OTHER
+3:2793,utilisation by service / Table row,OTHER
+3:643,Local components,OTHER
+3:672,Status pill,OTHER
+3:778,KPI card,OTHER
+3:2910,members needing follow-up / Table row,OTHER
+3:118,Metric=Total claims,OTHER
+3:2078,Style=Default,OTHER
+3:289,Metric=Scripts filled,OTHER
+3:2298,Style=Default,OTHER
+3:448,Metric=Total members,OTHER
+3:2468,Style=Default,OTHER
+3:618,"”=Metric=Admits per 1,000""",OTHER
+3:2771,Style=Default,OTHER
+3:758,Metric=Active care plans,OTHER
+3:2882,Style=Default,OTHER
+3:111,Page title,OTHER
+3:112,Title and description,OTHER
+3:282,Page title,OTHER
+3:283,Title and description,OTHER
+3:441,Page title,OTHER
+3:611,Page title,OTHER
+3:751,Page title,OTHER
+3:2094,Style=Alternate,OTHER
+3:2312,Style=Alternate,OTHER
+3:2488,Style=Alternate,OTHER
+3:2782,Style=Alternate,OTHER
+3:2896,Style=Alternate,OTHER
+3:123,Metric=Paid amount,OTHER
+3:294,Metric=Generic rate,OTHER
+3:453,Metric=New this month,OTHER
+3:623,"”=Metric=ER visits per 1,000""",OTHER
+3:763,Metric=High-risk members,OTHER
+3:117,Key metrics,OTHER
+3:139,Total claims,KPI_CARD
+3:144,Paid amount,KPI_CARD
+3:149,Denial rate,KPI_CARD
+3:154,Avg days to pay,KPI_CARD
+3:288,Key metrics,OTHER
+3:310,Scripts filled,KPI_CARD
+3:315,Generic rate,KPI_CARD
+3:320,Avg copay,KPI_CARD
+3:325,Prior auths pending,KPI_CARD
+3:447,Key metrics,OTHER
+3:464,Total members,KPI_CARD
+3:469,New this month,KPI_CARD
+3:474,Termed this month,KPI_CARD
+3:617,Key metrics,OTHER
+3:629,"”Admits per 1,000""",KPI_CARD
+3:634,"”ER visits per 1,000""",KPI_CARD
+3:757,Key metrics,OTHER
+3:779,Active care plans,KPI_CARD
+3:784,High-risk members,KPI_CARD
+3:789,Outreach rate,KPI_CARD
+3:794,Avg risk score,KPI_CARD
+3:128,Metric=Denial rate,OTHER
+3:299,Metric=Avg copay,OTHER
+3:458,Metric=Termed this month,OTHER
+3:768,Metric=Outreach rate,OTHER
+3:159,Charts,OTHER
+3:1537,claims by month,CHART
+3:1567,denial rate trend,CHART
+3:330,Charts,OTHER
+3:1598,scripts by drug class,CHART
+3:479,Filter Bar,FILTER
+3:639,Chart row 1,OTHER
+3:1624,admissions by month,CHART
+3:1654,ER visit trend,CHART
+3:799,Charts,OTHER
+3:1755,risk score trend,CHART
+3:1786,outreach by team,CHART
+3:2442,members,TABLE
+3:2443,Table heading,OTHER
+3:133,Metric=Avg days to pay,OTHER
+3:304,Metric=Prior auths pending,OTHER
+3:773,Metric=Avg risk score,OTHER
+3:2451,Header row,OTHER
+3:2054,recent claims,TABLE
+3:2055,Table heading,OTHER
+3:2276,prescriptions,TABLE
+3:2277,Table heading,OTHER
+3:640,Chart row 2,OTHER
+3:1685,visits by setting,CHART
+3:1707,utilisation by age group,CHART
+3:2860,members needing follow-up,TABLE
+3:2861,Table heading,OTHER
+3:2063,Header row,OTHER
+3:2285,Header row,OTHER
+3:2869,Header row,OTHER
+3:2751,utilisation by service,TABLE
+3:2752,Table heading,OTHER
+3:2760,Header row,OTHER
+3:1125,Test 08 - Member Home Mobile,OTHER
+3:802,Local components,OTHER
+3:831,Status pill,OTHER
+3:945,KPI card,OTHER
+3:3087,spend by category / Table row,OTHER
+3:977,Local components,OTHER
+3:1006,Status pill,OTHER
+3:1107,KPI card,OTHER
+3:3234,Top Performers / Table row,OTHER
+3:3343,Needs Improvement / Table row,OTHER
+3:1126,Local components,OTHER
+3:1155,Status pill,OTHER
+3:1176,KPI card,OTHER
+3:3440,recent claims / Table row,OTHER
+3:1207,Local components,OTHER
+3:1236,Status pill,OTHER
+3:1337,KPI card,OTHER
+3:3533,service categories / Table row,OTHER
+3:1356,Local components,OTHER
+3:1385,Status pill,OTHER
+3:1496,KPI card,OTHER
+3:3683,Top Denial Reasons / Table row,OTHER
+3:3788,High-Cost Claimants / Table row,OTHER
+3:3974,Contract Summary / Table row,OTHER
+3:917,Metric=Total spend,OTHER
+3:3048,Style=Default,OTHER
+3:1092,Metric=Providers scored,OTHER
+3:3212,Style=Default,OTHER
+3:3321,Style=Default,OTHER
+3:1166,Metric=Deductible used,OTHER
+3:3426,Style=Default,OTHER
+3:1322,Metric=Active members,OTHER
+3:3505,Style=Default,OTHER
+3:1471,Metric=Total members,OTHER
+3:3665,Style=Default,OTHER
+3:3760,Style=Default,OTHER
+3:3934,Style=Default,OTHER
+3:910,Page title,OTHER
+3:911,Title and description,OTHER
+3:1085,Page title,OTHER
+3:1086,Title and description,OTHER
+3:1315,Page title,OTHER
+3:1316,Title and description,OTHER
+3:1464,Page title,OTHER
+3:1465,Title and description,OTHER
+3:3061,Style=Alternate,OTHER
+3:3223,Style=Alternate,OTHER
+3:3332,Style=Alternate,OTHER
+3:3519,Style=Alternate,OTHER
+3:3674,Style=Alternate,OTHER
+3:3774,Style=Alternate,OTHER
+3:3954,Style=Alternate,OTHER
+3:3433,Style=Alternate,OTHER
+3:3074,Style=Total,OTHER
+3:924,Metric=PMPM,OTHER
+3:1097,Metric=Avg quality score,OTHER
+3:1171,Metric=Out-of-pocket spent,OTHER
+3:1327,Metric=ER visits,OTHER
+3:1476,Metric=Total spend,OTHER
+3:916,Key metrics,OTHER
+3:946,Total spend,KPI_CARD
+3:953,PMPM,KPI_CARD
+3:960,Specialty spend,KPI_CARD
+3:967,Rebates,KPI_CARD
+3:1091,Key metrics,OTHER
+3:1108,Providers scored,KPI_CARD
+3:1113,Avg quality score,KPI_CARD
+3:1118,Cost index,KPI_CARD
+3:1321,Key metrics,OTHER
+3:1338,Active members,KPI_CARD
+3:1343,ER visits,KPI_CARD
+3:1348,Cost trend,KPI_CARD
+3:1470,Key metrics,OTHER
+3:1497,Total members,KPI_CARD
+3:1502,Total spend,KPI_CARD
+3:1507,Denial rate,KPI_CARD
+3:1512,Quality score,KPI_CARD
+3:1517,PMPM,KPI_CARD
+3:1177,Deductible used,KPI_CARD
+3:1182,Out-of-pocket spent,KPI_CARD
+3:931,Metric=Specialty spend,OTHER
+3:1102,Metric=Cost index,OTHER
+3:1332,Metric=Cost trend,OTHER
+3:1481,Metric=Denial rate,OTHER
+3:974,Charts,OTHER
+3:1816,spend by month,CHART
+3:1123,Charts,OTHER
+3:1852,quality score by specialty,CHART
+3:1353,Charts,OTHER
+3:1926,scripts by drug class,CHART
+3:1522,Charts,OTHER
+3:1952,claims and denial rate,CHART
+3:1995,spend mix,CHART
+3:2021,quality by service,CHART
+3:1187,Charts,OTHER
+3:1894,monthly spend,CHART
+3:938,Metric=Rebates,OTHER
+3:1486,Metric=Quality score,OTHER
+3:1491,Metric=PMPM,OTHER
+3:3410,recent claims,TABLE
+3:3411,Table heading,OTHER
+3:3026,spend by category,TABLE
+3:3027,Table heading,OTHER
+3:3483,service categories,TABLE
+3:3484,Table heading,OTHER
+3:1523,Claims insights,OTHER
+3:3647,Top Denial Reasons,TABLE
+3:3648,Table heading,OTHER
+3:3738,High-Cost Claimants,TABLE
+3:3739,Table heading,OTHER
+3:1124,Provider rankings,OTHER
+3:3192,Top Performers,TABLE
+3:3193,Table heading,OTHER
+3:3301,Needs Improvement,TABLE
+3:3302,Table heading,OTHER
+3:3035,Header row,OTHER
+3:3492,Header row,OTHER
+3:3656,Header row,OTHER
+3:3747,Header row,OTHER
+3:3201,Header row,OTHER
+3:3310,Header row,OTHER
+3:3906,Contract Summary,TABLE
+3:3907,Table heading,OTHER
+3:3915,Header row,OTHER
