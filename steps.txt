@@ -127,3 +127,49 @@ Open `http://localhost:8000/dashboard_preview.html` and press **Ctrl + F5** to r
 
 
 http://localhost:8000/dashboard_preview.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+Running the Application
+Terminal 1 - Backend:
+
+powershell
+cd c:\figma_proj
+$env:PORT=8001; python server.py
+Terminal 2 - Frontend:
+
+powershell
+cd c:\figma_proj\frontend
+npm run dev
+Terminal 3 - Plugin Receiver (optional, if using plugin):
+
+powershell
+cd c:\figma_proj
+python plugin_receiver.py
+Access the app at: http://localhost:5174
+
+Workflow
+Send design from Figma plugin (or manually place JSON in dataset/new_dashboard/figma_data.json)
+Click "Load Plugin Data" in frontend
+Click "Normalize" to extract candidates
+Click "Preprocess" to extract features
+Click "Run Model" for XGBoost classification
+Click "Generate Layout" for 12x12 grid and Vista page.json
+Download page.json or view preview
+The 12x12 grid preview is already available in the existing LiveDashboardPreview component which displays the generated Vista page.json.
+
+Feedback submitted
+
+
+
+

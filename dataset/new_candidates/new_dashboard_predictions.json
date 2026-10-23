@@ -1,6 +1,7 @@
 {
   "source": "dataset\\new_candidates\\new_dashboard_candidates.json",
   "candidate_count": 23,
+  "model": "src\\model\\models\\component_classifier.joblib",
   "predictions": [
     {
       "candidate_id": "1607:2281",
@@ -32,14 +33,15 @@
         "/",
         "Workspace"
       ],
-      "dashboard": "—D—e—s—i—g—n— —0—3— —–— —A—p—p—o—i—n—t—m—e—n—t— —O—p—e—r—a—t—i—o—n—s—",
+      "dashboard": "Design 03 – Appointment Operations",
       "candidate_score": 7,
       "has_chart_word": false,
       "has_table_word": false,
       "has_kpi_word": false,
       "has_filter_word": false,
-      "predicted_type": "OTHER",
-      "confidence": 98.8
+      "predicted_type": "HEADER",
+      "confidence": 0.9953,
+      "needs_review": false
     },
     {
       "candidate_id": "1607:2299",
@@ -71,14 +73,15 @@
         "Monitor today's schedule, patient flow, and provider capacity.",
         "Appointment Operations"
       ],
-      "dashboard": "—D—e—s—i—g—n— —0—3— —–— —A—p—p—o—i—n—t—m—e—n—t— —O—p—e—r—a—t—i—o—n—s—",
+      "dashboard": "Design 03 – Appointment Operations",
       "candidate_score": 11,
       "has_chart_word": false,
       "has_table_word": false,
       "has_kpi_word": false,
       "has_filter_word": false,
-      "predicted_type": "OTHER",
-      "confidence": 98.4
+      "predicted_type": "HEADER",
+      "confidence": 0.983,
+      "needs_review": false
     },
     {
       "candidate_id": "1607:2300",
@@ -106,14 +109,15 @@
         "Monitor today's schedule, patient flow, and provider capacity.",
         "Appointment Operations"
       ],
-      "dashboard": "—D—e—s—i—g—n— —0—3— —–— —A—p—p—o—i—n—t—m—e—n—t— —O—p—e—r—a—t—i—o—n—s—",
+      "dashboard": "Design 03 – Appointment Operations",
       "candidate_score": 9,
       "has_chart_word": false,
       "has_table_word": false,
       "has_kpi_word": false,
       "has_filter_word": false,
-      "predicted_type": "OTHER",
-      "confidence": 98.2
+      "predicted_type": "HEADER",
+      "confidence": 0.9955,
+      "needs_review": false
     },
     {
       "candidate_id": "1607:2301",
@@ -140,14 +144,15 @@
         "Monitor today's schedule, patient flow, and provider capacity.",
         "Appointment Operations"
       ],
-      "dashboard": "—D—e—s—i—g—n— —0—3— —–— —A—p—p—o—i—n—t—m—e—n—t— —O—p—e—r—a—t—i—o—n—s—",
+      "dashboard": "Design 03 – Appointment Operations",
       "candidate_score": 6,
       "has_chart_word": false,
       "has_table_word": false,
       "has_kpi_word": false,
       "has_filter_word": false,
-      "predicted_type": "OTHER",
-      "confidence": 98.4
+      "predicted_type": "HEADER",
+      "confidence": 0.991,
+      "needs_review": false
     },
     {
       "candidate_id": "1607:2240",
@@ -179,14 +184,15 @@
         "Overview",
         "WORKSPACE"
       ],
-      "dashboard": "—D—e—s—i—g—n— —0—3— —–— —A—p—p—o—i—n—t—m—e—n—t— —O—p—e—r—a—t—i—o—n—s—",
+      "dashboard": "Design 03 – Appointment Operations",
       "candidate_score": 9,
       "has_chart_word": false,
       "has_table_word": false,
       "has_kpi_word": false,
       "has_filter_word": false,
-      "predicted_type": "KPI_CARD",
-      "confidence": 67.4
+      "predicted_type": "NAVBAR",
+      "confidence": 0.9704,
+      "needs_review": false
     },
     {
       "candidate_id": "1607:2325",
@@ -221,14 +227,15 @@
         "vs. prior period",
         "↓ 1.3 pp"
       ],
-      "dashboard": "—D—e—s—i—g—n— —0—3— —–— —A—p—p—o—i—n—t—m—e—n—t— —O—p—e—r—a—t—i—o—n—s—",
+      "dashboard": "Design 03 – Appointment Operations",
       "candidate_score": 13,
       "has_chart_word": false,
       "has_table_word": false,
       "has_kpi_word": false,
       "has_filter_word": false,
       "predicted_type": "OTHER",
-      "confidence": 89.8
+      "confidence": 0.9921,
+      "needs_review": false
     },
     {
       "candidate_id": "1607:2326",
@@ -257,14 +264,15 @@
         "248",
         "Appointments today"
       ],
-      "dashboard": "—D—e—s—i—g—n— —0—3— —–— —A—p—p—o—i—n—t—m—e—n—t— —O—p—e—r—a—t—i—o—n—s—",
+      "dashboard": "Design 03 – Appointment Operations",
       "candidate_score": 9,
       "has_chart_word": false,
       "has_table_word": false,
       "has_kpi_word": true,
       "has_filter_word": false,
       "predicted_type": "KPI_CARD",
-      "confidence": 55.1
+      "confidence": 0.9989,
+      "needs_review": false
     },
     {
       "candidate_id": "1607:2327",
@@ -293,14 +301,15 @@
         "4.2%",
         "No-show rate"
       ],
-      "dashboard": "—D—e—s—i—g—n— —0—3— —–— —A—p—p—o—i—n—t—m—e—n—t— —O—p—e—r—a—t—i—o—n—s—",
+      "dashboard": "Design 03 – Appointment Operations",
       "candidate_score": 7,
       "has_chart_word": false,
       "has_table_word": false,
       "has_kpi_word": true,
       "has_filter_word": false,
       "predicted_type": "KPI_CARD",
-      "confidence": 55.1
+      "confidence": 0.9989,
+      "needs_review": false
     },
     {
       "candidate_id": "1607:2328",
@@ -329,14 +338,15 @@
         "14 min",
         "Avg wait time"
       ],
-      "dashboard": "—D—e—s—i—g—n— —0—3— —–— —A—p—p—o—i—n—t—m—e—n—t— —O—p—e—r—a—t—i—o—n—s—",
+      "dashboard": "Design 03 – Appointment Operations",
       "candidate_score": 7,
       "has_chart_word": false,
       "has_table_word": false,
       "has_kpi_word": true,
       "has_filter_word": false,
       "predicted_type": "KPI_CARD",
-      "confidence": 53.6
+      "confidence": 0.9983,
+      "needs_review": false
     },
     {
       "candidate_id": "1607:2329",
@@ -365,14 +375,15 @@
         "89.6%",
         "Utilisation %"
       ],
-      "dashboard": "—D—e—s—i—g—n— —0—3— —–— —A—p—p—o—i—n—t—m—e—n—t— —O—p—e—r—a—t—i—o—n—s—",
+      "dashboard": "Design 03 – Appointment Operations",
       "candidate_score": 7,
       "has_chart_word": false,
       "has_table_word": false,
       "has_kpi_word": true,
       "has_filter_word": false,
       "predicted_type": "KPI_CARD",
-      "confidence": 55.1
+      "confidence": 0.9989,
+      "needs_review": false
     },
     {
       "candidate_id": "1607:2330",
@@ -407,14 +418,15 @@
         "15m",
         "22.5m"
       ],
-      "dashboard": "—D—e—s—i—g—n— —0—3— —–— —A—p—p—o—i—n—t—m—e—n—t— —O—p—e—r—a—t—i—o—n—s—",
+      "dashboard": "Design 03 – Appointment Operations",
       "candidate_score": 10,
       "has_chart_word": true,
       "has_table_word": false,
       "has_kpi_word": false,
       "has_filter_word": false,
-      "predicted_type": "OTHER",
-      "confidence": 85.9
+      "predicted_type": "CHART",
+      "confidence": 0.9831,
+      "needs_review": false
     },
     {
       "candidate_id": "1607:2341",
@@ -449,14 +461,15 @@
         "15m",
         "22.5m"
       ],
-      "dashboard": "—D—e—s—i—g—n— —0—3— —–— —A—p—p—o—i—n—t—m—e—n—t— —O—p—e—r—a—t—i—o—n—s—",
+      "dashboard": "Design 03 – Appointment Operations",
       "candidate_score": 9,
       "has_chart_word": false,
       "has_table_word": false,
       "has_kpi_word": false,
       "has_filter_word": false,
-      "predicted_type": "OTHER",
-      "confidence": 97.5
+      "predicted_type": "CHART",
+      "confidence": 0.9822,
+      "needs_review": false
     },
     {
       "candidate_id": "1607:2348",
@@ -487,14 +500,15 @@
         "Mon",
         "Target 15m"
       ],
-      "dashboard": "—D—e—s—i—g—n— —0—3— —–— —A—p—p—o—i—n—t—m—e—n—t— —O—p—e—r—a—t—i—o—n—s—",
+      "dashboard": "Design 03 – Appointment Operations",
       "candidate_score": 7,
       "has_chart_word": false,
       "has_table_word": false,
       "has_kpi_word": false,
       "has_filter_word": false,
-      "predicted_type": "OTHER",
-      "confidence": 96.1
+      "predicted_type": "CHART",
+      "confidence": 0.9861,
+      "needs_review": false
     },
     {
       "candidate_id": "1607:2379",
@@ -529,14 +543,15 @@
         "30 min",
         "30 min"
       ],
-      "dashboard": "—D—e—s—i—g—n— —0—3— —–— —A—p—p—o—i—n—t—m—e—n—t— —O—p—e—r—a—t—i—o—n—s—",
+      "dashboard": "Design 03 – Appointment Operations",
       "candidate_score": 14,
       "has_chart_word": false,
       "has_table_word": true,
       "has_kpi_word": false,
       "has_filter_word": false,
-      "predicted_type": "CHART",
-      "confidence": 43.7
+      "predicted_type": "TABLE",
+      "confidence": 0.9578,
+      "needs_review": false
     },
     {
       "candidate_id": "1607:2380",
@@ -563,14 +578,15 @@
         "Friday, October 9, 2026 · All clinical locations",
         "Today's appointments"
       ],
-      "dashboard": "—D—e—s—i—g—n— —0—3— —–— —A—p—p—o—i—n—t—m—e—n—t— —O—p—e—r—a—t—i—o—n—s—",
+      "dashboard": "Design 03 – Appointment Operations",
       "candidate_score": 8,
       "has_chart_word": false,
       "has_table_word": true,
       "has_kpi_word": false,
       "has_filter_word": false,
-      "predicted_type": "OTHER",
-      "confidence": 99.1
+      "predicted_type": "HEADER",
+      "confidence": 0.9358,
+      "needs_review": false
     },
     {
       "candidate_id": "1607:2383",
@@ -605,14 +621,15 @@
         "15 min",
         "30 min"
       ],
-      "dashboard": "—D—e—s—i—g—n— —0—3— —–— —A—p—p—o—i—n—t—m—e—n—t— —O—p—e—r—a—t—i—o—n—s—",
+      "dashboard": "Design 03 – Appointment Operations",
       "candidate_score": 14,
       "has_chart_word": false,
       "has_table_word": true,
       "has_kpi_word": false,
       "has_filter_word": false,
       "predicted_type": "TABLE",
-      "confidence": 72.5
+      "confidence": 0.9952,
+      "needs_review": false
     },
     {
       "candidate_id": "1607:2384",
@@ -647,14 +664,15 @@
         "08:15",
         "08:00"
       ],
-      "dashboard": "—D—e—s—i—g—n— —0—3— —–— —A—p—p—o—i—n—t—m—e—n—t— —O—p—e—r—a—t—i—o—n—s—",
+      "dashboard": "Design 03 – Appointment Operations",
       "candidate_score": 8,
       "has_chart_word": false,
       "has_table_word": true,
       "has_kpi_word": false,
       "has_filter_word": false,
-      "predicted_type": "KPI_CARD",
-      "confidence": 64.4
+      "predicted_type": "TABLE",
+      "confidence": 0.9852,
+      "needs_review": false
     },
     {
       "candidate_id": "1607:2407",
@@ -689,14 +707,15 @@
         "James Anderson",
         "Olivia Bennett"
       ],
-      "dashboard": "—D—e—s—i—g—n— —0—3— —–— —A—p—p—o—i—n—t—m—e—n—t— —O—p—e—r—a—t—i—o—n—s—",
+      "dashboard": "Design 03 – Appointment Operations",
       "candidate_score": 7,
       "has_chart_word": false,
       "has_table_word": true,
       "has_kpi_word": false,
       "has_filter_word": false,
-      "predicted_type": "KPI_CARD",
-      "confidence": 73.9
+      "predicted_type": "TABLE",
+      "confidence": 0.9921,
+      "needs_review": false
     },
     {
       "candidate_id": "1607:2430",
@@ -731,14 +750,15 @@
         "Dr. David Kim",
         "Dr. Maya Patel"
       ],
-      "dashboard": "—D—e—s—i—g—n— —0—3— —–— —A—p—p—o—i—n—t—m—e—n—t— —O—p—e—r—a—t—i—o—n—s—",
+      "dashboard": "Design 03 – Appointment Operations",
       "candidate_score": 6,
       "has_chart_word": false,
       "has_table_word": true,
       "has_kpi_word": false,
       "has_filter_word": false,
-      "predicted_type": "KPI_CARD",
-      "confidence": 73.9
+      "predicted_type": "TABLE",
+      "confidence": 0.9924,
+      "needs_review": false
     },
     {
       "candidate_id": "1607:2453",
@@ -773,14 +793,15 @@
         "Consultation",
         "Follow-up"
       ],
-      "dashboard": "—D—e—s—i—g—n— —0—3— —–— —A—p—p—o—i—n—t—m—e—n—t— —O—p—e—r—a—t—i—o—n—s—",
+      "dashboard": "Design 03 – Appointment Operations",
       "candidate_score": 6,
       "has_chart_word": false,
       "has_table_word": true,
       "has_kpi_word": false,
       "has_filter_word": false,
-      "predicted_type": "KPI_CARD",
-      "confidence": 73.9
+      "predicted_type": "TABLE",
+      "confidence": 0.989,
+      "needs_review": false
     },
     {
       "candidate_id": "1607:2476",
@@ -815,14 +836,15 @@
         "West Clinic",
         "North Pavilion"
       ],
-      "dashboard": "—D—e—s—i—g—n— —0—3— —–— —A—p—p—o—i—n—t—m—e—n—t— —O—p—e—r—a—t—i—o—n—s—",
+      "dashboard": "Design 03 – Appointment Operations",
       "candidate_score": 6,
       "has_chart_word": false,
       "has_table_word": true,
       "has_kpi_word": false,
       "has_filter_word": false,
-      "predicted_type": "KPI_CARD",
-      "confidence": 73.9
+      "predicted_type": "TABLE",
+      "confidence": 0.989,
+      "needs_review": false
     },
     {
       "candidate_id": "1607:2499",
@@ -857,14 +879,15 @@
         "Completed",
         "Completed"
       ],
-      "dashboard": "—D—e—s—i—g—n— —0—3— —–— —A—p—p—o—i—n—t—m—e—n—t— —O—p—e—r—a—t—i—o—n—s—",
+      "dashboard": "Design 03 – Appointment Operations",
       "candidate_score": 10,
       "has_chart_word": false,
       "has_table_word": true,
       "has_kpi_word": false,
       "has_filter_word": false,
-      "predicted_type": "CHART",
-      "confidence": 53.8
+      "predicted_type": "TABLE",
+      "confidence": 0.971,
+      "needs_review": false
     },
     {
       "candidate_id": "1607:2522",
@@ -899,14 +922,15 @@
         "15 min",
         "30 min"
       ],
-      "dashboard": "—D—e—s—i—g—n— —0—3— —–— —A—p—p—o—i—n—t—m—e—n—t— —O—p—e—r—a—t—i—o—n—s—",
+      "dashboard": "Design 03 – Appointment Operations",
       "candidate_score": 8,
       "has_chart_word": false,
       "has_table_word": true,
       "has_kpi_word": false,
       "has_filter_word": false,
-      "predicted_type": "KPI_CARD",
-      "confidence": 64.4
+      "predicted_type": "TABLE",
+      "confidence": 0.9852,
+      "needs_review": false
     }
   ]
 }
