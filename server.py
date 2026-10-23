@@ -7,6 +7,8 @@ import json
 import os
 import sys
 import time
+import uuid
+from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
@@ -49,6 +51,43 @@ app.add_middleware(
 STORAGE_DIR = ROOT / "outputs" / "designs"
 STORAGE_DIR.mkdir(parents=True, exist_ok=True)
 
+# History storage
+HISTORY_DIR = ROOT / "outputs" / "history"
+HISTORY_DIR.mkdir(parents=True, exist_ok=True)
+HISTORY_INDEX_FILE = HISTORY_DIR / "index.json"
+
+def load_history_index() -> List[Dict[str, Any]]:
+    """Load history index from disk."""
+    if HISTORY_INDEX_FILE.exists():
+        try:
+            with open(HISTORY_INDEX_FILE, encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            return []
+    return []
+
+def save_history_index(index: List[Dict[str, Any]]):
+    """Save history index to disk."""
+    with open(HISTORY_INDEX_FILE, "w", encoding="utf-8") as f:
+        json.dump(index, f, indent=2, ensure_ascii=False)
+
+def add_history_entry(run_id: str, design_name: str, component_count: int, widget_count: int, tile_count: int, need_attention: int) -> Dict[str, Any]:
+    """Add a new entry to history index."""
+    index = load_history_index()
+    entry = {
+        "runId": run_id,
+        "designName": design_name,
+        "timestamp": datetime.utcnow().isoformat(),
+        "componentCount": component_count,
+        "widgetCount": widget_count,
+        "tileCount": tile_count,
+        "needAttention": need_attention,
+        "status": "completed"
+    }
+    index.insert(0, entry)  # Add to beginning
+    save_history_index(index)
+    return entry
+
 
 class PackageDetails(BaseModel):
     subjectArea: Optional[str] = "sales"
@@ -64,6 +103,7 @@ class GenerateRequest(BaseModel):
     packageDetails: Optional[PackageDetails] = None
     reclassify: Optional[bool] = False
     includeChrome: Optional[bool] = False
+    runId: Optional[str] = None
 
 
 # ============================================================================
@@ -75,6 +115,23 @@ def get_status():
     """Return backend health and ML model status."""
     model_path = ROOT / "models" / "xgboost_model.json"
     encoder_path = ROOT / "models" / "label_encoder.pkl"
+    
+    # Check if plugin has sent data
+    active_figma = ROOT / "dataset" / "new_dashboard" / "figma_data.json"
+    plugin_data_received = active_figma.exists()
+    
+    design_name = None
+    if plugin_data_received:
+        try:
+            with open(active_figma, encoding="utf-8") as f:
+                data = json.load(f)
+            doc = data.get("document", {})
+            first_child = doc.get("children", [{}])[0] if doc.get("children") else {}
+            design_name = first_child.get("name") or doc.get("name") or "Unknown Design"
+            design_name = design_name.replace("\ufffd", " - ").strip()
+        except Exception:
+            design_name = "Unknown Design"
+    
     return {
         "status": "connected",
         "modelLoaded": model_path.exists() and encoder_path.exists(),
@@ -88,6 +145,8 @@ def get_status():
             "12x12 CSS Grid Layout Mapping",
             "Vista Slide page.json Assembly"
         ],
+        "pluginDataReceived": plugin_data_received,
+        "designName": design_name,
         "timestamp": time.time()
     }
 
@@ -203,6 +262,29 @@ async def upload_figma_file(file: UploadFile = File(...)):
         raise HTTPException(status_code=422, detail=f"Figma structure error: {str(exc)}")
 
 
+@app.get("/api/load-plugin-data")
+def load_plugin_data():
+    """Load Figma data sent by plugin from dataset/new_dashboard/figma_data.json."""
+    active_figma = ROOT / "dataset" / "new_dashboard" / "figma_data.json"
+    if not active_figma.exists():
+        raise HTTPException(status_code=404, detail="No plugin data found. Please send design from Figma plugin first.")
+    
+    try:
+        with open(active_figma, encoding="utf-8") as f:
+            figma_data = json.load(f)
+        
+        nodes, doc_name, dims = extract_nodes_from_figma_payload(figma_data)
+        return {
+            "success": True,
+            "documentName": doc_name,
+            "nodeCount": len(nodes),
+            "dimensions": dims,
+            "figmaJson": figma_data
+        }
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=f"Failed to load plugin data: {str(exc)}")
+
+
 @app.post("/api/generate")
 def generate_dashboard(request: GenerateRequest):
     """
@@ -235,18 +317,29 @@ def generate_dashboard(request: GenerateRequest):
 
 @app.post("/api/normalize")
 def normalize_candidates(request: GenerateRequest):
-    """Run candidate generation stage only."""
+    """Run candidate generation stage only (Normalize)."""
     figma_data = request.figmaJson
     if not figma_data:
         active_figma = ROOT / "dataset" / "new_dashboard" / "figma_data.json"
+        if not active_figma.exists():
+            raise HTTPException(status_code=404, detail="No Figma data found. Please send from plugin first.")
         with open(active_figma, encoding="utf-8") as f:
             figma_data = json.load(f)
 
     nodes, doc_name, _ = extract_nodes_from_figma_payload(figma_data)
     candidates = run_candidate_generation(nodes, dashboard_name=doc_name)
+    
+    # Save to disk
+    cand_file = ROOT / "dataset" / "new_candidates" / "new_dashboard_candidates.json"
+    cand_file.parent.mkdir(parents=True, exist_ok=True)
+    with open(cand_file, "w", encoding="utf-8") as f:
+        json.dump({"dashboard": doc_name, "candidate_count": len(candidates), "candidates": candidates}, f, indent=2, ensure_ascii=False)
+    
     return {
         "success": True,
+        "stage": "normalize",
         "candidateCount": len(candidates),
+        "documentName": doc_name,
         "normalizedJson": {
             "dashboard": doc_name,
             "candidate_count": len(candidates),
@@ -255,26 +348,164 @@ def normalize_candidates(request: GenerateRequest):
     }
 
 
+@app.post("/api/preprocess")
+def preprocess_candidates(request: GenerateRequest):
+    """Run preprocessing (feature extraction) on normalized candidates."""
+    # Load candidates from normalize stage
+    cand_file = ROOT / "dataset" / "new_candidates" / "new_dashboard_candidates.json"
+    if not cand_file.exists():
+        raise HTTPException(status_code=404, detail="No normalized candidates found. Please run Normalize first.")
+    
+    with open(cand_file, encoding="utf-8") as f:
+        cand_data = json.load(f)
+    
+    candidates = cand_data.get("candidates", [])
+    doc_name = cand_data.get("dashboard", "new_dashboard")
+    
+    # Feature extraction is part of classification, so we'll extract features here
+    from src.features.extract_features import calculate_features
+    import pandas as pd
+    
+    feature_rows = [calculate_features(c) for c in candidates]
+    features_df = pd.DataFrame(feature_rows)
+    
+    return {
+        "success": True,
+        "stage": "preprocess",
+        "candidateCount": len(candidates),
+        "documentName": doc_name,
+        "features": features_df.to_dict(orient="records")[:10],  # Return first 10 for preview
+        "totalFeatures": len(feature_rows)
+    }
+
+
 @app.post("/api/classify")
 def classify_components(request: GenerateRequest):
     """Run XGBoost classification and prediction cleaning only."""
-    figma_data = request.figmaJson
-    if not figma_data:
-        active_figma = ROOT / "dataset" / "new_dashboard" / "figma_data.json"
-        with open(active_figma, encoding="utf-8") as f:
-            figma_data = json.load(f)
-
-    nodes, doc_name, _ = extract_nodes_from_figma_payload(figma_data)
-    candidates = run_candidate_generation(nodes, dashboard_name=doc_name)
+    # Load candidates from normalize stage
+    cand_file = ROOT / "dataset" / "new_candidates" / "new_dashboard_candidates.json"
+    if not cand_file.exists():
+        raise HTTPException(status_code=404, detail="No normalized candidates found. Please run Normalize first.")
+    
+    with open(cand_file, encoding="utf-8") as f:
+        cand_data = json.load(f)
+    
+    candidates = cand_data.get("candidates", [])
+    
     raw_predictions = run_classification(candidates)
     cleaned = run_prediction_cleaning(raw_predictions)
+    
+    # Save to disk
+    clean_file = ROOT / "dataset" / "new_candidates" / "new_dashboard_clean_predictions.json"
+    clean_file.parent.mkdir(parents=True, exist_ok=True)
+    with open(clean_file, "w", encoding="utf-8") as f:
+        json.dump({"dashboard": cand_data.get("dashboard", "new_dashboard"), "candidate_count": len(cleaned), "predictions": cleaned}, f, indent=2, ensure_ascii=False)
 
     return {
         "success": True,
+        "stage": "classify",
         "candidateCount": len(cleaned),
         "classifierJson": {
             "candidate_count": len(cleaned),
             "predictions": cleaned
+        }
+    }
+
+
+@app.post("/api/generate-layout")
+def generate_layout(request: GenerateRequest):
+    """Generate 12x12 grid layout and Vista page.json from predictions."""
+    # Load predictions from classify stage
+    pred_file = ROOT / "dataset" / "new_candidates" / "new_dashboard_clean_predictions.json"
+    if not pred_file.exists():
+        raise HTTPException(status_code=404, detail="No predictions found. Please run Classify first.")
+    
+    # Load figma data
+    active_figma = ROOT / "dataset" / "new_dashboard" / "figma_data.json"
+    if not active_figma.exists():
+        raise HTTPException(status_code=404, detail="No Figma data found.")
+    
+    with open(active_figma, encoding="utf-8") as f:
+        figma_data = json.load(f)
+    
+    with open(pred_file, encoding="utf-8") as f:
+        pred_data = json.load(f)
+    
+    predictions = pred_data.get("predictions", [])
+    
+    # Generate grid layout
+    grid_layout = run_grid_layout(figma_data, predictions)
+    
+    # Generate Vista page
+    package_meta = request.packageDetails.dict() if request.packageDetails else None
+    source_nodes, _, _ = extract_nodes_from_figma_payload(figma_data)
+
+    vista_page = run_vista_page_generation(
+        grid_layout,
+        predictions,
+        package_meta,
+        source_nodes=source_nodes,
+    )
+    
+    # Generate or use provided run ID
+    run_id = request.runId or str(uuid.uuid4())[:8]
+    
+    # Save to history directory
+    run_dir = HISTORY_DIR / run_id
+    run_dir.mkdir(parents=True, exist_ok=True)
+    
+    # Save all outputs to history
+    with open(run_dir / "figma_data.json", "w", encoding="utf-8") as f:
+        json.dump(figma_data, f, indent=2, ensure_ascii=False)
+    
+    # Load raw predictions if available
+    raw_pred_file = ROOT / "dataset" / "new_candidates" / "new_dashboard_predictions.json"
+    if raw_pred_file.exists():
+        with open(raw_pred_file, encoding="utf-8") as f:
+            raw_predictions = json.load(f)
+        with open(run_dir / "raw_predictions.json", "w", encoding="utf-8") as f:
+            json.dump(raw_predictions, f, indent=2, ensure_ascii=False)
+    
+    with open(run_dir / "clean_predictions.json", "w", encoding="utf-8") as f:
+        json.dump(pred_data, f, indent=2, ensure_ascii=False)
+    
+    with open(run_dir / "grid_layout.json", "w", encoding="utf-8") as f:
+        json.dump(grid_layout, f, indent=2, ensure_ascii=False)
+    
+    with open(run_dir / "page.json", "w", encoding="utf-8") as f:
+        json.dump(vista_page, f, indent=2, ensure_ascii=False)
+    
+    # Also save to standard locations for backward compatibility
+    grid_file = ROOT / "outputs" / "dashboard_configs" / "new_dashboard" / "grid_layout.json"
+    grid_file.parent.mkdir(parents=True, exist_ok=True)
+    with open(grid_file, "w", encoding="utf-8") as f:
+        json.dump(grid_layout, f, indent=2, ensure_ascii=False)
+    
+    page_file = ROOT / "outputs" / "vista_pages" / "new_dashboard" / "page.json"
+    page_file.parent.mkdir(parents=True, exist_ok=True)
+    with open(page_file, "w", encoding="utf-8") as f:
+        json.dump(vista_page, f, indent=2, ensure_ascii=False)
+    
+    # Add to history index
+    add_history_entry(
+        run_id=run_id,
+        design_name=vista_page["title"],
+        component_count=len(predictions),
+        widget_count=len(vista_page["widgets"]),
+        tile_count=len(vista_page["tiles"]),
+        need_attention=vista_page["validation"]["reviewRequired"]
+    )
+    
+    return {
+        "success": True,
+        "stage": "generate-layout",
+        "runId": run_id,
+        "gridLayout": grid_layout,
+        "pageJson": vista_page,
+        "stats": {
+            "widgets": len(vista_page["widgets"]),
+            "tiles": len(vista_page["tiles"]),
+            "needAttention": vista_page["validation"]["reviewRequired"]
         }
     }
 
@@ -301,6 +532,111 @@ def download_predictions_json():
     return FileResponse(
         path=str(pred_file),
         filename="new_dashboard_clean_predictions.json",
+        media_type="application/json"
+    )
+
+
+# ============================================================================
+# HISTORY API ENDPOINTS
+# ============================================================================
+
+@app.get("/api/history")
+def get_history():
+    """List all historical runs."""
+    index = load_history_index()
+    return {"runs": index}
+
+
+@app.get("/api/history/{run_id}")
+def get_history_run(run_id: str):
+    """Get details for a specific historical run."""
+    index = load_history_index()
+    entry = next((e for e in index if e["runId"] == run_id), None)
+    if not entry:
+        raise HTTPException(status_code=404, detail="Run not found in history.")
+    
+    # Load the run's JSON files
+    run_dir = HISTORY_DIR / run_id
+    if not run_dir.exists():
+        raise HTTPException(status_code=404, detail="Run data not found on disk.")
+    
+    result = dict(entry)
+    
+    # Load available JSON outputs
+    json_files = {
+        "figma_data": run_dir / "figma_data.json",
+        "raw_predictions": run_dir / "raw_predictions.json",
+        "clean_predictions": run_dir / "clean_predictions.json",
+        "grid_layout": run_dir / "grid_layout.json",
+        "page_json": run_dir / "page.json"
+    }
+    
+    available_jsons = {}
+    for key, path in json_files.items():
+        if path.exists():
+            available_jsons[key] = True
+        else:
+            available_jsons[key] = False
+    
+    result["availableOutputs"] = available_jsons
+    return result
+
+
+@app.get("/api/history/{run_id}/json/{json_type}")
+def get_history_json(run_id: str, json_type: str):
+    """Get a specific JSON output for a run."""
+    run_dir = HISTORY_DIR / run_id
+    if not run_dir.exists():
+        raise HTTPException(status_code=404, detail="Run not found.")
+    
+    # Map json_type to file path
+    file_map = {
+        "figma_data": "figma_data.json",
+        "raw_predictions": "raw_predictions.json",
+        "clean_predictions": "clean_predictions.json",
+        "grid_layout": "grid_layout.json",
+        "page_json": "page.json"
+    }
+    
+    if json_type not in file_map:
+        raise HTTPException(status_code=400, detail=f"Invalid JSON type: {json_type}")
+    
+    file_path = run_dir / file_map[json_type]
+    if not file_path.exists():
+        raise HTTPException(status_code=404, detail=f"JSON file not found: {json_type}")
+    
+    with open(file_path, encoding="utf-8") as f:
+        return json.load(f)
+
+
+@app.get("/api/history/{run_id}/download/{json_type}")
+def download_history_json(run_id: str, json_type: str):
+    """Download a specific JSON output for a run."""
+    run_dir = HISTORY_DIR / run_id
+    if not run_dir.exists():
+        raise HTTPException(status_code=404, detail="Run not found.")
+    
+    file_map = {
+        "figma_data": "figma_data.json",
+        "raw_predictions": "raw_predictions.json",
+        "clean_predictions": "clean_predictions.json",
+        "grid_layout": "grid_layout.json",
+        "page_json": "page.json"
+    }
+    
+    if json_type not in file_map:
+        raise HTTPException(status_code=400, detail=f"Invalid JSON type: {json_type}")
+    
+    file_path = run_dir / file_map[json_type]
+    if not file_path.exists():
+        raise HTTPException(status_code=404, detail=f"JSON file not found: {json_type}")
+    
+    # Generate descriptive filename
+    filename = f"{run_id}_{json_type}.json"
+    
+    return FileResponse(
+        path=str(file_path),
+        filename=filename,
         media_type="application/json"
     )
 

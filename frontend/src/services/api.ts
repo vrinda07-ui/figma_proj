@@ -1,4 +1,4 @@
-import { BackendStatus, DesignSummary, PackageDetails, PipelineResult } from '../types'
+import { BackendStatus, DesignSummary, PackageDetails, PipelineResult, HistoryEntry, HistoryRunDetails } from '../types'
 
 const API_BASE = '/api'
 
@@ -6,6 +6,21 @@ export async function fetchBackendStatus(): Promise<BackendStatus> {
   const res = await fetch(`${API_BASE}/status`)
   if (!res.ok) {
     throw new Error(`Backend unavailable (${res.status})`)
+  }
+  return res.json()
+}
+
+export async function loadPluginData(): Promise<{
+  success: boolean
+  documentName: string
+  nodeCount: number
+  dimensions: { width: number; height: number }
+  figmaJson: any
+}> {
+  const res = await fetch(`${API_BASE}/load-plugin-data`)
+  if (!res.ok) {
+    const error = await res.json().catch(() => ({ detail: 'Failed to load plugin data' }))
+    throw new Error(error.detail || 'Failed to load plugin data')
   }
   return res.json()
 }
@@ -102,6 +117,70 @@ export async function runClassify(params: {
     throw new Error(error.detail || 'Classification failed')
   }
   return res.json()
+}
+
+export async function runPreprocess(params: {
+  figmaJson?: any
+  designId?: string
+}): Promise<any> {
+  const res = await fetch(`${API_BASE}/preprocess`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(params),
+  })
+
+  if (!res.ok) {
+    const error = await res.json().catch(() => ({ detail: 'Preprocessing failed' }))
+    throw new Error(error.detail || 'Preprocessing failed')
+  }
+  return res.json()
+}
+
+export async function runGenerateLayout(params: {
+  figmaJson?: any
+  designId?: string
+  packageDetails?: Partial<PackageDetails>
+  runId?: string
+}): Promise<any> {
+  const res = await fetch(`${API_BASE}/generate-layout`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(params),
+  })
+
+  if (!res.ok) {
+    const error = await res.json().catch(() => ({ detail: 'Layout generation failed' }))
+    throw new Error(error.detail || 'Layout generation failed')
+  }
+  return res.json()
+}
+
+export async function fetchHistory(): Promise<{ runs: HistoryEntry[] }> {
+  const res = await fetch(`${API_BASE}/history`)
+  if (!res.ok) {
+    throw new Error('Failed to fetch history')
+  }
+  return res.json()
+}
+
+export async function fetchHistoryRun(runId: string): Promise<HistoryRunDetails> {
+  const res = await fetch(`${API_BASE}/history/${runId}`)
+  if (!res.ok) {
+    throw new Error('Failed to fetch run details')
+  }
+  return res.json()
+}
+
+export async function fetchHistoryJson(runId: string, jsonType: string): Promise<any> {
+  const res = await fetch(`${API_BASE}/history/${runId}/json/${jsonType}`)
+  if (!res.ok) {
+    throw new Error('Failed to fetch JSON')
+  }
+  return res.json()
+}
+
+export function getHistoryDownloadUrl(runId: string, jsonType: string): string {
+  return `${API_BASE}/history/${runId}/download/${jsonType}`
 }
 
 export function getDownloadPageUrl(): string {

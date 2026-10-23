@@ -5,17 +5,25 @@ import joblib
 import pandas as pd
 
 from pathlib import Path
-from xgboost import XGBClassifier
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 
 from src.features.extract_features import calculate_features
 
-CANDIDATE_FILE = ROOT / "dataset" / "new_candidates" / "new_dashboard_candidates.json"
-MODEL_FILE = ROOT / "models" / "xgboost_model.json"
-ENCODER_FILE = ROOT / "models" / "label_encoder.pkl"
-OUTPUT_FILE = ROOT / "dataset" / "new_candidates" / "new_dashboard_predictions.json"
+# New dashboard candidates
+CANDIDATE_FILE = (
+    ROOT / "dataset" / "new_candidates" / "new_dashboard_candidates.json"
+)
+
+# Use the newly trained model bundle
+MODEL_FILE = (
+    ROOT / "src" / "model" / "models" / "component_classifier.joblib"
+)
+
+OUTPUT_FILE = (
+    ROOT / "dataset" / "new_candidates" / "new_dashboard_predictions.json"
+)
 
 FEATURE_COLS = [
     "width", "height", "area", "aspect_ratio", "child_count",
@@ -29,8 +37,16 @@ FEATURE_COLS = [
 
 def main():
     print("=" * 60)
-    print("XGBOOST PREDICTION")
+    print("XGBOOST NEW DASHBOARD PREDICTION")
     print("=" * 60)
+
+    if not CANDIDATE_FILE.exists():
+        print(f"ERROR: Candidate file not found:\n{CANDIDATE_FILE}")
+        return
+
+    if not MODEL_FILE.exists():
+        print(f"ERROR: Trained model bundle not found:\n{MODEL_FILE}")
+        return
 
     with open(CANDIDATE_FILE, "r", encoding="utf-8") as f:
         candidate_data = json.load(f)
@@ -41,62 +57,78 @@ def main():
         candidates = candidate_data.get("candidates", [])
 
     if not candidates:
-        print("No candidates found. Check the candidate JSON structure.")
+        print("No candidates found. Check your candidate JSON structure.")
         return
 
     print(f"Candidates found: {len(candidates)}")
 
-    print("\nLoading XGBoost model...")
-    model = XGBClassifier()
-    model.load_model(str(MODEL_FILE))
+    print("\nLoading trained model and label encoder...")
+    bundle = joblib.load(MODEL_FILE)
 
-    print("Loading label encoder...")
-    encoder = joblib.load(ENCODER_FILE)
+    model = bundle["model"]
+    encoder = bundle["label_encoder"]
+    medians = pd.Series(bundle["medians"])
+
     print("Classes:", list(encoder.classes_))
 
+    print("\nExtracting features...")
     feature_rows = [
         calculate_features(candidate)
         for candidate in candidates
     ]
 
     features_df = pd.DataFrame(feature_rows)
-    X_new = features_df[FEATURE_COLS]
 
-    print(f"\nFeature matrix shape: {X_new.shape}")
+    # Ensure all expected features exist and use training-time preprocessing.
+    X_new = features_df.reindex(columns=FEATURE_COLS)
+    X_new = X_new.apply(pd.to_numeric, errors="coerce")
+    X_new = X_new.replace([float("inf"), float("-inf")], float("nan"))
+    X_new = X_new.fillna(medians.reindex(FEATURE_COLS)).fillna(0)
 
-    predictions_encoded = model.predict(X_new)
-    predictions = encoder.inverse_transform(
-        predictions_encoded.astype(int)
-    )
+    print(f"Feature matrix shape: {X_new.shape}")
+
+    probabilities = model.predict_proba(X_new)
+    predicted_ids = probabilities.argmax(axis=1)
+    predictions = encoder.inverse_transform(predicted_ids)
+    confidences = probabilities.max(axis=1)
 
     results = []
 
-    for candidate, prediction in zip(candidates, predictions):
+    for candidate, prediction, confidence in zip(
+        candidates, predictions, confidences
+    ):
         result = dict(candidate)
         result["predicted_type"] = str(prediction)
+        result["confidence"] = round(float(confidence), 4)
+        result["needs_review"] = bool(confidence < 0.70)
         results.append(result)
 
         print(
-            f"{candidate.get('name', 'Unnamed')} "
-            f"| {candidate.get('id', 'No ID')} "
-            f"| {prediction}"
+            f"{candidate.get('name', 'Unnamed')} | "
+            f"{candidate.get('id', 'No ID')} | "
+            f"{prediction} | confidence={confidence:.3f}"
         )
+
+    OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
 
     output_data = {
         "source": str(CANDIDATE_FILE.relative_to(ROOT)),
         "candidate_count": len(results),
+        "model": str(MODEL_FILE.relative_to(ROOT)),
         "predictions": results,
     }
-
-    OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(output_data, f, indent=2, ensure_ascii=False)
 
-    print("\n" + "=" * 60)
-    print("PREDICTION COMPLETE")
+    counts = pd.Series(predictions).value_counts()
+
+    print("\nPredicted component counts:")
+    print(counts.to_string())
+
+    print(f"\nNeeds review: {sum(confidences < 0.70)} candidates")
+    print("\nPREDICTION COMPLETE")
     print(f"Saved to: {OUTPUT_FILE}")
-    print("=" * 60)
 
 
 if __name__ == "__main__":

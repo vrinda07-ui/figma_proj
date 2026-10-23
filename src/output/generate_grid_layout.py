@@ -20,9 +20,10 @@ GRID_ROWS = 12
 
 
 def load_figma_nodes(document):
-    """Flatten the Figma tree and remember each node's parent."""
+    """Flatten the Figma tree and remember each node's parent and children."""
     nodes = {}
     parents = {}
+    children = {}
 
     def walk(node, parent_id=None):
         if not isinstance(node, dict):
@@ -35,11 +36,16 @@ def load_figma_nodes(document):
             nodes[node_id] = node
             parents[node_id] = parent_id
 
+            if parent_id is not None:
+                if parent_id not in children:
+                    children[parent_id] = []
+                children[parent_id].append(node_id)
+
         for child in node.get("children", []):
             walk(child, node_id)
 
     walk(document)
-    return nodes, parents
+    return nodes, parents, children
 
 
 def get_bbox(node):
@@ -146,7 +152,7 @@ def main():
     with open(PREDICTIONS_FILE, encoding="utf-8") as f:
         prediction_data = json.load(f)
 
-    nodes, parents = load_figma_nodes(
+    nodes, parents, children = load_figma_nodes(
         figma_data.get("document", {})
     )
     predictions = prediction_data.get("predictions", [])
@@ -173,12 +179,12 @@ def main():
 
     selected = []
 
-    # Keep predicted charts and KPI cards inside the detected dashboard.
+    # Keep predicted charts, KPI cards, tables, and other components inside the detected dashboard.
     for prediction in predictions:
         candidate_id = prediction.get("candidate_id")
         predicted_type = prediction.get("predicted_type")
 
-        if predicted_type not in {"CHART", "KPI_CARD"}:
+        if predicted_type not in {"CHART", "KPI_CARD", "TABLE", "OTHER"}:
             continue
 
         if candidate_id is None:
@@ -241,35 +247,143 @@ def main():
             "relative": relative,
         })
 
-    # Remove chart-like groups contained within larger chart containers.
-    charts = [
-        item for item in selected
-        if item["predicted_type"] == "CHART"
-    ]
+    # Also include structural components (Sidebar, Header) that are direct children of the dashboard
+    # These are added as OTHER type since they're not in the model's class set
+    for child_id in children.get(dashboard_id, []):
+        if child_id in nodes:
+            child = nodes[child_id]
+            child_name = child.get("name", "").lower()
+            child_type = child.get("type", "")
+            bbox = get_bbox(child)
 
-    filtered = []
-
-    for item in selected:
-        if item["predicted_type"] == "CHART":
-            nested = any(
-                other["candidate_id"] != item["candidate_id"]
-                and is_inside(item["bbox"], other["bbox"])
-                and (
-                    other["bbox"]["width"]
-                    * other["bbox"]["height"]
-                    > item["bbox"]["width"]
-                    * item["bbox"]["height"]
-                )
-                for other in charts
+            # Check if this is a structural component
+            is_structural = (
+                "sidebar" in child_name or
+                "header" in child_name or
+                "navbar" in child_name or
+                "navigation" in child_name
             )
 
-            if nested:
-                print(
-                    "Skipping nested chart:",
-                    item["candidate_id"],
-                    item["name"],
+            if is_structural and bbox:
+                # Check if not already in selected
+                already_selected = any(
+                    item["candidate_id"] == child_id
+                    for item in selected
                 )
-                continue
+
+                if not already_selected:
+                    relative = {
+                        "x": bbox["x"] - dashboard_x,
+                        "y": bbox["y"] - dashboard_y,
+                        "width": bbox["width"],
+                        "height": bbox["height"],
+                    }
+
+                    # Use OTHER type since NAVBAR/HEADER are not in model classes
+                    selected.append({
+                        "candidate_id": child_id,
+                        "name": child.get("name", ""),
+                        "predicted_type": "OTHER",
+                        "bbox": bbox,
+                        "relative": relative,
+                    })
+                    print(f"Added structural component: {child.get('name')} as OTHER")
+
+        if candidate_id is None:
+            continue
+
+        candidate_id = str(candidate_id)
+        node = nodes.get(candidate_id)
+
+        if node is None:
+            print("Skipping missing node:", candidate_id)
+            continue
+
+        bbox = get_bbox(node)
+
+        if bbox is None:
+            print("Skipping node without bounding box:", candidate_id)
+            continue
+
+        # Exclude the dashboard container itself.
+        if candidate_id == dashboard_id:
+            continue
+
+        # Require the candidate to be a descendant of the dashboard.
+        current_id = parents.get(candidate_id)
+        is_descendant = False
+
+        while current_id is not None:
+            if current_id == dashboard_id:
+                is_descendant = True
+                break
+            current_id = parents.get(current_id)
+
+        if not is_descendant:
+            print("Skipping candidate outside dashboard:", candidate_id)
+            continue
+
+        relative = {
+            "x": bbox["x"] - dashboard_x,
+            "y": bbox["y"] - dashboard_y,
+            "width": bbox["width"],
+            "height": bbox["height"],
+        }
+
+        # Exclude nodes outside the dashboard bounds.
+        if (
+            relative["x"] + relative["width"] <= 0
+            or relative["y"] + relative["height"] <= 0
+            or relative["x"] >= dashboard_width
+            or relative["y"] >= dashboard_height
+        ):
+            continue
+
+        selected.append({
+            "candidate_id": candidate_id,
+            "name": node.get(
+                "name", prediction.get("name", "")
+            ),
+            "predicted_type": predicted_type,
+            "bbox": bbox,
+            "relative": relative,
+        })
+
+    # Remove nested components contained within larger containers of any type.
+    # This prevents small internal elements (like menu items, chart labels) from being
+    # treated as separate dashboard widgets when they belong to larger containers.
+    all_items = selected
+
+    filtered = []
+    seen_ids = set()
+
+    for item in all_items:
+        # Skip duplicates
+        if item["candidate_id"] in seen_ids:
+            continue
+        seen_ids.add(item["candidate_id"])
+
+        # Check if this item is nested inside any other item
+        nested = any(
+            other["candidate_id"] != item["candidate_id"]
+            and is_inside(item["bbox"], other["bbox"])
+            and (
+                other["bbox"]["width"]
+                * other["bbox"]["height"]
+                > item["bbox"]["width"]
+                * item["bbox"]["height"]
+            )
+            for other in all_items
+        )
+
+        if nested:
+            print(
+                "Skipping nested component:",
+                item["candidate_id"],
+                item["name"],
+                item["predicted_type"],
+            )
+            continue
 
         filtered.append(item)
 

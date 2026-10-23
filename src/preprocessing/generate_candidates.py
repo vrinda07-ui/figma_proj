@@ -62,6 +62,25 @@ UI_WORDS = (
     "advanced search", "search", "button", "menu item"
 )
 
+# Complete dashboard panels we want to preserve as candidates. These rules
+# intentionally target panel-level containers, not individual controls.
+PANEL_NAME_ALIASES = {
+    "header", "page header", "dashboard header", "main header",
+    "navbar", "nav bar", "navigation bar", "navigation panel",
+    "sidebar", "side bar", "side navigation", "side nav",
+    "left sidebar", "main sidebar", "topbar", "top bar",
+    "filter", "filters", "filter panel", "filters panel",
+    "filter section", "filters section", "filter container",
+    "filters container", "filter area", "filters area",
+}
+
+PANEL_NAME_PHRASES = (
+    "filter panel", "filters panel", "filter section", "filters section",
+    "filter container", "filters container", "navigation bar",
+    "navigation panel", "dashboard header", "page header",
+    "side navigation", "left sidebar", "main sidebar",
+)
+
 SEMANTIC_WORDS = (
     "kpi", "metric", "patient", "patients", "doctor", "doctors",
     "appointment", "appointments", "admission", "admissions",
@@ -360,6 +379,23 @@ def stats(node_id, node_map, children):
 # CLASSIFICATION SIGNALS
 # ============================================================
 
+def is_panel_candidate_name(node):
+    """Return True for names that explicitly denote a complete UI panel."""
+    name = norm(node.get("name"))
+    if name in PANEL_NAME_ALIASES:
+        return True
+    if any(phrase in name for phrase in PANEL_NAME_PHRASES):
+        return True
+    # Names such as "Header container" or "Sidebar section" are common in exports.
+    return bool(re.search(
+        r"\b(header|navbar|nav bar|navigation bar|sidebar|side bar|side nav|topbar|top bar)\b.*\b(container|section|panel|wrapper)\b|"
+        r"\b(container|section|panel|wrapper)\b.*\b(header|navbar|nav bar|navigation bar|sidebar|side bar|side nav|topbar|top bar)\b|"
+        r"\b(filters?|filter area)\b.*\b(container|section|panel|area)\b|"
+        r"\b(container|section|panel|area)\b.*\b(filters?|filter area)\b",
+        name
+    ))
+
+
 def is_internal(node):
     name = norm(node.get("name"))
 
@@ -524,19 +560,34 @@ def score(node, info):
 def is_component_candidate(node, info):
     name = norm(node.get("name"))
 
+    if info["width"] < 70 or info["height"] < 40:
+        print(
+            f"REJECT dimensions: {name!r} "
+            f"{info['width']}x{info['height']}"
+        )
+        return False
+
+    # Panel-level exceptions must run before generic internal/UI filtering:
+    # "header", "sidebar", and "filters" were previously rejected as UI/internal.
+    if is_panel_candidate_name(node):
+        if info["area"] >= 5000 and (
+            info["text_count"] >= 1
+            or info["direct_container_count"] >= 1
+            or info["graphic_count"] >= 2
+        ):
+            print(f"KEEP panel candidate: {name!r}")
+            return True
+        print(f"REJECT weak panel candidate: {name!r}")
+        return False
+
+    # Generic "header" is treated as a panel only when it passes the named-panel
+    # rule above. Other internal chart/table subparts should still be rejected.
     if is_internal(node):
         print(f"REJECT internal: {name!r}")
         return False
 
     if is_ui(node):
         print(f"REJECT UI: {name!r}")
-        return False
-
-    if info["width"] < 70 or info["height"] < 40:
-        print(
-            f"REJECT dimensions: {name!r} "
-            f"{info['width']}x{info['height']}"
-        )
         return False
 
     if looks_like_layout_wrapper(node, info):
@@ -712,6 +763,20 @@ def remove_nested(candidates, node_map, children):
         parent = node_map[parent_id]
         parent_info = stats(parent_id, node_map, children)
         child_info = stats(cid, node_map, children)
+
+        # The selected taxonomy is panel-level: once a complete header/sidebar/
+        # filter panel is retained, do not emit its nested controls as separate
+        # candidates. This applies only to descendants of explicitly named panels.
+        panel_ancestor_ids = [
+            ancestor_id for ancestor_id in candidate_ancestors
+            if is_panel_candidate_name(node_map.get(ancestor_id, {}))
+        ]
+        if panel_ancestor_ids:
+            print(
+                f"DROP nested child under panel: {candidate.get('name')!r} "
+                f"parent={node_map[panel_ancestor_ids[0]].get('name')!r}"
+            )
+            continue
 
         parent_name = norm(parent.get("name"))
 

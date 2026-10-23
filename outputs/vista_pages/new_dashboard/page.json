@@ -1,77 +1,97 @@
 {
-  "contentId": "EC001",
-  "slideId": "EC001",
-  "pageId": "87f97816-821b-4194-8366-b71e4465144f",
-  "id": "87f97816-821b-4194-8366-b71e4465144f",
-  "title": "E-commerce Revenue Summary",
+  "contentId": "91AOR",
+  "slideId": "91AOR",
+  "pageId": "ff0c0496-2121-471a-9247-28c2503c0c57",
+  "id": "ff0c0496-2121-471a-9247-28c2503c0c57",
+  "title": "Dashboard 18",
   "description": " ",
   "subjectArea": "sales",
-  "topic": "ecommerce",
-  "slideName": "revenue-summary",
+  "topic": "analytics",
+  "slideName": "dashboard-summary",
   "schemaVersion": "1.0",
   "format": "local-dashboard-page",
   "dashboard": {
-    "id": "1607:2230",
-    "name": "E-commerce Revenue Summary",
+    "id": "141:2068",
+    "name": "Dashboard 18",
     "columns": 12,
     "rows": 12,
     "sourceWidth": 1440.0,
-    "sourceHeight": 1080.0
+    "sourceHeight": 1100.0
   },
   "tiles": [
     {
-      "tileId": "78e9b308-6507-4bb8-b57c-c1e48c4d66bb",
-      "id": "78e9b308-6507-4bb8-b57c-c1e48c4d66bb",
-      "contentId": "EC001",
-      "slideId": "EC001",
+      "tileId": "5459c448-b558-476f-9b82-b1bbb6133e35",
+      "id": "5459c448-b558-476f-9b82-b1bbb6133e35",
+      "contentId": "91AOR",
+      "slideId": "91AOR",
       "cols": 2,
-      "rows": 5,
+      "rows": 12,
       "colOffset": 0,
-      "rowOffset": 1,
+      "rowOffset": 0,
       "widgetIds": [
-        "185ef128-e871-4985-a933-13b6ff668e83"
+        "7c0a7f2c-0b92-427e-8660-80462487b9d3"
       ],
-      "widgetId": "185ef128-e871-4985-a933-13b6ff668e83",
+      "widgetId": "7c0a7f2c-0b92-427e-8660-80462487b9d3",
       "grid": {
         "colOffset": 0,
         "colSpan": 2,
-        "rowOffset": 1,
-        "rowSpan": 5
+        "rowOffset": 0,
+        "rowSpan": 12
       }
     },
     {
-      "tileId": "99d1c667-d50a-40cb-bbc0-8878a85c8cba",
-      "id": "99d1c667-d50a-40cb-bbc0-8878a85c8cba",
-      "contentId": "EC001",
-      "slideId": "EC001",
-      "cols": 3,
+      "tileId": "55a2e8ce-88f6-4545-b28c-571ffa00be01",
+      "id": "55a2e8ce-88f6-4545-b28c-571ffa00be01",
+      "contentId": "91AOR",
+      "slideId": "91AOR",
+      "cols": 6,
       "rows": 2,
-      "colOffset": 2,
+      "colOffset": 1,
+      "rowOffset": 1,
+      "widgetIds": [
+        "c89dd18f-5c6e-410c-9d8a-8ab1fb69f4ac"
+      ],
+      "widgetId": "c89dd18f-5c6e-410c-9d8a-8ab1fb69f4ac",
+      "grid": {
+        "colOffset": 1,
+        "colSpan": 6,
+        "rowOffset": 1,
+        "rowSpan": 2
+      }
+    },
+    {
+      "tileId": "63157449-3b32-4eb1-afbe-47dc6f53fc38",
+      "id": "63157449-3b32-4eb1-afbe-47dc6f53fc38",
+      "contentId": "91AOR",
+      "slideId": "91AOR",
+      "cols": 4,
+      "rows": 2,
+      "colOffset": 1,
       "rowOffset": 2,
       "widgetIds": [
-        "5b4578e1-8dcc-4405-9e88-88282e64b6b9"
+        "84eb05ae-c107-4d81-b4a9-db271a745a44"
       ],
-      "widgetId": "5b4578e1-8dcc-4405-9e88-88282e64b6b9",
+      "widgetId": "84eb05ae-c107-4d81-b4a9-db271a745a44",
       "grid": {
-        "colOffset": 2,
-        "colSpan": 3,
+        "colOffset": 1,
+        "colSpan": 4,
         "rowOffset": 2,
         "rowSpan": 2
       }
     },
     {
-      "tileId": "a62d9f2f-5586-4b17-80d7-cefb392158f4",
-      "id": "a62d9f2f-5586-4b17-80d7-cefb392158f4",
-      "contentId": "EC001",
-      "slideId": "EC001",
+      "tileId": "5dd79555-d38e-43ee-93e5-bf413c54380e",
+      "id": "5dd79555-d38e-43ee-93e5-bf413c54380e",
+      "contentId": "91AOR",
+      "slideId": "91AOR",
       "cols": 3,
       "rows": 2,
       "colOffset": 4,
       "rowOffset": 2,
       "widgetIds": [
-        "595c616c-655e-4bb2-8205-d9f43c137236"
+        "162938f9-5971-4711-b57a-1bb57b3718ed"
       ],
-      "widgetId": "595c616c-655e-4bb2-8205-d9f43c137236",
+      "widgetId": "162938f9-5971-4711-b57a-1bb57b3718ed",
       "grid": {
         "colOffset": 4,
         "colSpan": 3,
@@ -80,18 +100,18 @@
       }
     },
     {
-      "tileId": "85d5030f-78df-45cc-81d2-00bc1ff2a05c",
-      "id": "85d5030f-78df-45cc-81d2-00bc1ff2a05c",
-      "contentId": "EC001",
-      "slideId": "EC001",
+      "tileId": "36eada9b-a395-4bae-9b76-413ba3cd963c",
+      "id": "36eada9b-a395-4bae-9b76-413ba3cd963c",
+      "contentId": "91AOR",
+      "slideId": "91AOR",
       "cols": 4,
       "rows": 2,
       "colOffset": 6,
       "rowOffset": 2,
       "widgetIds": [
-        "cad5a432-dbfb-40f1-b031-8fc1a3e3316c"
+        "2c34587c-96d8-4148-b301-9707a676da40"
       ],
-      "widgetId": "cad5a432-dbfb-40f1-b031-8fc1a3e3316c",
+      "widgetId": "2c34587c-96d8-4148-b301-9707a676da40",
       "grid": {
         "colOffset": 6,
         "colSpan": 4,
@@ -100,18 +120,18 @@
       }
     },
     {
-      "tileId": "f7fc2f4d-d437-4afe-b668-1948a464237d",
-      "id": "f7fc2f4d-d437-4afe-b668-1948a464237d",
-      "contentId": "EC001",
-      "slideId": "EC001",
+      "tileId": "4c0d94a0-badb-4c3f-bb20-289ca47f3998",
+      "id": "4c0d94a0-badb-4c3f-bb20-289ca47f3998",
+      "contentId": "91AOR",
+      "slideId": "91AOR",
       "cols": 3,
       "rows": 2,
       "colOffset": 9,
       "rowOffset": 2,
       "widgetIds": [
-        "ce8396eb-881d-4cd6-8cff-67ad94da3011"
+        "27f7012d-0eee-4ee8-b643-172d356b2ec4"
       ],
-      "widgetId": "ce8396eb-881d-4cd6-8cff-67ad94da3011",
+      "widgetId": "27f7012d-0eee-4ee8-b643-172d356b2ec4",
       "grid": {
         "colOffset": 9,
         "colSpan": 3,
@@ -120,261 +140,206 @@
       }
     },
     {
-      "tileId": "edcc76e3-0679-4dca-9a9a-8abf58395016",
-      "id": "edcc76e3-0679-4dca-9a9a-8abf58395016",
-      "contentId": "EC001",
-      "slideId": "EC001",
-      "cols": 10,
-      "rows": 6,
-      "colOffset": 2,
-      "rowOffset": 6,
+      "tileId": "677b0729-e91e-4bd6-839f-b7f5e0a831ae",
+      "id": "677b0729-e91e-4bd6-839f-b7f5e0a831ae",
+      "contentId": "91AOR",
+      "slideId": "91AOR",
+      "cols": 8,
+      "rows": 4,
+      "colOffset": 1,
+      "rowOffset": 4,
       "widgetIds": [
-        "dea7c803-5bb1-4c68-b088-5c7e042567b8"
+        "091500c5-03c3-41b0-8384-0117510bb565"
       ],
-      "widgetId": "dea7c803-5bb1-4c68-b088-5c7e042567b8",
+      "widgetId": "091500c5-03c3-41b0-8384-0117510bb565",
       "grid": {
-        "colOffset": 2,
-        "colSpan": 10,
-        "rowOffset": 6,
-        "rowSpan": 6
+        "colOffset": 1,
+        "colSpan": 8,
+        "rowOffset": 4,
+        "rowSpan": 4
       }
     },
     {
-      "tileId": "941bd541-f578-4e50-8866-d2a859e5c17c",
-      "id": "941bd541-f578-4e50-8866-d2a859e5c17c",
-      "contentId": "EC001",
-      "slideId": "EC001",
-      "cols": 2,
+      "tileId": "f943c5b9-1c85-40b0-8a11-3f7b272ba063",
+      "id": "f943c5b9-1c85-40b0-8a11-3f7b272ba063",
+      "contentId": "91AOR",
+      "slideId": "91AOR",
+      "cols": 4,
       "rows": 5,
-      "colOffset": 2,
-      "rowOffset": 7,
+      "colOffset": 8,
+      "rowOffset": 4,
       "widgetIds": [
-        "af18c7b2-a77e-4d2f-99eb-bb6652f39629"
+        "67b45062-a576-47e8-8a5a-d2d1ae2dcd28"
       ],
-      "widgetId": "af18c7b2-a77e-4d2f-99eb-bb6652f39629",
+      "widgetId": "67b45062-a576-47e8-8a5a-d2d1ae2dcd28",
       "grid": {
-        "colOffset": 2,
-        "colSpan": 2,
-        "rowOffset": 7,
+        "colOffset": 8,
+        "colSpan": 4,
+        "rowOffset": 4,
         "rowSpan": 5
       }
     },
     {
-      "tileId": "460e354a-517a-4ebc-856f-be79683946c6",
-      "id": "460e354a-517a-4ebc-856f-be79683946c6",
-      "contentId": "EC001",
-      "slideId": "EC001",
-      "cols": 2,
-      "rows": 5,
-      "colOffset": 3,
-      "rowOffset": 7,
+      "tileId": "52ea7b81-61b8-47f9-94f6-179eb4393192",
+      "id": "52ea7b81-61b8-47f9-94f6-179eb4393192",
+      "contentId": "91AOR",
+      "slideId": "91AOR",
+      "cols": 8,
+      "rows": 3,
+      "colOffset": 1,
+      "rowOffset": 5,
       "widgetIds": [
-        "d84735de-47f6-447f-8b3b-ddc5c25920cf"
+        "db064b00-0c7d-4096-8264-d4255dbcf2fb"
       ],
-      "widgetId": "d84735de-47f6-447f-8b3b-ddc5c25920cf",
+      "widgetId": "db064b00-0c7d-4096-8264-d4255dbcf2fb",
       "grid": {
-        "colOffset": 3,
-        "colSpan": 2,
-        "rowOffset": 7,
-        "rowSpan": 5
+        "colOffset": 1,
+        "colSpan": 8,
+        "rowOffset": 5,
+        "rowSpan": 3
       }
     },
     {
-      "tileId": "b965109a-aa89-4774-99d1-e31e06c8f2ae",
-      "id": "b965109a-aa89-4774-99d1-e31e06c8f2ae",
-      "contentId": "EC001",
-      "slideId": "EC001",
-      "cols": 3,
-      "rows": 5,
-      "colOffset": 4,
-      "rowOffset": 7,
+      "tileId": "85744c8f-a2c1-4c3a-984c-84bbcc58fb00",
+      "id": "85744c8f-a2c1-4c3a-984c-84bbcc58fb00",
+      "contentId": "91AOR",
+      "slideId": "91AOR",
+      "cols": 7,
+      "rows": 4,
+      "colOffset": 5,
+      "rowOffset": 8,
       "widgetIds": [
-        "6c8fdaf9-06be-4493-be35-208dc460a17a"
+        "87c7a2c5-f088-4fdc-b1b4-8783d061edfc"
       ],
-      "widgetId": "6c8fdaf9-06be-4493-be35-208dc460a17a",
+      "widgetId": "87c7a2c5-f088-4fdc-b1b4-8783d061edfc",
       "grid": {
-        "colOffset": 4,
-        "colSpan": 3,
-        "rowOffset": 7,
-        "rowSpan": 5
+        "colOffset": 5,
+        "colSpan": 7,
+        "rowOffset": 8,
+        "rowSpan": 4
       }
     },
     {
-      "tileId": "345e2c3b-f44f-437f-aadf-cfbee16f5ba4",
-      "id": "345e2c3b-f44f-437f-aadf-cfbee16f5ba4",
-      "contentId": "EC001",
-      "slideId": "EC001",
-      "cols": 2,
-      "rows": 5,
-      "colOffset": 6,
-      "rowOffset": 7,
+      "tileId": "d79d8424-bdad-4cb5-80f7-045c23182e48",
+      "id": "d79d8424-bdad-4cb5-80f7-045c23182e48",
+      "contentId": "91AOR",
+      "slideId": "91AOR",
+      "cols": 5,
+      "rows": 4,
+      "colOffset": 1,
+      "rowOffset": 8,
       "widgetIds": [
-        "53d67d6c-f5cd-480a-9fcb-95bfeb0f9c9c"
+        "06310750-c9c3-4ddf-b11b-e4657454778f"
       ],
-      "widgetId": "53d67d6c-f5cd-480a-9fcb-95bfeb0f9c9c",
+      "widgetId": "06310750-c9c3-4ddf-b11b-e4657454778f",
       "grid": {
-        "colOffset": 6,
-        "colSpan": 2,
-        "rowOffset": 7,
-        "rowSpan": 5
-      }
-    },
-    {
-      "tileId": "742d30da-dfa4-438b-8eba-6a3ea531cc74",
-      "id": "742d30da-dfa4-438b-8eba-6a3ea531cc74",
-      "contentId": "EC001",
-      "slideId": "EC001",
-      "cols": 2,
-      "rows": 5,
-      "colOffset": 7,
-      "rowOffset": 7,
-      "widgetIds": [
-        "cd8c9136-04e1-4f9f-ac07-2041866799e7"
-      ],
-      "widgetId": "cd8c9136-04e1-4f9f-ac07-2041866799e7",
-      "grid": {
-        "colOffset": 7,
-        "colSpan": 2,
-        "rowOffset": 7,
-        "rowSpan": 5
-      }
-    },
-    {
-      "tileId": "e1b68a6d-5f13-49c4-af19-a3b5f0a0e4dc",
-      "id": "e1b68a6d-5f13-49c4-af19-a3b5f0a0e4dc",
-      "contentId": "EC001",
-      "slideId": "EC001",
-      "cols": 2,
-      "rows": 5,
-      "colOffset": 10,
-      "rowOffset": 7,
-      "widgetIds": [
-        "525f98a0-6330-4823-901d-1b04307a557c"
-      ],
-      "widgetId": "525f98a0-6330-4823-901d-1b04307a557c",
-      "grid": {
-        "colOffset": 10,
-        "colSpan": 2,
-        "rowOffset": 7,
-        "rowSpan": 5
+        "colOffset": 1,
+        "colSpan": 5,
+        "rowOffset": 8,
+        "rowSpan": 4
       }
     }
   ],
   "widgets": [
     {
-      "id": "185ef128-e871-4985-a933-13b6ff668e83",
-      "widgetId": "185ef128-e871-4985-a933-13b6ff668e83",
+      "id": "7c0a7f2c-0b92-427e-8660-80462487b9d3",
+      "widgetId": "7c0a7f2c-0b92-427e-8660-80462487b9d3",
       "type": "column2d",
-      "componentType": "KPI_CARD",
-      "title": "Reports",
-      "sourceComponentId": "1607:2240",
+      "componentType": "CHART",
+      "title": "Frame 12",
+      "semanticLabel": "Neri Rell",
+      "sourceComponentId": "141:2407",
       "grid": {
         "colOffset": 0,
         "colSpan": 2,
-        "rowOffset": 1,
-        "rowSpan": 5
+        "rowOffset": 0,
+        "rowSpan": 12
+      },
+      "position": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 184.0,
+        "height": 1100.0
       },
       "text": [
-        "Reports",
-        "Care gaps",
-        "Prescriptions",
-        "Claims",
-        "Members",
-        "Overview",
-        "WORKSPACE"
+        "/",
+        "YARD /",
+        "RESOURCE SYSTEM 02",
+        "Capacity",
+        "Allocation",
+        "Reservations",
+        "People",
+        "Audit log",
+        "NR",
+        "Neri Rell"
       ],
-      "needsReview": false,
-      "kpiValue": "—",
-      "kpiLabel": "Reports",
-      "trend": "",
+      "needsReview": true,
+      "chartData": [],
       "chart": {
-        "showLabels": "0",
-        "showValues": "0",
+        "showValues": "1",
         "showLegend": "0",
-        "showXAxisLine": "0",
-        "showYAxisLine": "0",
-        "plotFillAlpha": "0",
-        "plotHoverEffect": "0",
-        "theme": "fusion,evernorth-light"
+        "theme": "fusion,evernorth-light",
+        "caption": "Frame 12"
       },
-      "annotations": {
-        "groups": [
-          {
-            "id": "kpi-group",
-            "textAlign": "center",
-            "font": "Montserrat",
-            "fontSize": "14",
-            "color": "#172033",
-            "items": [
-              {
-                "id": "lbl-1",
-                "type": "text",
-                "text": "Reports",
-                "x": "$chartCenterX",
-                "y": "$chartTopMargin+30"
-              },
-              {
-                "id": "val-1",
-                "type": "text",
-                "text": "—",
-                "x": "$chartCenterX",
-                "y": "$chartTopMargin+65",
-                "fontSize": "26",
-                "bold": "1"
-              },
-              {
-                "id": "trend-1",
-                "type": "text",
-                "text": "",
-                "x": "$chartCenterX",
-                "y": "$chartTopMargin+95",
-                "fontSize": "12",
-                "color": "#718096"
-              }
-            ]
-          }
-        ]
-      },
-      "dataRequest": {
-        "moduleCode": "CMP",
-        "type": "static",
-        "staticData": [
-          {
-            "id": "185ef128-e871-4985-a933-13b6ff668e83",
-            "label": "kpi-185ef128",
-            "data": [
-              {
-                "label": "Metric",
-                "value": 1
-              }
-            ]
-          }
-        ]
-      }
+      "chartDataWarning": "Could not extract chart data from source text"
     },
     {
-      "id": "5b4578e1-8dcc-4405-9e88-88282e64b6b9",
-      "widgetId": "5b4578e1-8dcc-4405-9e88-88282e64b6b9",
+      "id": "c89dd18f-5c6e-410c-9d8a-8ab1fb69f4ac",
+      "widgetId": "c89dd18f-5c6e-410c-9d8a-8ab1fb69f4ac",
+      "type": "column2d",
+      "componentType": "OTHER",
+      "title": "Frame 12",
+      "semanticLabel": "History",
+      "sourceComponentId": "141:2388",
+      "grid": {
+        "colOffset": 1,
+        "colSpan": 6,
+        "rowOffset": 1,
+        "rowSpan": 2
+      },
+      "position": {
+        "x": 214.0,
+        "y": 151.0,
+        "width": 550.0,
+        "height": 42.0
+      },
+      "text": [
+        "Allocation",
+        "Availability",
+        "Requests",
+        "History"
+      ],
+      "needsReview": false
+    },
+    {
+      "id": "84eb05ae-c107-4d81-b4a9-db271a745a44",
+      "widgetId": "84eb05ae-c107-4d81-b4a9-db271a745a44",
       "type": "column2d",
       "componentType": "KPI_CARD",
-      "title": "↑ 8.8%",
-      "sourceComponentId": "1607:2326",
+      "title": "Frame 12",
+      "semanticLabel": "+82 h vs. previous week",
+      "sourceComponentId": "141:2365",
       "grid": {
-        "colOffset": 2,
-        "colSpan": 3,
+        "colOffset": 1,
+        "colSpan": 4,
         "rowOffset": 2,
         "rowSpan": 2
       },
+      "position": {
+        "x": 214.0,
+        "y": 218.0,
+        "width": 279.0,
+        "height": 132.0
+      },
       "text": [
-        "vs. prior period",
-        "↑ 8.8%",
-        "248",
-        "Appointments today"
+        "BOOKED HOURS",
+        "1,248",
+        "+82 h vs. previous week"
       ],
       "needsReview": false,
-      "kpiValue": "↑ 8.8%",
-      "kpiLabel": "vs. prior period",
-      "trend": "",
+      "kpiValue": "1,248",
+      "kpiLabel": "BOOKED HOURS",
+      "trend": "+82 h vs. previous week",
       "chart": {
         "showLabels": "0",
         "showValues": "0",
@@ -397,27 +362,28 @@
               {
                 "id": "lbl-1",
                 "type": "text",
-                "text": "vs. prior period",
+                "text": "BOOKED HOURS",
                 "x": "$chartCenterX",
-                "y": "$chartTopMargin+30"
+                "y": "$chartTopMargin+25",
+                "fontSize": "14"
               },
               {
                 "id": "val-1",
                 "type": "text",
-                "text": "↑ 8.8%",
+                "text": "1,248",
                 "x": "$chartCenterX",
-                "y": "$chartTopMargin+65",
+                "y": "$chartTopMargin+58",
                 "fontSize": "26",
                 "bold": "1"
               },
               {
                 "id": "trend-1",
                 "type": "text",
-                "text": "",
+                "text": "+82 h vs. previous week",
                 "x": "$chartCenterX",
-                "y": "$chartTopMargin+95",
+                "y": "$chartTopMargin+100",
                 "fontSize": "12",
-                "color": "#718096"
+                "color": "#16a34a"
               }
             ]
           }
@@ -428,11 +394,11 @@
         "type": "static",
         "staticData": [
           {
-            "id": "5b4578e1-8dcc-4405-9e88-88282e64b6b9",
-            "label": "kpi-5b4578e1",
+            "id": "84eb05ae-c107-4d81-b4a9-db271a745a44",
+            "label": "kpi-84eb05ae",
             "data": [
               {
-                "label": "Metric",
+                "label": "BOOKED HOURS",
                 "value": 1
               }
             ]
@@ -441,28 +407,34 @@
       }
     },
     {
-      "id": "595c616c-655e-4bb2-8205-d9f43c137236",
-      "widgetId": "595c616c-655e-4bb2-8205-d9f43c137236",
+      "id": "162938f9-5971-4711-b57a-1bb57b3718ed",
+      "widgetId": "162938f9-5971-4711-b57a-1bb57b3718ed",
       "type": "column2d",
       "componentType": "KPI_CARD",
-      "title": "↓ 1.3 pp",
-      "sourceComponentId": "1607:2327",
+      "title": "Frame 12",
+      "semanticLabel": "186 h",
+      "sourceComponentId": "141:2349",
       "grid": {
         "colOffset": 4,
         "colSpan": 3,
         "rowOffset": 2,
         "rowSpan": 2
       },
+      "position": {
+        "x": 511.0,
+        "y": 218.0,
+        "width": 279.0,
+        "height": 141.0
+      },
       "text": [
-        "vs. prior period",
-        "↓ 1.3 pp",
-        "4.2%",
-        "No-show rate"
+        "UNALLOCATED",
+        "186 h",
+        "14.9% of availability"
       ],
       "needsReview": false,
-      "kpiValue": "↓ 1.3 pp",
-      "kpiLabel": "vs. prior period",
-      "trend": "4.2%",
+      "kpiValue": "14.9% of availability",
+      "kpiLabel": "UNALLOCATED",
+      "trend": "",
       "chart": {
         "showLabels": "0",
         "showValues": "0",
@@ -485,27 +457,19 @@
               {
                 "id": "lbl-1",
                 "type": "text",
-                "text": "vs. prior period",
+                "text": "UNALLOCATED",
                 "x": "$chartCenterX",
-                "y": "$chartTopMargin+30"
+                "y": "$chartTopMargin+25",
+                "fontSize": "14"
               },
               {
                 "id": "val-1",
                 "type": "text",
-                "text": "↓ 1.3 pp",
+                "text": "14.9% of availability",
                 "x": "$chartCenterX",
-                "y": "$chartTopMargin+65",
+                "y": "$chartTopMargin+58",
                 "fontSize": "26",
                 "bold": "1"
-              },
-              {
-                "id": "trend-1",
-                "type": "text",
-                "text": "4.2%",
-                "x": "$chartCenterX",
-                "y": "$chartTopMargin+95",
-                "fontSize": "12",
-                "color": "#718096"
               }
             ]
           }
@@ -516,11 +480,11 @@
         "type": "static",
         "staticData": [
           {
-            "id": "595c616c-655e-4bb2-8205-d9f43c137236",
-            "label": "kpi-595c616c",
+            "id": "162938f9-5971-4711-b57a-1bb57b3718ed",
+            "label": "kpi-162938f9",
             "data": [
               {
-                "label": "Metric",
+                "label": "UNALLOCATED",
                 "value": 1
               }
             ]
@@ -529,27 +493,33 @@
       }
     },
     {
-      "id": "cad5a432-dbfb-40f1-b031-8fc1a3e3316c",
-      "widgetId": "cad5a432-dbfb-40f1-b031-8fc1a3e3316c",
+      "id": "2c34587c-96d8-4148-b301-9707a676da40",
+      "widgetId": "2c34587c-96d8-4148-b301-9707a676da40",
       "type": "column2d",
       "componentType": "KPI_CARD",
-      "title": "↓ 3 min",
-      "sourceComponentId": "1607:2328",
+      "title": "Frame 12",
+      "semanticLabel": "3 require reassignment",
+      "sourceComponentId": "141:2333",
       "grid": {
         "colOffset": 6,
         "colSpan": 4,
         "rowOffset": 2,
         "rowSpan": 2
       },
+      "position": {
+        "x": 808.0,
+        "y": 218.0,
+        "width": 279.0,
+        "height": 132.0
+      },
       "text": [
-        "vs. prior period",
-        "↓ 3 min",
-        "14 min",
-        "Avg wait time"
+        "OVERBOOKED SLOTS",
+        "09",
+        "3 require reassignment"
       ],
       "needsReview": false,
-      "kpiValue": "↓ 3 min",
-      "kpiLabel": "vs. prior period",
+      "kpiValue": "3 require reassignment",
+      "kpiLabel": "OVERBOOKED SLOTS",
       "trend": "",
       "chart": {
         "showLabels": "0",
@@ -573,27 +543,19 @@
               {
                 "id": "lbl-1",
                 "type": "text",
-                "text": "vs. prior period",
+                "text": "OVERBOOKED SLOTS",
                 "x": "$chartCenterX",
-                "y": "$chartTopMargin+30"
+                "y": "$chartTopMargin+25",
+                "fontSize": "14"
               },
               {
                 "id": "val-1",
                 "type": "text",
-                "text": "↓ 3 min",
+                "text": "3 require reassignment",
                 "x": "$chartCenterX",
-                "y": "$chartTopMargin+65",
+                "y": "$chartTopMargin+58",
                 "fontSize": "26",
                 "bold": "1"
-              },
-              {
-                "id": "trend-1",
-                "type": "text",
-                "text": "",
-                "x": "$chartCenterX",
-                "y": "$chartTopMargin+95",
-                "fontSize": "12",
-                "color": "#718096"
               }
             ]
           }
@@ -604,11 +566,11 @@
         "type": "static",
         "staticData": [
           {
-            "id": "cad5a432-dbfb-40f1-b031-8fc1a3e3316c",
-            "label": "kpi-cad5a432",
+            "id": "2c34587c-96d8-4148-b301-9707a676da40",
+            "label": "kpi-2c34587c",
             "data": [
               {
-                "label": "Metric",
+                "label": "OVERBOOKED SLOTS",
                 "value": 1
               }
             ]
@@ -617,28 +579,34 @@
       }
     },
     {
-      "id": "ce8396eb-881d-4cd6-8cff-67ad94da3011",
-      "widgetId": "ce8396eb-881d-4cd6-8cff-67ad94da3011",
+      "id": "27f7012d-0eee-4ee8-b643-172d356b2ec4",
+      "widgetId": "27f7012d-0eee-4ee8-b643-172d356b2ec4",
       "type": "column2d",
       "componentType": "KPI_CARD",
-      "title": "↑ 4.1 pp",
-      "sourceComponentId": "1607:2329",
+      "title": "Frame 12",
+      "semanticLabel": "Oldest request: 6 days",
+      "sourceComponentId": "141:2317",
       "grid": {
         "colOffset": 9,
         "colSpan": 3,
         "rowOffset": 2,
         "rowSpan": 2
       },
+      "position": {
+        "x": 1105.0,
+        "y": 218.0,
+        "width": 299.0,
+        "height": 141.0
+      },
       "text": [
-        "vs. prior period",
-        "↑ 4.1 pp",
-        "89.6%",
-        "Utilisation %"
+        "REQUEST BACKLOG",
+        "24",
+        "Oldest request: 6 days"
       ],
       "needsReview": false,
-      "kpiValue": "↑ 4.1 pp",
-      "kpiLabel": "vs. prior period",
-      "trend": "89.6%",
+      "kpiValue": "Oldest request: 6 days",
+      "kpiLabel": "REQUEST BACKLOG",
+      "trend": "",
       "chart": {
         "showLabels": "0",
         "showValues": "0",
@@ -661,27 +629,19 @@
               {
                 "id": "lbl-1",
                 "type": "text",
-                "text": "vs. prior period",
+                "text": "REQUEST BACKLOG",
                 "x": "$chartCenterX",
-                "y": "$chartTopMargin+30"
+                "y": "$chartTopMargin+25",
+                "fontSize": "14"
               },
               {
                 "id": "val-1",
                 "type": "text",
-                "text": "↑ 4.1 pp",
+                "text": "Oldest request: 6 days",
                 "x": "$chartCenterX",
-                "y": "$chartTopMargin+65",
+                "y": "$chartTopMargin+58",
                 "fontSize": "26",
                 "bold": "1"
-              },
-              {
-                "id": "trend-1",
-                "type": "text",
-                "text": "89.6%",
-                "x": "$chartCenterX",
-                "y": "$chartTopMargin+95",
-                "fontSize": "12",
-                "color": "#718096"
               }
             ]
           }
@@ -692,11 +652,11 @@
         "type": "static",
         "staticData": [
           {
-            "id": "ce8396eb-881d-4cd6-8cff-67ad94da3011",
-            "label": "kpi-ce8396eb",
+            "id": "27f7012d-0eee-4ee8-b643-172d356b2ec4",
+            "label": "kpi-27f7012d",
             "data": [
               {
-                "label": "Metric",
+                "label": "REQUEST BACKLOG",
                 "value": 1
               }
             ]
@@ -705,623 +665,257 @@
       }
     },
     {
-      "id": "dea7c803-5bb1-4c68-b088-5c7e042567b8",
-      "widgetId": "dea7c803-5bb1-4c68-b088-5c7e042567b8",
+      "id": "091500c5-03c3-41b0-8384-0117510bb565",
+      "widgetId": "091500c5-03c3-41b0-8384-0117510bb565",
       "type": "column2d",
-      "componentType": "CHART",
-      "title": "3",
-      "sourceComponentId": "1607:2379",
+      "componentType": "OTHER",
+      "title": "Frame 12",
+      "semanticLabel": "Thu PM",
+      "sourceComponentId": "141:2193",
       "grid": {
-        "colOffset": 2,
-        "colSpan": 10,
-        "rowOffset": 6,
-        "rowSpan": 6
+        "colOffset": 1,
+        "colSpan": 8,
+        "rowOffset": 4,
+        "rowSpan": 4
+      },
+      "position": {
+        "x": 214.0,
+        "y": 388.0,
+        "width": 790.0,
+        "height": 338.0
       },
       "text": [
-        "3",
-        "2",
-        "1",
-        "Rows per page: 10",
-        "Showing 1–10 of 248 appointments",
-        "30 min",
-        "30 min",
-        "15 min",
-        "30 min",
-        "30 min"
+        "Resource load matrix",
+        "Booked capacity (%) · Grey cells are provisional allocations",
+        "Mon AM",
+        "Mon PM",
+        "Tue AM",
+        "Tue PM",
+        "Wed AM",
+        "Wed PM",
+        "Thu AM",
+        "Thu PM"
+      ],
+      "needsReview": false
+    },
+    {
+      "id": "67b45062-a576-47e8-8a5a-d2d1ae2dcd28",
+      "widgetId": "67b45062-a576-47e8-8a5a-d2d1ae2dcd28",
+      "type": "column2d",
+      "componentType": "KPI_CARD",
+      "title": "Frame 12",
+      "semanticLabel": "2 pp above the planning threshold",
+      "sourceComponentId": "141:2143",
+      "grid": {
+        "colOffset": 8,
+        "colSpan": 4,
+        "rowOffset": 4,
+        "rowSpan": 5
+      },
+      "position": {
+        "x": 1026.0,
+        "y": 388.0,
+        "width": 378.0,
+        "height": 355.0
+      },
+      "text": [
+        "Committed capacity",
+        "Effective utilization · Excludes leave",
+        "87%",
+        "Comfort band: 65–85%",
+        "0",
+        "100",
+        "2 pp above the planning threshold"
       ],
       "needsReview": false,
-      "chartData": [
-        {
-          "label": "Rows per page",
-          "value": 10.0
-        }
+      "kpiValue": "2 pp above the planning threshold",
+      "kpiLabel": "Effective utilization · Excludes leave",
+      "trend": "",
+      "chart": {
+        "showLabels": "0",
+        "showValues": "0",
+        "showLegend": "0",
+        "showXAxisLine": "0",
+        "showYAxisLine": "0",
+        "plotFillAlpha": "0",
+        "plotHoverEffect": "0",
+        "theme": "fusion,evernorth-light"
+      },
+      "annotations": {
+        "groups": [
+          {
+            "id": "kpi-group",
+            "textAlign": "center",
+            "font": "Montserrat",
+            "fontSize": "14",
+            "color": "#172033",
+            "items": [
+              {
+                "id": "lbl-1",
+                "type": "text",
+                "text": "Effective utilization · Excludes leave",
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+25",
+                "fontSize": "14"
+              },
+              {
+                "id": "val-1",
+                "type": "text",
+                "text": "2 pp above the planning threshold",
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+58",
+                "fontSize": "26",
+                "bold": "1"
+              }
+            ]
+          }
+        ]
+      },
+      "dataRequest": {
+        "moduleCode": "CMP",
+        "type": "static",
+        "staticData": [
+          {
+            "id": "67b45062-a576-47e8-8a5a-d2d1ae2dcd28",
+            "label": "kpi-67b45062",
+            "data": [
+              {
+                "label": "Effective utilization · Excludes leave",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "db064b00-0c7d-4096-8264-d4255dbcf2fb",
+      "widgetId": "db064b00-0c7d-4096-8264-d4255dbcf2fb",
+      "type": "table",
+      "componentType": "TABLE",
+      "title": "Frame 12",
+      "semanticLabel": "Fri PM",
+      "sourceComponentId": "141:2194",
+      "grid": {
+        "colOffset": 1,
+        "colSpan": 8,
+        "rowOffset": 5,
+        "rowSpan": 3
+      },
+      "position": {
+        "x": 236.0,
+        "y": 469.0,
+        "width": 746.0,
+        "height": 222.0
+      },
+      "text": [
+        "Mon AM",
+        "Mon PM",
+        "Tue AM",
+        "Tue PM",
+        "Wed AM",
+        "Wed PM",
+        "Thu AM",
+        "Thu PM",
+        "Fri AM",
+        "Fri PM"
       ],
+      "needsReview": true,
+      "tableConfig": {
+        "columns": [
+          "Mon AM",
+          "Mon PM",
+          "Tue AM",
+          "Tue PM",
+          "Wed AM",
+          "Wed PM"
+        ],
+        "rows": []
+      }
+    },
+    {
+      "id": "87c7a2c5-f088-4fdc-b1b4-8783d061edfc",
+      "widgetId": "87c7a2c5-f088-4fdc-b1b4-8783d061edfc",
+      "type": "column2d",
+      "componentType": "CHART",
+      "title": "Frame 12",
+      "semanticLabel": "Assembly · Cover for 2 absent operators",
+      "sourceComponentId": "141:2070",
+      "grid": {
+        "colOffset": 5,
+        "colSpan": 7,
+        "rowOffset": 8,
+        "rowSpan": 4
+      },
+      "position": {
+        "x": 684.0,
+        "y": 788.0,
+        "width": 720.0,
+        "height": 256.0
+      },
+      "text": [
+        "Allocation review queue",
+        "Priority cases · 3 of 24 open requests",
+        "VA",
+        "Venn Arel",
+        "Test bay · Extra 12 h / Duplicate reservation",
+        "P1",
+        "Pending",
+        "SK",
+        "Serri Keld",
+        "Assembly · Cover for 2 absent operators"
+      ],
+      "needsReview": true,
+      "chartData": [],
       "chart": {
         "showValues": "1",
         "showLegend": "0",
         "theme": "fusion,evernorth-light",
-        "caption": "3"
+        "caption": "Frame 12"
       },
-      "dataRequest": {
-        "moduleCode": "CMP",
-        "type": "static",
-        "staticData": [
-          {
-            "id": "dea7c803-5bb1-4c68-b088-5c7e042567b8",
-            "label": "widget-dea7c803",
-            "data": [
-              {
-                "label": "Rows per page",
-                "value": 10.0
-              }
-            ]
-          }
-        ]
-      }
+      "chartDataWarning": "Could not extract chart data from source text"
     },
     {
-      "id": "af18c7b2-a77e-4d2f-99eb-bb6652f39629",
-      "widgetId": "af18c7b2-a77e-4d2f-99eb-bb6652f39629",
+      "id": "06310750-c9c3-4ddf-b11b-e4657454778f",
+      "widgetId": "06310750-c9c3-4ddf-b11b-e4657454778f",
       "type": "column2d",
-      "componentType": "KPI_CARD",
-      "title": "11:00",
-      "sourceComponentId": "1607:2384",
+      "componentType": "CHART",
+      "title": "Frame 12",
+      "semanticLabel": "Test",
+      "sourceComponentId": "141:2104",
       "grid": {
-        "colOffset": 2,
-        "colSpan": 2,
-        "rowOffset": 7,
-        "rowSpan": 5
+        "colOffset": 1,
+        "colSpan": 5,
+        "rowOffset": 8,
+        "rowSpan": 4
+      },
+      "position": {
+        "x": 214.0,
+        "y": 797.0,
+        "width": 448.0,
+        "height": 247.0
       },
       "text": [
-        "11:00",
-        "10:30",
-        "10:15",
-        "10:00",
-        "09:30",
-        "09:15",
-        "09:00",
-        "08:30",
-        "08:15",
-        "08:00"
+        "Hours by workstream",
+        "Booked / held / free · Indexed totals",
+        "100",
+        "75",
+        "50",
+        "25",
+        "0",
+        "Fab",
+        "Assy",
+        "Test"
       ],
-      "needsReview": false,
-      "kpiValue": "11:00",
-      "kpiLabel": "10:30",
-      "trend": "",
+      "needsReview": true,
+      "chartData": [],
       "chart": {
-        "showLabels": "0",
-        "showValues": "0",
+        "showValues": "1",
         "showLegend": "0",
-        "showXAxisLine": "0",
-        "showYAxisLine": "0",
-        "plotFillAlpha": "0",
-        "plotHoverEffect": "0",
-        "theme": "fusion,evernorth-light"
+        "theme": "fusion,evernorth-light",
+        "caption": "Frame 12"
       },
-      "annotations": {
-        "groups": [
-          {
-            "id": "kpi-group",
-            "textAlign": "center",
-            "font": "Montserrat",
-            "fontSize": "14",
-            "color": "#172033",
-            "items": [
-              {
-                "id": "lbl-1",
-                "type": "text",
-                "text": "10:30",
-                "x": "$chartCenterX",
-                "y": "$chartTopMargin+30"
-              },
-              {
-                "id": "val-1",
-                "type": "text",
-                "text": "11:00",
-                "x": "$chartCenterX",
-                "y": "$chartTopMargin+65",
-                "fontSize": "26",
-                "bold": "1"
-              },
-              {
-                "id": "trend-1",
-                "type": "text",
-                "text": "",
-                "x": "$chartCenterX",
-                "y": "$chartTopMargin+95",
-                "fontSize": "12",
-                "color": "#718096"
-              }
-            ]
-          }
-        ]
-      },
-      "dataRequest": {
-        "moduleCode": "CMP",
-        "type": "static",
-        "staticData": [
-          {
-            "id": "af18c7b2-a77e-4d2f-99eb-bb6652f39629",
-            "label": "kpi-af18c7b2",
-            "data": [
-              {
-                "label": "Metric",
-                "value": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "id": "d84735de-47f6-447f-8b3b-ddc5c25920cf",
-      "widgetId": "d84735de-47f6-447f-8b3b-ddc5c25920cf",
-      "type": "column2d",
-      "componentType": "KPI_CARD",
-      "title": "Henry Wilson",
-      "sourceComponentId": "1607:2407",
-      "grid": {
-        "colOffset": 3,
-        "colSpan": 2,
-        "rowOffset": 7,
-        "rowSpan": 5
-      },
-      "text": [
-        "Henry Wilson",
-        "Charlotte Lee",
-        "Lucas Williams",
-        "Amelia Johnson",
-        "Benjamin Davis",
-        "Isabella Thompson",
-        "William Chen",
-        "Sophia Martinez",
-        "James Anderson",
-        "Olivia Bennett"
-      ],
-      "needsReview": false,
-      "kpiValue": "—",
-      "kpiLabel": "Henry Wilson",
-      "trend": "",
-      "chart": {
-        "showLabels": "0",
-        "showValues": "0",
-        "showLegend": "0",
-        "showXAxisLine": "0",
-        "showYAxisLine": "0",
-        "plotFillAlpha": "0",
-        "plotHoverEffect": "0",
-        "theme": "fusion,evernorth-light"
-      },
-      "annotations": {
-        "groups": [
-          {
-            "id": "kpi-group",
-            "textAlign": "center",
-            "font": "Montserrat",
-            "fontSize": "14",
-            "color": "#172033",
-            "items": [
-              {
-                "id": "lbl-1",
-                "type": "text",
-                "text": "Henry Wilson",
-                "x": "$chartCenterX",
-                "y": "$chartTopMargin+30"
-              },
-              {
-                "id": "val-1",
-                "type": "text",
-                "text": "—",
-                "x": "$chartCenterX",
-                "y": "$chartTopMargin+65",
-                "fontSize": "26",
-                "bold": "1"
-              },
-              {
-                "id": "trend-1",
-                "type": "text",
-                "text": "",
-                "x": "$chartCenterX",
-                "y": "$chartTopMargin+95",
-                "fontSize": "12",
-                "color": "#718096"
-              }
-            ]
-          }
-        ]
-      },
-      "dataRequest": {
-        "moduleCode": "CMP",
-        "type": "static",
-        "staticData": [
-          {
-            "id": "d84735de-47f6-447f-8b3b-ddc5c25920cf",
-            "label": "kpi-d84735de",
-            "data": [
-              {
-                "label": "Metric",
-                "value": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "id": "6c8fdaf9-06be-4493-be35-208dc460a17a",
-      "widgetId": "6c8fdaf9-06be-4493-be35-208dc460a17a",
-      "type": "column2d",
-      "componentType": "KPI_CARD",
-      "title": "Dr. Maya Patel",
-      "sourceComponentId": "1607:2430",
-      "grid": {
-        "colOffset": 4,
-        "colSpan": 3,
-        "rowOffset": 7,
-        "rowSpan": 5
-      },
-      "text": [
-        "Dr. Maya Patel",
-        "Dr. Elena Ruiz",
-        "Dr. David Kim",
-        "Dr. Maya Patel",
-        "Dr. Elena Ruiz",
-        "Dr. David Kim",
-        "Dr. Maya Patel",
-        "Dr. Elena Ruiz",
-        "Dr. David Kim",
-        "Dr. Maya Patel"
-      ],
-      "needsReview": false,
-      "kpiValue": "—",
-      "kpiLabel": "Dr. Maya Patel",
-      "trend": "",
-      "chart": {
-        "showLabels": "0",
-        "showValues": "0",
-        "showLegend": "0",
-        "showXAxisLine": "0",
-        "showYAxisLine": "0",
-        "plotFillAlpha": "0",
-        "plotHoverEffect": "0",
-        "theme": "fusion,evernorth-light"
-      },
-      "annotations": {
-        "groups": [
-          {
-            "id": "kpi-group",
-            "textAlign": "center",
-            "font": "Montserrat",
-            "fontSize": "14",
-            "color": "#172033",
-            "items": [
-              {
-                "id": "lbl-1",
-                "type": "text",
-                "text": "Dr. Maya Patel",
-                "x": "$chartCenterX",
-                "y": "$chartTopMargin+30"
-              },
-              {
-                "id": "val-1",
-                "type": "text",
-                "text": "—",
-                "x": "$chartCenterX",
-                "y": "$chartTopMargin+65",
-                "fontSize": "26",
-                "bold": "1"
-              },
-              {
-                "id": "trend-1",
-                "type": "text",
-                "text": "",
-                "x": "$chartCenterX",
-                "y": "$chartTopMargin+95",
-                "fontSize": "12",
-                "color": "#718096"
-              }
-            ]
-          }
-        ]
-      },
-      "dataRequest": {
-        "moduleCode": "CMP",
-        "type": "static",
-        "staticData": [
-          {
-            "id": "6c8fdaf9-06be-4493-be35-208dc460a17a",
-            "label": "kpi-6c8fdaf9",
-            "data": [
-              {
-                "label": "Metric",
-                "value": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "id": "53d67d6c-f5cd-480a-9fcb-95bfeb0f9c9c",
-      "widgetId": "53d67d6c-f5cd-480a-9fcb-95bfeb0f9c9c",
-      "type": "column2d",
-      "componentType": "KPI_CARD",
-      "title": "Follow-up",
-      "sourceComponentId": "1607:2453",
-      "grid": {
-        "colOffset": 6,
-        "colSpan": 2,
-        "rowOffset": 7,
-        "rowSpan": 5
-      },
-      "text": [
-        "Follow-up",
-        "Annual visit",
-        "Consultation",
-        "Follow-up",
-        "Annual visit",
-        "Consultation",
-        "Follow-up",
-        "Annual visit",
-        "Consultation",
-        "Follow-up"
-      ],
-      "needsReview": false,
-      "kpiValue": "—",
-      "kpiLabel": "Follow-up",
-      "trend": "",
-      "chart": {
-        "showLabels": "0",
-        "showValues": "0",
-        "showLegend": "0",
-        "showXAxisLine": "0",
-        "showYAxisLine": "0",
-        "plotFillAlpha": "0",
-        "plotHoverEffect": "0",
-        "theme": "fusion,evernorth-light"
-      },
-      "annotations": {
-        "groups": [
-          {
-            "id": "kpi-group",
-            "textAlign": "center",
-            "font": "Montserrat",
-            "fontSize": "14",
-            "color": "#172033",
-            "items": [
-              {
-                "id": "lbl-1",
-                "type": "text",
-                "text": "Follow-up",
-                "x": "$chartCenterX",
-                "y": "$chartTopMargin+30"
-              },
-              {
-                "id": "val-1",
-                "type": "text",
-                "text": "—",
-                "x": "$chartCenterX",
-                "y": "$chartTopMargin+65",
-                "fontSize": "26",
-                "bold": "1"
-              },
-              {
-                "id": "trend-1",
-                "type": "text",
-                "text": "",
-                "x": "$chartCenterX",
-                "y": "$chartTopMargin+95",
-                "fontSize": "12",
-                "color": "#718096"
-              }
-            ]
-          }
-        ]
-      },
-      "dataRequest": {
-        "moduleCode": "CMP",
-        "type": "static",
-        "staticData": [
-          {
-            "id": "53d67d6c-f5cd-480a-9fcb-95bfeb0f9c9c",
-            "label": "kpi-53d67d6c",
-            "data": [
-              {
-                "label": "Metric",
-                "value": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "id": "cd8c9136-04e1-4f9f-ac07-2041866799e7",
-      "widgetId": "cd8c9136-04e1-4f9f-ac07-2041866799e7",
-      "type": "column2d",
-      "componentType": "KPI_CARD",
-      "title": "North Pavilion",
-      "sourceComponentId": "1607:2476",
-      "grid": {
-        "colOffset": 7,
-        "colSpan": 2,
-        "rowOffset": 7,
-        "rowSpan": 5
-      },
-      "text": [
-        "North Pavilion",
-        "Telehealth",
-        "West Clinic",
-        "North Pavilion",
-        "Telehealth",
-        "West Clinic",
-        "North Pavilion",
-        "Telehealth",
-        "West Clinic",
-        "North Pavilion"
-      ],
-      "needsReview": false,
-      "kpiValue": "—",
-      "kpiLabel": "North Pavilion",
-      "trend": "",
-      "chart": {
-        "showLabels": "0",
-        "showValues": "0",
-        "showLegend": "0",
-        "showXAxisLine": "0",
-        "showYAxisLine": "0",
-        "plotFillAlpha": "0",
-        "plotHoverEffect": "0",
-        "theme": "fusion,evernorth-light"
-      },
-      "annotations": {
-        "groups": [
-          {
-            "id": "kpi-group",
-            "textAlign": "center",
-            "font": "Montserrat",
-            "fontSize": "14",
-            "color": "#172033",
-            "items": [
-              {
-                "id": "lbl-1",
-                "type": "text",
-                "text": "North Pavilion",
-                "x": "$chartCenterX",
-                "y": "$chartTopMargin+30"
-              },
-              {
-                "id": "val-1",
-                "type": "text",
-                "text": "—",
-                "x": "$chartCenterX",
-                "y": "$chartTopMargin+65",
-                "fontSize": "26",
-                "bold": "1"
-              },
-              {
-                "id": "trend-1",
-                "type": "text",
-                "text": "",
-                "x": "$chartCenterX",
-                "y": "$chartTopMargin+95",
-                "fontSize": "12",
-                "color": "#718096"
-              }
-            ]
-          }
-        ]
-      },
-      "dataRequest": {
-        "moduleCode": "CMP",
-        "type": "static",
-        "staticData": [
-          {
-            "id": "cd8c9136-04e1-4f9f-ac07-2041866799e7",
-            "label": "kpi-cd8c9136",
-            "data": [
-              {
-                "label": "Metric",
-                "value": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "id": "525f98a0-6330-4823-901d-1b04307a557c",
-      "widgetId": "525f98a0-6330-4823-901d-1b04307a557c",
-      "type": "column2d",
-      "componentType": "KPI_CARD",
-      "title": "30 min",
-      "sourceComponentId": "1607:2522",
-      "grid": {
-        "colOffset": 10,
-        "colSpan": 2,
-        "rowOffset": 7,
-        "rowSpan": 5
-      },
-      "text": [
-        "30 min",
-        "30 min",
-        "15 min",
-        "30 min",
-        "30 min",
-        "15 min",
-        "30 min",
-        "30 min",
-        "15 min",
-        "30 min"
-      ],
-      "needsReview": false,
-      "kpiValue": "30 min",
-      "kpiLabel": "15 min",
-      "trend": "",
-      "chart": {
-        "showLabels": "0",
-        "showValues": "0",
-        "showLegend": "0",
-        "showXAxisLine": "0",
-        "showYAxisLine": "0",
-        "plotFillAlpha": "0",
-        "plotHoverEffect": "0",
-        "theme": "fusion,evernorth-light"
-      },
-      "annotations": {
-        "groups": [
-          {
-            "id": "kpi-group",
-            "textAlign": "center",
-            "font": "Montserrat",
-            "fontSize": "14",
-            "color": "#172033",
-            "items": [
-              {
-                "id": "lbl-1",
-                "type": "text",
-                "text": "15 min",
-                "x": "$chartCenterX",
-                "y": "$chartTopMargin+30"
-              },
-              {
-                "id": "val-1",
-                "type": "text",
-                "text": "30 min",
-                "x": "$chartCenterX",
-                "y": "$chartTopMargin+65",
-                "fontSize": "26",
-                "bold": "1"
-              },
-              {
-                "id": "trend-1",
-                "type": "text",
-                "text": "",
-                "x": "$chartCenterX",
-                "y": "$chartTopMargin+95",
-                "fontSize": "12",
-                "color": "#718096"
-              }
-            ]
-          }
-        ]
-      },
-      "dataRequest": {
-        "moduleCode": "CMP",
-        "type": "static",
-        "staticData": [
-          {
-            "id": "525f98a0-6330-4823-901d-1b04307a557c",
-            "label": "kpi-525f98a0",
-            "data": [
-              {
-                "label": "Metric",
-                "value": 1
-              }
-            ]
-          }
-        ]
-      }
+      "chartDataWarning": "Could not extract chart data from source text"
     }
   ],
   "backgroundPaths": [
@@ -1335,10 +929,10 @@
     }
   ],
   "validation": {
-    "componentCount": 12,
-    "widgetCount": 12,
-    "tileCount": 12,
-    "reviewRequired": 0,
+    "componentCount": 11,
+    "widgetCount": 11,
+    "tileCount": 11,
+    "reviewRequired": 4,
     "validationErrors": []
   }
 }

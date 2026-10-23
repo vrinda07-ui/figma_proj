@@ -1,10 +1,10 @@
 import React from 'react'
-import { LayoutGrid, Sparkles, BookOpen, Layers, Activity } from 'lucide-react'
+import { LayoutGrid, Sparkles, BookOpen, Layers, Activity, Clock } from 'lucide-react'
 import { BackendStatus } from '../types'
 
 interface NavbarProps {
-  activeTab: 'designs' | 'workspace' | 'preview' | 'guide'
-  setActiveTab: (tab: 'designs' | 'workspace' | 'preview' | 'guide') => void
+  activeTab: 'workspace' | 'preview' | 'guide' | 'history'
+  setActiveTab: (tab: 'workspace' | 'preview' | 'guide' | 'history') => void
   status: BackendStatus | null
   isConnecting: boolean
   onAddDesign: () => void
@@ -26,7 +26,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Logo & Brand */}
           <div className="flex items-center gap-6">
             <div
-              onClick={() => setActiveTab('designs')}
+              onClick={() => setActiveTab('workspace')}
               className="flex items-center gap-2 cursor-pointer group"
             >
               <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white shadow-xs group-hover:bg-blue-700 transition">
@@ -45,26 +45,6 @@ export const Navbar: React.FC<NavbarProps> = ({
             {/* Nav Tabs */}
             <nav className="flex space-x-1">
               <button
-                onClick={() => setActiveTab('designs')}
-                className={`px-3 py-1.5 text-sm font-medium rounded-md transition ${
-                  activeTab === 'designs'
-                    ? 'text-blue-600 bg-blue-50 font-semibold'
-                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
-                }`}
-              >
-                Designs
-              </button>
-
-              <button
-                onClick={() => {
-                  onAddDesign()
-                }}
-                className="px-3 py-1.5 text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-md transition"
-              >
-                Add design
-              </button>
-
-              <button
                 onClick={() => setActiveTab('workspace')}
                 className={`px-3 py-1.5 text-sm font-medium rounded-md transition ${
                   activeTab === 'workspace'
@@ -73,6 +53,17 @@ export const Navbar: React.FC<NavbarProps> = ({
                 }`}
               >
                 Workspace
+              </button>
+
+              <button
+                onClick={() => setActiveTab('history')}
+                className={`px-3 py-1.5 text-sm font-medium rounded-md transition ${
+                  activeTab === 'history'
+                    ? 'text-blue-600 bg-blue-50 font-semibold'
+                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                }`}
+              >
+                History
               </button>
 
               <button

@@ -206,41 +206,161 @@ def run_classification(candidates: List[Dict[str, Any]]) -> List[Dict[str, Any]]
     return results
 
 
-def correct_prediction_type(component: Dict[str, Any]) -> str:
-    """Stage 3 helper: Rule-based heuristics for misclassifications."""
-    name = component.get("name", "").lower()
-    text = " ".join(component.get("text_preview", [])).lower()
 
-    if "picture" in name or "avatar" in name or "icon" in name:
+
+def correct_prediction_type(component: Dict[str, Any]) -> str:
+    """Apply conservative rules to correct obvious component misclassifications."""
+
+    name = str(component.get("name", "")).lower()
+
+    texts = [
+        str(t).strip()
+        for t in component.get("text_preview", [])
+        if str(t).strip()
+    ]
+
+    text = " ".join(texts).lower()
+
+    # Decorative elements should not be treated as dashboard widgets.
+    if any(word in name for word in ("picture", "avatar", "icon")):
         return "OTHER"
+
+    # Keep common page-level elements as OTHER.
     if name in {"title", "breadcrumb", "header utilities"}:
         return "OTHER"
-    if "listenings" in text and any(text.startswith(f"{i}.") for i in range(1, 6)):
+
+    # Ignore numbered listening-list items.
+    if "listenings" in text and any(
+        t.startswith(f"{i}.")
+        for i in range(1, 6)
+        for t in texts
+    ):
         return "OTHER"
-    if any(metric in text for metric in ["minutes of listening", "unique tracks", "different artists", "appointments today"]):
+
+    # Preserve existing KPI corrections.
+    if any(metric in text for metric in [
+        "minutes of listening",
+        "unique tracks",
+        "different artists",
+        "appointments today",
+    ]):
         return "KPI_CARD"
 
+    # Identify explicit KPI cards using numeric values and label text.
+    numeric_items = [
+        t for t in texts
+        if any(ch.isdigit() for ch in t)
+    ]
+
+    nonnumeric_items = [
+        t for t in texts
+        if not any(ch.isdigit() for ch in t)
+    ]
+
+    explicit_kpi_name = (
+        "kpi card" in name
+        or "kpi_card" in name
+    )
+
+    if explicit_kpi_name and numeric_items and nonnumeric_items:
+        return "KPI_CARD"
+
+    # Detect metric cards from their semantic name and text.
+    metric_keywords = (
+        "revenue",
+        "engaged members",
+        "average order",
+        "repeat purchase",
+        "new patients",
+        "opd patients",
+        "visitors",
+        "no-show rate",
+        "avg wait time",
+        "utilisation",
+        "utilization",
+    )
+
+    has_metric_label = any(
+        keyword in name or keyword in text
+        for keyword in metric_keywords
+    )
+
+    has_percentage_or_currency = any(
+        "%" in t or "$" in t or "€" in t or "£" in t
+        for t in numeric_items
+    )
+
+    if (
+        has_metric_label
+        and len(numeric_items) >= 1
+        and len(nonnumeric_items) >= 1
+        and has_percentage_or_currency
+    ):
+        return "KPI_CARD"
+
+    # Donut/chart containers with multiple ellipses are charts.
+    if "chart" in name and component.get("ellipse_count", 0) >= 2:
+        return "CHART"
+
+    # Otherwise, preserve the model's original prediction.
     return component.get("predicted_type", "OTHER")
+
+
 
 
 def run_prediction_cleaning(predictions: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     """Stage 3: Remove candidates nested inside detected charts and apply type corrections."""
     visible = [dict(p) for p in predictions]
 
+    # Remove candidates nested inside charts
     chart_ids = {
         p["candidate_id"]
         for p in visible
         if p.get("predicted_type") == "CHART"
     }
 
+    # Also remove candidates nested inside tables (to prevent duplicate tables)
+    table_ids = {
+        p["candidate_id"]
+        for p in visible
+        if p.get("predicted_type") == "TABLE"
+    }
+
+    # Combine both sets of parent IDs
+    parent_ids = chart_ids | table_ids
+
     cleaned = []
     for component in visible:
         parent_id = component.get("parent_id")
-        if parent_id in chart_ids:
+        # Remove if nested inside a chart or table
+        if parent_id in parent_ids:
             continue
 
         component["predicted_type"] = correct_prediction_type(component)
         cleaned.append(component)
+
+    # Additional cleanup: remove overlapping tables with same parent
+    # If we have a table and a nested table-like element, keep the larger one
+    table_preds = [c for c in cleaned if c["predicted_type"] == "TABLE"]
+    if len(table_preds) > 1:
+        # Group by parent
+        by_parent = {}
+        for t in table_preds:
+            pid = t.get("parent_id")
+            if pid not in by_parent:
+                by_parent[pid] = []
+            by_parent[pid].append(t)
+
+        # For each parent, keep only the largest table
+        to_remove = set()
+        for pid, group in by_parent.items():
+            if len(group) > 1:
+                # Sort by area descending, keep the largest
+                group.sort(key=lambda x: x.get("area", 0), reverse=True)
+                for t in group[1:]:  # Remove all but the largest
+                    to_remove.add(t["candidate_id"])
+
+        cleaned = [c for c in cleaned if c["candidate_id"] not in to_remove]
 
     return cleaned
 
@@ -278,6 +398,14 @@ def run_grid_layout(figma_data: Dict[str, Any], predictions: List[Dict[str, Any]
     raw_nodes, doc_name, default_dims = extract_nodes_from_figma_payload(figma_data)
     nodes = {str(n.get("id")): n for n in raw_nodes if n.get("id") is not None}
     parents = {str(n.get("id")): str(n.get("parent_id")) if n.get("parent_id") is not None else None for n in raw_nodes if n.get("id") is not None}
+    children = {}
+    for n in raw_nodes:
+        pid = n.get("parent_id")
+        if pid is not None:
+            pid_str = str(pid)
+            if pid_str not in children:
+                children[pid_str] = []
+            children[pid_str].append(str(n.get("id")))
 
     candidate_ids = []
     for pred in predictions:
@@ -333,7 +461,7 @@ def run_grid_layout(figma_data: Dict[str, Any], predictions: List[Dict[str, Any]
     selected = []
     for pred in predictions:
         ptype = pred.get("predicted_type")
-        if ptype not in {"CHART", "KPI_CARD", "TABLE", "FILTER"}:
+        if ptype not in {"CHART", "KPI_CARD", "TABLE", "FILTER", "OTHER"}:
             continue
         cid = str(pred.get("candidate_id"))
         node = nodes.get(cid)
@@ -364,19 +492,57 @@ def run_grid_layout(figma_data: Dict[str, Any], predictions: List[Dict[str, Any]
             "relative": rel,
         })
 
-    # Filter nested charts
-    charts = [item for item in selected if item["predicted_type"] == "CHART"]
-    filtered = []
-    for item in selected:
-        if item["predicted_type"] == "CHART":
-            nested = any(
-                other["candidate_id"] != item["candidate_id"]
-                and is_inside(item["bbox"], other["bbox"])
-                and (other["bbox"]["width"] * other["bbox"]["height"] > item["bbox"]["width"] * item["bbox"]["height"])
-                for other in charts
+    # Add structural components (Sidebar, Header) as direct children of dashboard
+    # These are added as OTHER type since they're not in the model's class set
+    for child_id in children.get(dashboard_id, []):
+        if child_id in nodes:
+            child = nodes[child_id]
+            child_name = child.get("name", "").lower()
+            bbox = get_bbox(child)
+
+            # Check if this is a structural component
+            is_structural = (
+                "sidebar" in child_name or
+                "header" in child_name or
+                "navbar" in child_name or
+                "navigation" in child_name
             )
-            if nested:
-                continue
+
+            if is_structural and bbox:
+                # Check if not already in selected
+                already_selected = any(
+                    item["candidate_id"] == child_id
+                    for item in selected
+                )
+
+                if not already_selected:
+                    rel = {
+                        "x": bbox["x"] - dash_x,
+                        "y": bbox["y"] - dash_y,
+                        "width": bbox["width"],
+                        "height": bbox["height"],
+                    }
+
+                    selected.append({
+                        "candidate_id": child_id,
+                        "name": child.get("name", ""),
+                        "predicted_type": "OTHER",
+                        "bbox": bbox,
+                        "relative": rel,
+                    })
+
+    # Remove duplicate component IDs without discarding valid nested widgets.
+    # KPI cards are commonly children of a KPI section/container, so preserve them
+    # as separate widgets. Nested chart/table internals are handled earlier during
+    # prediction cleaning.
+    filtered = []
+    seen_ids = set()
+
+    for item in selected:
+        candidate_id = item["candidate_id"]
+        if candidate_id in seen_ids:
+            continue
+        seen_ids.add(candidate_id)
         filtered.append(item)
 
     # Compute grid offsets
@@ -421,66 +587,176 @@ def run_grid_layout(figma_data: Dict[str, Any], predictions: List[Dict[str, Any]
     }
 
 
-def extract_chart_data(prediction: Dict[str, Any]) -> List[Dict[str, Any]]:
-    """Extract numeric label/value pairs from text in a component."""
-    data = []
-    texts = [str(v).strip() for v in prediction.get("text_preview", []) if str(v).strip()]
+def extract_chart_data(
+    prediction: Dict[str, Any],
+    source_nodes: Optional[List[Dict[str, Any]]] = None,
+    component: Optional[Dict[str, Any]] = None,
+) -> List[Dict[str, Any]]:
+    """Extract line-chart points from Figma geometry when reliable."""
 
-    for text in texts:
-        match = re.match(r"^\s*(?:\d+[.)]\s*)?(.+?)\s*[-:]\s*(-?\d+(?:\.\d+)?)\s*%?\s*$", text)
-        if match:
-            lbl = match.group(1).strip()
-            val = float(match.group(2))
-            if lbl and lbl.lower() not in {"show all", "all"}:
-                data.append({"label": lbl, "value": val})
+    source_nodes = source_nodes or []
+    component = component or {}
 
-    # If no dash/colon pairs found, try adjacent text/number pairs
-    if not data and len(texts) >= 2:
-        for i in range(len(texts) - 1):
-            num_match = re.search(r"^\$?(\d+(?:,\d+)*(?:\.\d+)?)\%?$", texts[i + 1].strip())
-            if num_match:
-                lbl = texts[i].strip()
-                if len(lbl) > 1 and not re.match(r"^\d", lbl):
-                    val_str = num_match.group(1).replace(",", "")
-                    try:
-                        val = float(val_str)
-                        data.append({"label": lbl, "value": val})
-                    except ValueError:
-                        pass
+    def get_node_text(node: Dict[str, Any]) -> str:
+        return str(
+            node.get("text") or node.get("characters") or ""
+        ).strip()
 
-    return data
+    def node_bbox(node: Dict[str, Any]) -> Optional[Dict[str, float]]:
+        box = get_bbox(node)
+        if box:
+            return box
+        return None
+
+    candidate_id = str(component.get("candidate_id", ""))
+    plot_nodes = [
+        node for node in source_nodes
+        if str(node.get("parent_id", "")) == candidate_id
+    ]
+
+    points = []
+    x_labels = []
+    y_labels = []
+
+    for node in plot_nodes:
+        box = node_bbox(node)
+        if not box:
+            continue
+
+        name = str(node.get("name", "")).strip().lower()
+        node_type = str(node.get("type", "")).upper()
+        text = get_node_text(node)
+
+        if name == "data point" and node_type == "ELLIPSE":
+            points.append({
+                "x": box["x"] + box["width"] / 2,
+                "y": box["y"] + box["height"] / 2,
+            })
+
+        if node_type == "TEXT":
+            if re.fullmatch(r"W\d{2}", text, flags=re.IGNORECASE):
+                x_labels.append({
+                    "label": text.upper(),
+                    "x": box["x"] + box["width"] / 2,
+                })
+
+            numeric = text.replace(",", "").rstrip("%")
+            if re.fullmatch(r"-?\d+(?:\.\d+)?", numeric):
+                y_labels.append({
+                    "value": float(numeric),
+                    "y": box["y"] + box["height"] / 2,
+                })
+
+    points.sort(key=lambda item: item["x"])
+    x_labels.sort(key=lambda item: item["x"])
+    y_labels.sort(key=lambda item: item["y"])
+
+    # Calculate values only when the points, week labels, and axis
+    # labels all belong to the component identified by candidate_id.
+    if (
+        len(points) >= 3
+        and len(points) == len(x_labels)
+        and len(y_labels) >= 2
+    ):
+        result = []
+
+        for point, label in zip(points, x_labels):
+            above = [
+                axis for axis in y_labels
+                if axis["y"] <= point["y"]
+            ]
+            below = [
+                axis for axis in y_labels
+                if axis["y"] >= point["y"]
+            ]
+
+            if not above or not below:
+                result = []
+                break
+
+            top = above[-1]
+            bottom = below[0]
+
+            if abs(bottom["y"] - top["y"]) < 0.001:
+                value = top["value"]
+            else:
+                fraction = (
+                    (point["y"] - top["y"])
+                    / (bottom["y"] - top["y"])
+                )
+                value = top["value"] + fraction * (
+                    bottom["value"] - top["value"]
+                )
+
+            result.append({
+                "label": label["label"],
+                "value": round(value, 2),
+            })
+
+        if len(result) == len(points):
+            return result
+
+    # Conservative fallback: do not infer values from arbitrary text.
+    return []
 
 
-def make_vista_widget(component: Dict[str, Any], prediction: Dict[str, Any]) -> Dict[str, Any]:
+
+def make_vista_widget(
+    component: Dict[str, Any],
+    prediction: Dict[str, Any],
+    source_nodes: Optional[List[Dict[str, Any]]] = None,
+) -> Dict[str, Any]:
     """
-    Construct a widget conforming to both Vista POC guide and preview renderer.
+    Construct a Vista widget with KPI labels, main values,
+    supporting descriptions, trends, and chart/table configuration.
     """
     ctype = component["predicted_type"]
-    texts = [str(v).strip() for v in prediction.get("text_preview", []) if str(v).strip()]
 
-    # Extract clean title
-    title = component["name"]
-    for t in texts:
-        if not re.match(r"^\d+[.)]\s*", t) and t.lower() not in {"show all", "%", "vs. prior period"}:
-            title = t
-            break
+    texts = [
+        str(v).strip()
+        for v in prediction.get("text_preview", [])
+        if str(v).strip()
+    ]
 
-    widget_uuid = str(uuid.uuid4())
-    chart_data = extract_chart_data(prediction)
-
-    # Determine specific Vista widget type
-    name_lower = component["name"].lower()
+    name = str(component.get("name", ""))
+    name_lower = name.lower()
     text_lower = " ".join(texts).lower()
 
+    ignored_labels = {
+        "show all", "%", "vs. prior period", "vs last mo",
+        "kpi card", "chart", "table", "other"
+    }
+
+    meaningful_texts = [
+        t for t in texts
+        if not re.match(r"^\d+[.)]\s*", t)
+        and t.lower() not in ignored_labels
+        and len(t) > 2
+    ]
+
+    title = name
+    if not title or title.startswith("4:"):
+        title = meaningful_texts[0] if meaningful_texts else "Dashboard Widget"
+
+    semantic_label = meaningful_texts[-1] if meaningful_texts else title
+
+    widget_uuid = str(uuid.uuid4())
+    chart_data = extract_chart_data(
+    prediction,
+    source_nodes=source_nodes or [],
+    component=component,
+    )
+
+    # Determine Vista widget type.
     if ctype == "CHART":
-        if "donut" in name_lower or "doughnut" in name_lower or "pie" in name_lower or "%" in text_lower:
+        if any(word in name_lower for word in ("donut", "doughnut", "pie")):
             vista_type = "doughnut2d"
         elif "bar" in name_lower or "horizontal" in name_lower:
             vista_type = "bar2d"
         else:
             vista_type = "column2d"
     elif ctype == "KPI_CARD":
-        vista_type = "column2d"  # Standard Vista annotation KPI
+        vista_type = "column2d"
     elif ctype == "TABLE":
         vista_type = "table"
     elif ctype == "COMMENT" or "insight" in name_lower:
@@ -494,13 +770,15 @@ def make_vista_widget(component: Dict[str, Any], prediction: Dict[str, Any]) -> 
         "type": vista_type,
         "componentType": ctype,
         "title": title,
+        "semanticLabel": semantic_label,
         "sourceComponentId": component["candidate_id"],
         "grid": component["grid"],
+        "position": component.get("position_relative_to_dashboard", {}),
         "text": texts,
         "needsReview": False,
     }
 
-    # Vista chart / annotations configuration
+    # Chart configuration.
     if ctype == "CHART":
         widget["chartData"] = chart_data
         widget["chart"] = {
@@ -509,32 +787,145 @@ def make_vista_widget(component: Dict[str, Any], prediction: Dict[str, Any]) -> 
             "theme": "fusion,evernorth-light",
             "caption": title,
         }
-        widget["dataRequest"] = {
-            "moduleCode": "CMP",
-            "type": "static",
-            "staticData": [{
-                "id": widget_uuid,
-                "label": f"widget-{widget_uuid[:8]}",
-                "data": chart_data if chart_data else [{"label": "Category A", "value": 45}, {"label": "Category B", "value": 55}]
-            }]
-        }
-        widget["needsReview"] = len(chart_data) == 0
 
+        if chart_data:
+            widget["dataRequest"] = {
+                "moduleCode": "CMP",
+                "type": "static",
+                "staticData": [{
+                    "id": widget_uuid,
+                    "label": f"widget-{widget_uuid[:8]}",
+                    "data": chart_data,
+                }],
+            }
+        else:
+            widget["needsReview"] = True
+            widget["chartDataWarning"] = (
+                "Could not extract chart data from source text"
+            )
+
+    # KPI extraction and annotations.
+    
     elif ctype == "KPI_CARD":
-        # Extract primary metric value
-        numeric_val = next((t for t in texts if re.search(r"\d", t)), "—")
-        metric_lbl = next((t for t in texts if t != numeric_val and len(t) > 2), title)
-        trend_lbl = next((t for t in texts if t not in {numeric_val, metric_lbl} and ("%" in t or "vs" in t.lower() or "↑" in t or "↓" in t)), "")
+        numeric_texts = [
+            t for t in texts if re.search(r"\d", t)
+        ]
+
+        def is_trend_text(value: str) -> bool:
+            s = value.strip()
+            lower = s.lower()
+
+            if "vs" in lower or "prior period" in lower:
+                return True
+
+            if re.match(r"^[+\-]\s*\d", s):
+                return True
+
+            # Handles Unicode arrows and common mojibake forms.
+            if s.startswith(("↑", "↓", "↗", "↘", "â†", "â‡")):
+                return True
+
+            return False
+
+        trend_candidates = [
+            t for t in numeric_texts if is_trend_text(t)
+        ]
+        metric_candidates = [
+            t for t in numeric_texts if not is_trend_text(t)
+        ]
+
+        numeric_val = metric_candidates[-1] if metric_candidates else "—"
+
+        nonnumeric_texts = [
+            t for t in texts
+            if not re.search(r"\d", t)
+            and "vs" not in t.lower()
+            and "prior period" not in t.lower()
+            and t.lower() not in {"show all", "vs last mo"}
+        ]
+
+        metric_lbl = nonnumeric_texts[-1] if nonnumeric_texts else title
+
+        trend_lbl = trend_candidates[0] if trend_candidates else ""
+        comparison = next(
+            (t for t in texts if "vs" in t.lower() or "prior period" in t.lower()),
+            "",
+        )
+
+        if comparison and comparison.lower() not in trend_lbl.lower():
+            trend_lbl = f"{trend_lbl} {comparison}".strip()
 
         widget["kpiValue"] = numeric_val
         widget["kpiLabel"] = metric_lbl
         widget["trend"] = trend_lbl
+
+    
+
+        trend_is_positive = trend_lbl.strip().startswith(("+", "↑", "↗", "â†‘"))
+        trend_is_negative = trend_lbl.strip().startswith(("-", "−", "↓", "↘", "â†“"))
+
+        trend_color = (
+            "#16a34a" if trend_is_positive
+            else "#dc2626" if trend_is_negative
+            else "#718096"
+        )
+
         widget["chart"] = {
-            "showLabels": "0", "showValues": "0", "showLegend": "0",
-            "showXAxisLine": "0", "showYAxisLine": "0",
-            "plotFillAlpha": "0", "plotHoverEffect": "0",
-            "theme": "fusion,evernorth-light"
+            "showLabels": "0",
+            "showValues": "0",
+            "showLegend": "0",
+            "showXAxisLine": "0",
+            "showYAxisLine": "0",
+            "plotFillAlpha": "0",
+            "plotHoverEffect": "0",
+            "theme": "fusion,evernorth-light",
         }
+        supporting_text = (
+            str(widget.get("supportingText", "")).strip()
+            or str(widget.get("description", "")).strip()
+        )
+        annotation_items = [
+            {
+                "id": "lbl-1",
+                "type": "text",
+                "text": metric_lbl,
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+25",
+                "fontSize": "14",
+            },
+            {
+                "id": "val-1",
+                "type": "text",
+                "text": numeric_val,
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+58",
+                "fontSize": "26",
+                "bold": "1",
+            },
+        ]
+
+        if supporting_text:
+            annotation_items.append({
+                "id": "desc-1",
+                "type": "text",
+                "text": supporting_text,
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+80",
+                "fontSize": "10",
+                "color": "#64748b",
+            })
+
+        if trend_lbl:
+            annotation_items.append({
+                "id": "trend-1",
+                "type": "text",
+                "text": trend_lbl,
+                "x": "$chartCenterX",
+                "y": "$chartTopMargin+100",
+                "fontSize": "12",
+                "color": trend_color,
+            })
+
         widget["annotations"] = {
             "groups": [{
                 "id": "kpi-group",
@@ -542,28 +933,37 @@ def make_vista_widget(component: Dict[str, Any], prediction: Dict[str, Any]) -> 
                 "font": "Montserrat",
                 "fontSize": "14",
                 "color": "#172033",
-                "items": [
-                    {"id": "lbl-1", "type": "text", "text": metric_lbl, "x": "$chartCenterX", "y": "$chartTopMargin+30"},
-                    {"id": "val-1", "type": "text", "text": numeric_val, "x": "$chartCenterX", "y": "$chartTopMargin+65", "fontSize": "26", "bold": "1"},
-                    {"id": "trend-1", "type": "text", "text": trend_lbl, "x": "$chartCenterX", "y": "$chartTopMargin+95", "fontSize": "12", "color": "#16a34a" if ("↑" in trend_lbl or "+" in trend_lbl) else "#718096"}
-                ]
+                "items": annotation_items,
             }]
         }
+
         widget["dataRequest"] = {
             "moduleCode": "CMP",
             "type": "static",
             "staticData": [{
                 "id": widget_uuid,
                 "label": f"kpi-{widget_uuid[:8]}",
-                "data": [{"label": "Metric", "value": 1}]
-            }]
+                "data": [{
+                    "label": metric_lbl,
+                    "value": 1,
+                }],
+            }],
         }
 
+        if numeric_val == "—" or not metric_lbl:
+            widget["needsReview"] = True
+
+    # Table configuration.
     elif ctype == "TABLE":
-        headers = [t for t in texts[:6] if len(t) < 30]
+        headers = [
+            t for t in texts[:6] if len(t) < 30
+        ]
+
         widget["tableConfig"] = {
-            "columns": headers if headers else ["Column 1", "Column 2", "Status"],
-            "rows": []
+            "columns": headers if headers else [
+                "Column 1", "Column 2", "Status"
+            ],
+            "rows": [],
         }
         widget["needsReview"] = True
 
@@ -573,7 +973,8 @@ def make_vista_widget(component: Dict[str, Any], prediction: Dict[str, Any]) -> 
 def run_vista_page_generation(
     grid_data: Dict[str, Any],
     predictions: List[Dict[str, Any]],
-    package_metadata: Optional[Dict[str, str]] = None
+    package_metadata: Optional[Dict[str, str]] = None,
+    source_nodes: Optional[List[Dict[str, Any]]] = None,
 ) -> Dict[str, Any]:
     """Stage 5: Generate Vista page.json adhering strictly to student guide specifications."""
     meta = package_metadata or {}
@@ -602,7 +1003,11 @@ def run_vista_page_generation(
     for comp in components:
         cid = str(comp["candidate_id"])
         pred = pred_map.get(cid, {})
-        widget = make_vista_widget(comp, pred)
+        widget = make_vista_widget(
+            comp,
+            pred,
+            source_nodes=source_nodes or [],
+        )
         widgets.append(widget)
 
         tile_id = str(uuid.uuid4())
@@ -704,7 +1109,12 @@ def execute_full_pipeline(
     grid_layout = run_grid_layout(figma_data, clean_predictions)
 
     # Step 6: Vista Page
-    vista_page = run_vista_page_generation(grid_layout, clean_predictions, package_metadata)
+    vista_page = run_vista_page_generation(
+        grid_layout,
+        clean_predictions,
+        package_metadata,
+        source_nodes=nodes,
+    )
 
     elapsed_ms = round((time.time() - start_time) * 1000, 1)
 

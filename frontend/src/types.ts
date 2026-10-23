@@ -1,3 +1,4 @@
+
 export interface GridPosition {
   colOffset: number
   colSpan: number
@@ -36,23 +37,37 @@ export interface VistaTile {
   grid: GridPosition
 }
 
+export interface AbsolutePosition {
+  x: number
+  y: number
+  width: number
+  height: number
+}
+
 export interface VistaWidget {
   id: string
   widgetId: string
   type: string
   componentType: string
   title: string
+  semanticLabel?: string
   sourceComponentId?: string
   grid: GridPosition
+  position?: AbsolutePosition
   text?: string[]
   chartData?: Array<{ label: string; value: number }>
+
+  // KPI content
   kpiValue?: string
   kpiLabel?: string
+  supportingText?: string
   trend?: string
+
   needsReview?: boolean
   chart?: Record<string, any>
   annotations?: Record<string, any>
   dataRequest?: Record<string, any>
+
   tableConfig?: {
     columns: string[]
     rows?: any[]
@@ -139,7 +154,12 @@ export interface PipelineResult {
       name: string
       predicted_type: string
       grid: GridPosition
-      position_relative_to_dashboard: { x: number; y: number; width: number; height: number }
+      position_relative_to_dashboard: {
+        x: number
+        y: number
+        width: number
+        height: number
+      }
     }>
   }
   pageJson: VistaPageJson
@@ -151,6 +171,7 @@ export interface PipelineResult {
     validationErrors: number
     classifier: string
   }
+  runId?: string
 }
 
 export interface DesignSummary {
@@ -171,5 +192,28 @@ export interface BackendStatus {
   modelFile: string
   classes: string[]
   pipelineStages: string[]
+  pluginDataReceived: boolean
+  designName: string | null
   timestamp: number
+}
+
+export interface HistoryEntry {
+  runId: string
+  designName: string
+  timestamp: string
+  componentCount: number
+  widgetCount: number
+  tileCount: number
+  needAttention: number
+  status: string
+}
+
+export interface HistoryRunDetails extends HistoryEntry {
+  availableOutputs: {
+    figma_data: boolean
+    raw_predictions: boolean
+    clean_predictions: boolean
+    grid_layout: boolean
+    page_json: boolean
+  }
 }

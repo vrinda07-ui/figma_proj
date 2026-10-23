@@ -88,6 +88,8 @@ def make_widget(component, prediction):
         "title": title,
         "sourceComponentId": component["candidate_id"],
         "grid": component["grid"],
+        "position": component.get("position_relative_to_dashboard", {}),
+        "componentType": component_type,
     }
 
     if component_type == "CHART":
