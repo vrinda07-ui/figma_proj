@@ -1,6 +1,6 @@
 {
   "dashboard": "dashboard1",
-  "candidate_count": 19,
+  "candidate_count": 18,
   "candidates": [
     {
       "candidate_id": "12:5",
@@ -639,38 +639,6 @@
       "candidate_score": 12,
       "has_chart_word": false,
       "has_table_word": true,
-      "has_kpi_word": false,
-      "has_filter_word": false
-    },
-    {
-      "candidate_id": "12:43",
-      "name": "header-title-block",
-      "type": "FRAME",
-      "parent_id": "12:42",
-      "x": 0.0,
-      "y": 0.0,
-      "width": 343.0,
-      "height": 54.0,
-      "area": 18522.0,
-      "aspect_ratio": 6.351851851851852,
-      "child_count": 2,
-      "text_count": 2,
-      "numeric_text_count": 0,
-      "has_percentage": false,
-      "has_date_text": false,
-      "vector_count": 0,
-      "line_count": 0,
-      "ellipse_count": 0,
-      "rectangle_count": 0,
-      "graphical_count": 0,
-      "text_preview": [
-        "Real-time hospital capacity and performance monitor.",
-        "Clinical Operations"
-      ],
-      "dashboard": "dashboard1",
-      "candidate_score": 5,
-      "has_chart_word": false,
-      "has_table_word": false,
       "has_kpi_word": false,
       "has_filter_word": false
     }
